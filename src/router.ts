@@ -31,6 +31,57 @@ const router = createRouter({
       name: 'about',
       component: () => import('./pages/About.vue'),
     },
+    // Landing pages for SEO
+    {
+      path: '/docker-run-to-compose-converter',
+      name: 'docker-landing',
+      component: () => import('./pages/landing/docker-run-to-compose.landing.vue'),
+    },
+    {
+      path: '/jwt-decoder',
+      name: 'jwt-landing',
+      component: () => import('./pages/landing/jwt-decoder.landing.vue'),
+    },
+    {
+      path: '/crontab-generator-landing',
+      name: 'crontab-landing',
+      component: () => import('./pages/landing/crontab-generator.landing.vue'),
+    },
+    {
+      path: '/chmod-calculator-landing',
+      name: 'chmod-landing',
+      component: () => import('./pages/landing/chmod-calculator.landing.vue'),
+    },
+    {
+      path: '/bcrypt-generator',
+      name: 'bcrypt-landing',
+      component: () => import('./pages/landing/bcrypt-generator.landing.vue'),
+    },
+    {
+      path: '/otp-generator',
+      name: 'otp-landing',
+      component: () => import('./pages/landing/otp-generator.landing.vue'),
+    },
+    {
+      path: '/uuid-generator-landing',
+      name: 'uuid-landing',
+      component: () => import('./pages/landing/uuid-generator.landing.vue'),
+    },
+    {
+      path: '/regex-tester-landing',
+      name: 'regex-landing',
+      component: () => import('./pages/landing/regex-tester.landing.vue'),
+    },
+    {
+      path: '/base64-converter',
+      name: 'base64-landing',
+      component: () => import('./pages/landing/base64-converter.landing.vue'),
+    },
+    {
+      path: '/json-formatter',
+      name: 'json-landing',
+      component: () => import('./pages/landing/json-formatter.landing.vue'),
+    },
     ...toolsRoutes,
     ...toolsRedirectRoutes,
     ...(config.app.env === 'development' ? demoRoutes : []),
