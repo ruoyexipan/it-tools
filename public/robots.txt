@@ -1,0 +1,15 @@
+# Robots.txt for AgentsAITools
+# https://agentsaitools.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://agentsaitools.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin or internal paths
+Disallow: /api/
+Disallow: /_nuxt/
