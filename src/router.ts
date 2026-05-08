@@ -31,6 +31,21 @@ const router = createRouter({
       name: 'about',
       component: () => import('./pages/About.vue'),
     },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('./pages/Contact.vue'),
+    },
+    {
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: () => import('./pages/legal/privacy-policy.vue'),
+    },
+    {
+      path: '/terms-of-service',
+      name: 'terms-of-service',
+      component: () => import('./pages/legal/terms-of-service.vue'),
+    },
     // Landing pages for SEO
     {
       path: '/docker-run-to-compose-converter',
