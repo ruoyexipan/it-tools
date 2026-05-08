@@ -10,12 +10,22 @@ import type { Tool } from '@/tools/tools.types';
 
 const route = useRoute();
 
+const toolName = computed(() => String(route.meta.name || ''));
+const toolDesc = computed(() => String(route.meta?.description || ''));
+const toolUrl = computed(() => `https://agentsaitools.com${route.path}`);
+
 const head = computed<HeadObject>(() => ({
-  title: `${route.meta.name} - Free Online Tool | AgentsAITools`,
+  title: `${toolName.value} - Free Online Tool | AgentsAITools`,
+  link: [
+    {
+      rel: 'canonical',
+      href: toolUrl.value,
+    },
+  ],
   meta: [
     {
       name: 'description',
-      content: `${route.meta?.description as string} Free online tool by AgentsAITools - no signup required.`,
+      content: `${toolDesc.value} Free online tool by AgentsAITools - no signup required.`,
     },
     {
       name: 'keywords',
@@ -23,15 +33,43 @@ const head = computed<HeadObject>(() => ({
     },
     {
       property: 'og:title',
-      content: `${route.meta.name} - Free Online Tool | AgentsAITools`,
+      content: `${toolName.value} - Free Online Tool | AgentsAITools`,
     },
     {
       property: 'og:description',
-      content: `${route.meta?.description as string} Free online tool by AgentsAITools - no signup required.`,
+      content: `${toolDesc.value} Free online tool by AgentsAITools - no signup required.`,
     },
     {
       property: 'og:url',
-      content: `https://agentsaitools.com${route.path}`,
+      content: toolUrl.value,
+    },
+    {
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      name: 'twitter:site',
+      content: '@agentsaitools',
+    },
+    {
+      name: 'twitter:title',
+      content: `${toolName.value} - Free Online Tool | AgentsAITools`,
+    },
+    {
+      name: 'twitter:description',
+      content: `${toolDesc.value} Free online tool by AgentsAITools - no signup required.`,
+    },
+    {
+      name: 'twitter:image',
+      content: 'https://agentsaitools.com/banner.png?v=2',
+    },
+    {
+      name: 'twitter:image:alt',
+      content: `${toolName.value} - AgentsAITools`,
     },
   ],
 }));
@@ -39,15 +77,16 @@ useHead(head);
 const { t } = useI18n();
 
 const i18nKey = computed<string>(() => route.path.trim().replace('/', ''));
-const toolTitle = computed<string>(() => t(`tools.${i18nKey.value}.title`, String(route.meta.name)));
-const toolDescription = computed<string>(() => t(`tools.${i18nKey.value}.description`, String(route.meta.description)));
+const toolTitle = computed<string>(() => t(`tools.${i18nKey.value}.title`, toolName.value));
+const toolDescription = computed<string>(() => t(`tools.${i18nKey.value}.description`, toolDesc.value));
 
-const jsonLd = computed(() => ({
+// Tool JSON-LD
+const toolJsonLd = computed(() => ({
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  'name': `${route.meta.name} - AgentsAITools`,
-  'url': `https://agentsaitools.com${route.path}`,
-  'description': route.meta?.description as string,
+  'name': `${toolName.value} - AgentsAITools`,
+  'url': toolUrl.value,
+  'description': toolDesc.value,
   'applicationCategory': 'DeveloperApplication',
   'operatingSystem': 'Web',
   'offers': {
@@ -55,7 +94,41 @@ const jsonLd = computed(() => ({
     'price': '0',
     'priceCurrency': 'USD',
   },
+  'provider': {
+    '@type': 'Organization',
+    'name': 'AgentsAITools',
+    'url': 'https://agentsaitools.com',
+  },
 }));
+
+// BreadcrumbList JSON-LD
+const breadcrumbJsonLd = computed(() => {
+  const category = String(route.meta.category || 'Tools');
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': 'https://agentsaitools.com',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': category,
+        'item': `https://agentsaitools.com/#${category.toLowerCase().replace(/\s+/g, '-')}`,
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': toolName.value,
+        'item': toolUrl.value,
+      },
+    ],
+  };
+});
 </script>
 
 <template>
@@ -64,7 +137,11 @@ const jsonLd = computed(() => ({
       <Breadcrumb />
       
       <script type="application/ld+json">
-      {{ JSON.stringify(jsonLd) }}
+      {{ JSON.stringify(toolJsonLd) }}
+      </script>
+      
+      <script type="application/ld+json">
+      {{ JSON.stringify(breadcrumbJsonLd) }}
       </script>
 
       <div class="tool-header">

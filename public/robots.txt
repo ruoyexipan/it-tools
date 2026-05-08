@@ -13,3 +13,22 @@ Crawl-delay: 1
 # Disallow admin or internal paths
 Disallow: /api/
 Disallow: /_nuxt/
+
+# AI Crawlers - Allow for GEO optimization
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
