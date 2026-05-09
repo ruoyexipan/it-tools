@@ -18,7 +18,7 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', 'mainE
   { '@type': 'Question', 'name': 'How to use Meta Tag Generator?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Simply enter your input data and the tool will process it instantly. No signup or installation required.' } },
   { '@type': 'Question', 'name': 'Is Meta Tag Generator free?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, Meta Tag Generator is completely free to use. No signup required. All processing happens in your browser.' } },
 ]};
-function goToTool() { router.push('/meta-tag-generator'); }
+function goToTool() { router.push('/og-meta-generator'); }
 </script>
 <template>
   <div class="landing-page">

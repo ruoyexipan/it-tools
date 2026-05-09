@@ -18,7 +18,7 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', 'mainE
   { '@type': 'Question', 'name': 'How to use QR Code Generator?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Simply enter your input data and the tool will process it instantly. No signup or installation required.' } },
   { '@type': 'Question', 'name': 'Is QR Code Generator free?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, QR Code Generator is completely free to use. No signup required. All processing happens in your browser.' } },
 ]};
-function goToTool() { router.push('/qr-code-generator'); }
+function goToTool() { router.push('/qrcode-generator'); }
 </script>
 <template>
   <div class="landing-page">

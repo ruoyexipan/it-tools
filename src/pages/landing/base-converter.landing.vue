@@ -17,7 +17,7 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', 'mainE
   { '@type': 'Question', 'name': 'What number bases are supported?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The converter supports binary (base 2), octal (base 8), decimal (base 10), hexadecimal (base 16), and any custom base from 2 to 36.' } },
   { '@type': 'Question', 'name': 'Is this base converter free?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, our base converter is completely free. No signup required. All conversions happen in your browser.' } },
 ]};
-function goToTool() { router.push('/integer-base-converter'); }
+function goToTool() { router.push('/base-converter'); }
 </script>
 <template>
   <div class="landing-page">

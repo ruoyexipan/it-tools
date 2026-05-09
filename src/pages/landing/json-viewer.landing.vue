@@ -18,7 +18,7 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', 'mainE
   { '@type': 'Question', 'name': 'How to use JSON Viewer Online?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Simply enter your input data and the tool will process it instantly. No signup or installation required.' } },
   { '@type': 'Question', 'name': 'Is JSON Viewer Online free?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, JSON Viewer Online is completely free to use. No signup required. All processing happens in your browser.' } },
 ]};
-function goToTool() { router.push('/json-viewer'); }
+function goToTool() { router.push('/json-prettify'); }
 </script>
 <template>
   <div class="landing-page">

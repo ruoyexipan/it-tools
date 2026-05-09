@@ -17,7 +17,7 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', 'mainE
   { '@type': 'Question', 'name': 'How does TOTP work?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TOTP (Time-based OTP) generates a new code every 30 seconds using a shared secret and current time. It is compatible with apps like Google Authenticator.' } },
   { '@type': 'Question', 'name': 'Is this OTP generator secure?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, all OTP generation happens locally in your browser. The secret key never leaves your device.' } },
 ]};
-function goToTool() { router.push('/otp-code-generator-and-validator'); }
+function goToTool() { router.push('/otp-generator'); }
 </script>
 <template>
   <div class="landing-page">

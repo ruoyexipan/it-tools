@@ -18,7 +18,7 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', 'mainE
   { '@type': 'Question', 'name': 'How to convert timestamp to date?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Enter your Unix timestamp in the input field. The converter automatically shows the human-readable date and time.' } },
   { '@type': 'Question', 'name': 'What date formats are supported?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The converter supports Unix timestamp, ISO 8601, RFC 2822, and various date formats. You can convert between any of these formats.' } },
 ]};
-function goToTool() { router.push('/date-time-converter'); }
+function goToTool() { router.push('/date-converter'); }
 </script>
 <template>
   <div class="landing-page">
