@@ -16,7 +16,7 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', 'mainE
   { '@type': 'Question', 'name': 'What are HTML entities?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HTML entities are special characters that are represented by codes in HTML. For example, &amp; represents & and &lt; represents <.' } },
   { '@type': 'Question', 'name': 'How to encode HTML entities?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Enter your text in the input field. The tool automatically encodes special characters to HTML entities.' } },
   { '@type': 'Question', 'name': 'Is this HTML encoder free?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, our HTML entities encoder is completely free. No signup required. All encoding happens in your browser.' } },
-];
+]};
 function goToTool() { router.push('/html-entities'); }
 </script>
 <template>
