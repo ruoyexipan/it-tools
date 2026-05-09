@@ -47,106 +47,24 @@ const router = createRouter({
       component: () => import('./pages/legal/terms-of-service.vue'),
     },
     // Landing pages for SEO
-    {
-      path: '/docker-run-to-compose-converter',
-      name: 'docker-landing',
-      component: () => import('./pages/landing/docker-run-to-compose.landing.vue'),
-    },
-    {
-      path: '/jwt-decoder',
-      name: 'jwt-landing',
-      component: () => import('./pages/landing/jwt-decoder.landing.vue'),
-    },
-    {
-      path: '/crontab-generator-landing',
-      name: 'crontab-landing',
-      component: () => import('./pages/landing/crontab-generator.landing.vue'),
-    },
-    {
-      path: '/chmod-calculator-landing',
-      name: 'chmod-landing',
-      component: () => import('./pages/landing/chmod-calculator.landing.vue'),
-    },
-    {
-      path: '/bcrypt-generator',
-      name: 'bcrypt-landing',
-      component: () => import('./pages/landing/bcrypt-generator.landing.vue'),
-    },
-    {
-      path: '/otp-generator',
-      name: 'otp-landing',
-      component: () => import('./pages/landing/otp-generator.landing.vue'),
-    },
-    {
-      path: '/uuid-generator-landing',
-      name: 'uuid-landing',
-      component: () => import('./pages/landing/uuid-generator.landing.vue'),
-    },
-    {
-      path: '/regex-tester-landing',
-      name: 'regex-landing',
-      component: () => import('./pages/landing/regex-tester.landing.vue'),
-    },
-    {
-      path: '/base64-converter',
-      name: 'base64-landing',
-      component: () => import('./pages/landing/base64-converter.landing.vue'),
-    },
-    {
-      path: '/json-formatter',
-      name: 'json-landing',
-      component: () => import('./pages/landing/json-formatter.landing.vue'),
-    },
-    // New landing pages
-    {
-      path: '/base64-file',
-      name: 'base64-file-landing',
-      component: () => import('./pages/landing/base64-file.landing.vue'),
-    },
-    {
-      path: '/color-converter-landing',
-      name: 'color-landing',
-      component: () => import('./pages/landing/color-converter.landing.vue'),
-    },
-    {
-      path: '/date-time-converter-landing',
-      name: 'datetime-landing',
-      component: () => import('./pages/landing/date-time-converter.landing.vue'),
-    },
-    {
-      path: '/hash-text-landing',
-      name: 'hash-landing',
-      component: () => import('./pages/landing/hash-text.landing.vue'),
-    },
-    {
-      path: '/case-converter-landing',
-      name: 'case-landing',
-      component: () => import('./pages/landing/case-converter.landing.vue'),
-    },
-    {
-      path: '/subnet-calculator',
-      name: 'subnet-landing',
-      component: () => import('./pages/landing/subnet-calculator.landing.vue'),
-    },
-    {
-      path: '/base-converter',
-      name: 'base-landing',
-      component: () => import('./pages/landing/base-converter.landing.vue'),
-    },
-    {
-      path: '/html-entities-landing',
-      name: 'html-entities-landing',
-      component: () => import('./pages/landing/html-entities.landing.vue'),
-    },
-    ...toolsRoutes,
-    ...toolsRedirectRoutes,
-    ...(config.app.env === 'development' ? demoRoutes : []),
-    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
-  ],
-});
-
-export default router;
-    // All tools landing pages
+    { path: '/docker-run-to-compose-converter', name: 'docker-landing', component: () => import('./pages/landing/docker-run-to-compose.landing.vue') },
+    { path: '/jwt-decoder', name: 'jwt-landing', component: () => import('./pages/landing/jwt-decoder.landing.vue') },
+    { path: '/crontab-generator-landing', name: 'crontab-landing', component: () => import('./pages/landing/crontab-generator.landing.vue') },
+    { path: '/chmod-calculator-landing', name: 'chmod-landing', component: () => import('./pages/landing/chmod-calculator.landing.vue') },
+    { path: '/bcrypt-generator', name: 'bcrypt-landing', component: () => import('./pages/landing/bcrypt-generator.landing.vue') },
+    { path: '/otp-generator', name: 'otp-landing', component: () => import('./pages/landing/otp-generator.landing.vue') },
+    { path: '/uuid-generator-landing', name: 'uuid-landing', component: () => import('./pages/landing/uuid-generator.landing.vue') },
+    { path: '/regex-tester-landing', name: 'regex-landing', component: () => import('./pages/landing/regex-tester.landing.vue') },
+    { path: '/base64-converter', name: 'base64-landing', component: () => import('./pages/landing/base64-converter.landing.vue') },
+    { path: '/json-formatter', name: 'json-landing', component: () => import('./pages/landing/json-formatter.landing.vue') },
+    { path: '/base64-file', name: 'base64-file-landing', component: () => import('./pages/landing/base64-file.landing.vue') },
+    { path: '/color-converter-landing', name: 'color-landing', component: () => import('./pages/landing/color-converter.landing.vue') },
+    { path: '/date-time-converter-landing', name: 'datetime-landing', component: () => import('./pages/landing/date-time-converter.landing.vue') },
+    { path: '/hash-text-landing', name: 'hash-landing', component: () => import('./pages/landing/hash-text.landing.vue') },
+    { path: '/case-converter-landing', name: 'case-landing', component: () => import('./pages/landing/case-converter.landing.vue') },
+    { path: '/subnet-calculator', name: 'subnet-landing', component: () => import('./pages/landing/subnet-calculator.landing.vue') },
+    { path: '/base-converter', name: 'base-landing', component: () => import('./pages/landing/base-converter.landing.vue') },
+    { path: '/html-entities-landing', name: 'html-entities-landing', component: () => import('./pages/landing/html-entities.landing.vue') },
     { path: '/ascii-text-drawer-landing', name: 'ascii-landing', component: () => import('./pages/landing/ascii-text-drawer.landing.vue') },
     { path: '/base64-string-landing', name: 'base64-string-landing', component: () => import('./pages/landing/base64-string-converter.landing.vue') },
     { path: '/basic-auth-landing', name: 'basic-auth-landing', component: () => import('./pages/landing/basic-auth-generator.landing.vue') },
@@ -217,3 +135,11 @@ export default router;
     { path: '/yaml-to-json-landing', name: 'yaml-to-json-landing', component: () => import('./pages/landing/yaml-to-json-converter.landing.vue') },
     { path: '/yaml-to-toml-landing', name: 'yaml-to-toml-landing', component: () => import('./pages/landing/yaml-to-toml.landing.vue') },
     { path: '/yaml-viewer-landing', name: 'yaml-viewer-landing', component: () => import('./pages/landing/yaml-viewer.landing.vue') },
+    ...toolsRoutes,
+    ...toolsRedirectRoutes,
+    ...(config.app.env === 'development' ? demoRoutes : []),
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+  ],
+});
+
+export default router;
