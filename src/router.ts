@@ -97,6 +97,47 @@ const router = createRouter({
       name: 'json-landing',
       component: () => import('./pages/landing/json-formatter.landing.vue'),
     },
+    // New landing pages
+    {
+      path: '/base64-file',
+      name: 'base64-file-landing',
+      component: () => import('./pages/landing/base64-file.landing.vue'),
+    },
+    {
+      path: '/color-converter-landing',
+      name: 'color-landing',
+      component: () => import('./pages/landing/color-converter.landing.vue'),
+    },
+    {
+      path: '/date-time-converter-landing',
+      name: 'datetime-landing',
+      component: () => import('./pages/landing/date-time-converter.landing.vue'),
+    },
+    {
+      path: '/hash-text-landing',
+      name: 'hash-landing',
+      component: () => import('./pages/landing/hash-text.landing.vue'),
+    },
+    {
+      path: '/case-converter-landing',
+      name: 'case-landing',
+      component: () => import('./pages/landing/case-converter.landing.vue'),
+    },
+    {
+      path: '/subnet-calculator',
+      name: 'subnet-landing',
+      component: () => import('./pages/landing/subnet-calculator.landing.vue'),
+    },
+    {
+      path: '/base-converter',
+      name: 'base-landing',
+      component: () => import('./pages/landing/base-converter.landing.vue'),
+    },
+    {
+      path: '/html-entities-landing',
+      name: 'html-entities-landing',
+      component: () => import('./pages/landing/html-entities.landing.vue'),
+    },
     ...toolsRoutes,
     ...toolsRedirectRoutes,
     ...(config.app.env === 'development' ? demoRoutes : []),
