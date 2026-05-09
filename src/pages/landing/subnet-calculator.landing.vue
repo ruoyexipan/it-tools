@@ -16,7 +16,7 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', 'mainE
   { '@type': 'Question', 'name': 'How to calculate subnet mask?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Enter your IP address and CIDR notation (e.g., 192.168.1.0/24). The calculator shows network address, broadcast address, host range, and subnet mask.' } },
   { '@type': 'Question', 'name': 'What is CIDR notation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CIDR (Classless Inter-Domain Routing) notation specifies IP addresses and their routing prefix. For example, /24 means the first 24 bits are the network portion.' } },
   { '@type': 'Question', 'name': 'Is this subnet calculator free?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, our subnet calculator is completely free. No signup required. All calculations happen in your browser.' } },
-];
+]};
 function goToTool() { router.push('/ipv4-subnet-calculator'); }
 </script>
 <template>
