@@ -113,5 +113,27 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
+    // Code splitting
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-vue': ['vue', 'vue-router', 'pinia'],
+          'vendor-ui': ['naive-ui'],
+          'vendor-utils': ['lodash', 'date-fns', 'mathjs'],
+        },
+      },
+    },
+    // Minification
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    // Source maps (disable in production for smaller size)
+    sourcemap: false,
+    // Chunk size warning
+    chunkSizeWarningLimit: 500,
   },
 });
