@@ -32,49 +32,45 @@ const tools = computed<ToolCategory[]>(() => [
 <template>
   <MenuLayout class="menu-layout" :class="{ isSmallScreen: styleStore.isSmallScreen }">
     <template #sider>
-      <header>
-        <RouterLink to="/" class="hero-wrapper" aria-label="Go to homepage">
-          <HeroGradient class="gradient" />
-          <div class="text-wrapper">
-            <div class="title">
-              AgentsAITools
-            </div>
-            <div class="divider" />
-            <div class="subtitle">
-              {{ $t('home.subtitle') }}
-            </div>
+      <RouterLink to="/" class="hero-wrapper">
+        <HeroGradient class="gradient" />
+        <div class="text-wrapper">
+          <div class="title">
+            AgentsAITools
           </div>
-        </RouterLink>
-      </header>
-
-      <nav aria-label="Tool categories">
-        <div class="sider-content">
-          <div v-if="styleStore.isSmallScreen" flex flex-col items-center>
-            <locale-selector w="90%" />
-
-            <div flex justify-center>
-              <NavbarButtons />
-            </div>
+          <div class="divider" />
+          <div class="subtitle">
+            {{ $t('home.subtitle') }}
           </div>
-
-          <CollapsibleToolMenu :tools-by-category="tools" />
-
-          <footer class="footer">
-            <div>
-              AgentsAITools
-              <span>v{{ version }}</span>
-            </div>
-            <div>
-              © {{ new Date().getFullYear() }}
-              <span>AgentsAITools</span>
-            </div>
-          </footer>
         </div>
-      </nav>
+      </RouterLink>
+
+      <div class="sider-content">
+        <div v-if="styleStore.isSmallScreen" flex flex-col items-center>
+          <locale-selector w="90%" />
+
+          <div flex justify-center>
+            <NavbarButtons />
+          </div>
+        </div>
+
+        <CollapsibleToolMenu :tools-by-category="tools" />
+
+        <div class="footer">
+          <div>
+            AgentsAITools
+            <span>v{{ version }}</span>
+          </div>
+          <div>
+            © {{ new Date().getFullYear() }}
+            <span>AgentsAITools</span>
+          </div>
+        </div>
+      </div>
     </template>
 
     <template #content>
-      <header class="toolbar" role="toolbar" aria-label="Main toolbar">
+      <div flex items-center justify-center gap-2>
         <c-button
           circle
           variant="text"
@@ -103,10 +99,8 @@ const tools = computed<ToolCategory[]>(() => [
         <div>
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
-      </header>
-      <main role="main">
-        <slot />
-      </main>
+      </div>
+      <slot />
     </template>
   </MenuLayout>
 </template>
