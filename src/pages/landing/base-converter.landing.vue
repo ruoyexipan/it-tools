@@ -8,16 +8,16 @@ useHead({
     { name: 'description', content: 'Convert numbers between different bases online. Free base converter tool - binary, decimal, hex, octal conversion. Instant conversion, no signup.' },
     { name: 'keywords', content: 'base converter, binary converter, hex converter, decimal converter, octal converter, number base converter, binary to decimal, hex to decimal' },
     { property: 'og:title', content: 'Number Base Converter Online - Binary Hex Decimal Octal | AgentsAITools' },
-    { property: 'og:url', content: 'https://agentsaitools.com/integer-base-converter' },
+    { property: 'og:url', content: 'https://agentsaitools.com/number-base-converter' },
   ],
-  link: [{ rel: 'canonical', href: 'https://agentsaitools.com/integer-base-converter' }],
+  link: [{ rel: 'canonical', href: 'https://agentsaitools.com/number-base-converter' }],
 });
 const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
   { '@type': 'Question', 'name': 'How to convert binary to decimal?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Enter your binary number in the input field. The converter automatically shows the decimal equivalent and other base formats.' } },
   { '@type': 'Question', 'name': 'What number bases are supported?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The converter supports binary (base 2), octal (base 8), decimal (base 10), hexadecimal (base 16), and any custom base from 2 to 36.' } },
   { '@type': 'Question', 'name': 'Is this base converter free?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, our base converter is completely free. No signup required. All conversions happen in your browser.' } },
 ]};
-function goToTool() { router.push('/integer-base-converter'); }
+function goToTool() { router.push('/base-converter'); }
 </script>
 <template>
   <div class="landing-page">
