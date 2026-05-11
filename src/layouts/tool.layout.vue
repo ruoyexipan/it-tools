@@ -83,7 +83,7 @@ const toolDescription = computed<string>(() => t(`tools.${i18nKey.value}.descrip
 // Tool JSON-LD
 const toolJsonLd = computed(() => ({
   '@context': 'https://schema.org',
-  '@type': 'WebApplication',
+  '@type': 'SoftwareApplication',
   'name': `${toolName.value} - AgentsAITools`,
   'url': toolUrl.value,
   'description': toolDesc.value,
@@ -99,6 +99,11 @@ const toolJsonLd = computed(() => ({
     'name': 'AgentsAITools',
     'url': 'https://agentsaitools.com',
   },
+  'softwareHelp': {
+    '@type': 'CreativeWork',
+    'url': toolUrl.value,
+  },
+  'featureList': ((route.meta.keywords ?? []) as string[]).join(', '),
 }));
 
 // BreadcrumbList JSON-LD
@@ -129,6 +134,36 @@ const breadcrumbJsonLd = computed(() => {
     ],
   };
 });
+
+// HowTo JSON-LD
+const howToJsonLd = computed(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  'name': `How to use ${toolName.value}`,
+  'description': `Step by step guide to use ${toolName.value} online tool.`,
+  'step': [
+    {
+      '@type': 'HowToStep',
+      'name': 'Open the tool',
+      'text': `Navigate to the ${toolName.value} page on AgentsAITools.`,
+    },
+    {
+      '@type': 'HowToStep',
+      'name': 'Enter your input',
+      'text': 'Enter or paste your data into the input field.',
+    },
+    {
+      '@type': 'HowToStep',
+      'name': 'Get results',
+      'text': 'The tool will process your input and display results instantly.',
+    },
+    {
+      '@type': 'HowToStep',
+      'name': 'Copy output',
+      'text': 'Copy the results to use in your project.',
+    },
+  ],
+}));
 </script>
 
 <template>
@@ -142,6 +177,10 @@ const breadcrumbJsonLd = computed(() => {
       
       <script type="application/ld+json">
       {{ JSON.stringify(breadcrumbJsonLd) }}
+      </script>
+      
+      <script type="application/ld+json">
+      {{ JSON.stringify(howToJsonLd) }}
       </script>
 
       <div class="tool-header">

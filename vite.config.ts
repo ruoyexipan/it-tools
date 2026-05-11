@@ -57,8 +57,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       strategies: 'generateSW',
       manifest: {
-        name: 'AgentsAITools',
-        description: 'Free online developer tools collection.',
+        name: 'AgentsAITools - Free Online Developer Tools',
+        short_name: 'AITools',
+        description: 'Free online developer tools collection including JSON formatter, Base64 encoder, hash generator, and 100+ more.',
         display: 'standalone',
         lang: 'en-US',
         start_url: `${baseUrl}?utm_source=pwa&utm_medium=pwa`,
