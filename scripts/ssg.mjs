@@ -696,14 +696,14 @@ function generateHtml(page) {
   // 替换 Canonical
   html = html.replace(/<link rel="canonical" href="[^"]*"/, `<link rel="canonical" href="${url}"`);
   
-  // 替换 OG tags
-  html = html.replace(/<meta property="og:url" content="[^"]*"/, `<meta property="og:url" content="${url}"`);
-  html = html.replace(/<meta property="og:title" content="[^"]*"/, `<meta property="og:title" content="${page.title}"`);
-  html = html.replace(/<meta property="og:description" content="[^"]*"/, `<meta property="og:description" content="${page.description}"`);
+  // 替换 OG tags (支持多行)
+  html = html.replace(/<meta\s+property="og:url"\s+content="[^"]*"\s*\/>/s, `<meta\n      property="og:url"\n      content="${url}"\n    />`);
+  html = html.replace(/<meta\s+property="og:title"\s+content="[^"]*"\s*\/>/s, `<meta\n      property="og:title"\n      content="${page.title}"\n    />`);
+  html = html.replace(/<meta\s+property="og:description"\s+content="[^"]*"\s*\/>/s, `<meta\n      property="og:description"\n      content="${page.description}"\n    />`);
   
-  // 替换 Twitter tags
-  html = html.replace(/<meta name="twitter:title" content="[^"]*"/, `<meta name="twitter:title" content="${page.title}"`);
-  html = html.replace(/<meta name="twitter:description" content="[^"]*"/, `<meta name="twitter:description" content="${page.description}"`);
+  // 替换 Twitter tags (支持多行)
+  html = html.replace(/<meta\s+name="twitter:title"\s+content="[^"]*"\s*\/>/s, `<meta\n      name="twitter:title"\n      content="${page.title}"\n    />`);
+  html = html.replace(/<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/>/s, `<meta\n      name="twitter:description"\n      content="${page.description}"\n    />`);
   
   // 替换 Keywords
   html = html.replace(/<meta name="keywords" content="[^"]*"/, `<meta name="keywords" content="${page.keywords}"`);
