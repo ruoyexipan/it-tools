@@ -586,22 +586,35 @@ const pages = [
 function generateHtml(page) {
   const url = `${BASE_URL}${page.path}`;
   
-  let html = indexHtml
-    // Title
-    .replace(/<title>[^<]*<\/title>/, `<title>${page.title}</title>`)
-    // Meta description
-    .replace(/<meta name="description" content="[^"]*"/, `<meta name="description" content="${page.description}"`)
-    // Canonical
-    .replace(/<link rel="canonical" href="[^"]*"/, `<link rel="canonical" href="${url}"`)
-    // OG tags
-    .replace(/<meta property="og:url" content="[^"]*"/, `<meta property="og:url" content="${url}"`)
-    .replace(/<meta property="og:title" content="[^"]*"/, `<meta property="og:title" content="${page.title}"`)
-    .replace(/<meta property="og:description" content="[^"]*"/, `<meta property="og:description" content="${page.description}"`)
-    // Twitter tags
-    .replace(/<meta name="twitter:title" content="[^"]*"/, `<meta name="twitter:title" content="${page.title}"`)
-    .replace(/<meta name="twitter:description" content="[^"]*"/, `<meta name="twitter:description" content="${page.description}"`)
-    // Keywords
-    .replace(/<meta name="keywords" content="[^"]*"/, `<meta name="keywords" content="${page.keywords}"`);
+  // 替换 Title
+  let html = indexHtml.replace(/<title>[^<]*<\/title>/, `<title>${page.title}</title>`);
+  
+  // 替换 Meta Description (支持多行)
+  html = html.replace(
+    /<meta\s+name="description"\s+content="[^"]*"\s*\/>/s,
+    `<meta\n      name="description"\n      content="${page.description}"\n    />`
+  );
+  
+  // 替换 itemprop description
+  html = html.replace(
+    /<meta\s+itemprop="description"\s+content="[^"]*"\s*\/>/s,
+    `<meta\n      itemprop="description"\n      content="${page.description}"\n    />`
+  );
+  
+  // 替换 Canonical
+  html = html.replace(/<link rel="canonical" href="[^"]*"/, `<link rel="canonical" href="${url}"`);
+  
+  // 替换 OG tags
+  html = html.replace(/<meta property="og:url" content="[^"]*"/, `<meta property="og:url" content="${url}"`);
+  html = html.replace(/<meta property="og:title" content="[^"]*"/, `<meta property="og:title" content="${page.title}"`);
+  html = html.replace(/<meta property="og:description" content="[^"]*"/, `<meta property="og:description" content="${page.description}"`);
+  
+  // 替换 Twitter tags
+  html = html.replace(/<meta name="twitter:title" content="[^"]*"/, `<meta name="twitter:title" content="${page.title}"`);
+  html = html.replace(/<meta name="twitter:description" content="[^"]*"/, `<meta name="twitter:description" content="${page.description}"`);
+  
+  // 替换 Keywords
+  html = html.replace(/<meta name="keywords" content="[^"]*"/, `<meta name="keywords" content="${page.keywords}"`);
 
   // 添加 JSON-LD 结构化数据
   const jsonLd = {
