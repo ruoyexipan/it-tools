@@ -671,6 +671,21 @@ const pages = [
     keywords: 'iban validator, iban check',
     category: 'Data',
   },
+  // New tools
+  {
+    path: '/unix-timestamp-converter',
+    title: 'Unix Timestamp Converter Online - Epoch Converter | AgentsAITools',
+    description: 'Convert between Unix timestamps and human-readable dates online. Free timestamp converter supporting seconds and milliseconds.',
+    keywords: 'unix timestamp, epoch converter, timestamp to date, date to timestamp',
+    category: 'Converter',
+  },
+  {
+    path: '/my-ip',
+    title: 'What Is My IP Address - Check Public IP Online | AgentsAITools',
+    description: 'Check your public IP address online. Free IP address lookup tool showing your IP, location, and ISP information.',
+    keywords: 'my ip, what is my ip, ip address, public ip, ip lookup',
+    category: 'Network',
+  },
 ];
 
 // 生成 HTML
