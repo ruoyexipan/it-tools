@@ -8,104 +8,54 @@ const ipInfo = ref({
   country: '',
   org: '',
   timezone: '',
+  asn: '',
 });
 
 const loading = ref(true);
 const error = ref('');
 
-// CORS-friendly IP APIs
-const ipApis = [
-  'https://api.ipify.org?format=json',
-  'https://api.seeip.org/jsonip',
-  'https://ipinfo.io/json',
-];
-
-// CORS-friendly Geo APIs
-function getGeoUrl(ip: string) {
-  return [
-    `https://ipinfo.io/${ip}/json`,
-    `https://ipapi.co/${ip}/json/`,
-  ];
-}
-
-async function fetchWithTimeout(url: string, timeout = 5000) {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), timeout);
+async function fetchIPInfo() {
   try {
-    const response = await fetch(url, { signal: controller.signal });
-    clearTimeout(timeoutId);
-    return response;
+    // Use our own API endpoint (Cloudflare Pages Function)
+    const response = await fetch('/api/ip');
+    if (!response.ok) throw new Error('API error');
+    const data = await response.json();
+    
+    ipInfo.value = {
+      ip: data.ip || 'N/A',
+      city: data.city || 'N/A',
+      region: data.region || 'N/A',
+      country: data.country || 'N/A',
+      org: data.org || 'N/A',
+      timezone: data.timezone || 'N/A',
+      asn: data.asn || 'N/A',
+    };
   } catch (e) {
-    clearTimeout(timeoutId);
-    throw e;
-  }
-}
-
-async function fetchIP(): Promise<{ ip: string; data?: any }> {
-  for (const url of ipApis) {
+    // Fallback to external API
     try {
-      const response = await fetchWithTimeout(url);
-      if (!response.ok) continue;
+      const response = await fetch('https://ipinfo.io/json');
+      if (!response.ok) throw new Error('Fallback API error');
       const data = await response.json();
-      const ip = data.ip || data.IPv4;
-      if (ip) {
-        // If we got ipinfo.io, we already have geo data
-        if (data.city) {
-          return { ip, data };
-        }
-        return { ip };
-      }
-    } catch (e) {
-      continue;
-    }
-  }
-  throw new Error('Unable to fetch IP');
-}
-
-async function fetchGeoInfo(ip: string) {
-  for (const url of getGeoUrl(ip)) {
-    try {
-      const response = await fetchWithTimeout(url);
-      if (!response.ok) continue;
-      const data = await response.json();
-      return {
+      
+      ipInfo.value = {
+        ip: data.ip || 'N/A',
         city: data.city || 'N/A',
-        region: data.region || data.regionName || 'N/A',
-        country: data.country_name || data.country || 'N/A',
-        org: data.org || data.isp || 'N/A',
+        region: data.region || 'N/A',
+        country: data.country || 'N/A',
+        org: data.org || 'N/A',
         timezone: data.timezone || 'N/A',
+        asn: data.org || 'N/A',
       };
-    } catch (e) {
-      continue;
+    } catch (e2) {
+      error.value = 'Unable to fetch IP address. Please try again later.';
     }
-  }
-  return { city: 'N/A', region: 'N/A', country: 'N/A', org: 'N/A', timezone: 'N/A' };
-}
-
-onMounted(async () => {
-  try {
-    const result = await fetchIP();
-    let geo;
-
-    if (result.data) {
-      // We already have geo data from ipinfo.io
-      geo = {
-        city: result.data.city || 'N/A',
-        region: result.data.region || 'N/A',
-        country: result.data.country || 'N/A',
-        org: result.data.org || 'N/A',
-        timezone: result.data.timezone || 'N/A',
-      };
-    } else {
-      geo = await fetchGeoInfo(result.ip);
-    }
-
-    ipInfo.value = { ip: result.ip, ...geo };
-  } catch (e) {
-    error.value = 'Unable to fetch IP address. Please try again later.';
   } finally {
     loading.value = false;
   }
+}
+
+onMounted(() => {
+  fetchIPInfo();
 });
 
 function copyToClipboard(text: string) {
@@ -115,7 +65,7 @@ function copyToClipboard(text: string) {
 function retry() {
   loading.value = true;
   error.value = '';
-  location.reload();
+  fetchIPInfo();
 }
 </script>
 
@@ -153,13 +103,23 @@ function retry() {
           <span>{{ ipInfo.country }}</span>
         </div>
         <div class="detail-item">
-          <span class="label">ISP:</span>
+          <span class="label">ISP/Org:</span>
           <span>{{ ipInfo.org }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">ASN:</span>
+          <span>{{ ipInfo.asn }}</span>
         </div>
         <div class="detail-item">
           <span class="label">Timezone:</span>
           <span>{{ ipInfo.timezone }}</span>
         </div>
+      </div>
+
+      <div class="info-note">
+        <p><strong>About IP Address:</strong></p>
+        <p>An IP address is a unique numerical label assigned to each device connected to a computer network. Your public IP address is visible to websites you visit.</p>
+        <p><strong>Privacy Tip:</strong> Use a VPN to hide your real IP address and protect your online privacy.</p>
       </div>
     </div>
   </div>
@@ -193,10 +153,16 @@ function retry() {
   border: none; border-radius: 6px; cursor: pointer; font-size: 14px;
 }
 .copy-btn:hover { background: #158a4a; }
-.details { display: grid; gap: 12px; }
+.details { display: grid; gap: 12px; margin-bottom: 24px; }
 .detail-item {
   display: flex; justify-content: space-between; align-items: center;
   padding: 12px 16px; background: white; border-radius: 8px; border: 1px solid #e0e0e0;
 }
 .label { font-weight: 600; color: #333; }
+.info-note {
+  background: #e8f5e9; padding: 16px; border-radius: 8px;
+  font-size: 14px; line-height: 1.6; color: #333;
+}
+.info-note p { margin: 0 0 8px 0; }
+.info-note p:last-child { margin-bottom: 0; }
 </style>
