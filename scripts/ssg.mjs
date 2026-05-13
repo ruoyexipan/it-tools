@@ -797,7 +797,44 @@ function generateHtml(page) {
   <script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd, null, 2)}</script>${extraJsonLd}
   </head>`);
 
+  // 添加相关工具链接（内部链接）
+  if (page.path !== '/') {
+    const relatedTools = getRelatedTools(page);
+    if (relatedTools.length > 0) {
+      const relatedHtml = `
+    <div class="related-tools" style="max-width: 600px; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 12px;">
+      <h3 style="margin-bottom: 12px; font-size: 18px;">Related Tools</h3>
+      <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px;">
+        ${relatedTools.map(tool => `<li><a href="${BASE_URL}${tool.path}/" style="color: #18a058; text-decoration: none; padding: 4px 8px; background: #e8f5e9; border-radius: 4px; font-size: 14px;">${tool.name}</a></li>`).join('\n        ')}
+      </ul>
+    </div>`;
+      // 在 </body> 之前添加相关工具
+      html = html.replace('</body>', `${relatedHtml}\n  </body>`);
+    }
+  }
+
   return html;
+}
+
+// 获取相关工具
+function getRelatedTools(currentPage) {
+  const category = currentPage.category || 'Tools';
+  const related = pages
+    .filter(p => p.path !== '/' && p.path !== currentPage.path && p.category === category)
+    .slice(0, 6);
+  
+  // 如果同类工具不足，添加其他类别的工具
+  if (related.length < 6) {
+    const others = pages
+      .filter(p => p.path !== '/' && p.path !== currentPage.path && p.category !== category && !related.includes(p))
+      .slice(0, 6 - related.length);
+    related.push(...others);
+  }
+  
+  return related.map(p => ({
+    name: p.title.split(' - ')[0].split(' | ')[0],
+    path: p.path
+  }));
 }
 
 // 创建目录
