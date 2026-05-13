@@ -806,33 +806,32 @@ function generateHtml(page) {
   // 在 <div id="app"> 之后添加 H1
   html = html.replace('<div id="app">', `<div id="app">\n    ${h1Html}`);
 
-  // 添加相关工具链接（内部链接）
-  if (page.path !== '/') {
-    const relatedTools = getRelatedTools(page);
-    const allTools = getAllToolsList(page);
-    
-    // 相关工具
-    let relatedHtml = '';
-    if (relatedTools.length > 0) {
-      relatedHtml = `
+  // 添加相关工具链接（内部链接）- 包括首页
+  const relatedTools = getRelatedTools(page);
+  const allTools = getAllToolsList(page);
+  
+  // 相关工具
+  let relatedHtml = '';
+  if (relatedTools.length > 0) {
+    relatedHtml = `
     <div class="related-tools" style="max-width: 600px; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 12px;">
       <h3 style="margin-bottom: 12px; font-size: 18px;">Related Tools</h3>
       <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px;">
         ${relatedTools.map(tool => `<li><a href="${BASE_URL}${tool.path}/" style="color: #18a058; text-decoration: none; padding: 4px 8px; background: #e8f5e9; border-radius: 4px; font-size: 14px;">${tool.name}</a></li>`).join('\n        ')}
       </ul>
     </div>`;
+  }
+
+  // 所有工具列表（按类别分组）
+  const categories = {};
+  allTools.forEach(tool => {
+    if (!categories[tool.category]) {
+      categories[tool.category] = [];
     }
+    categories[tool.category].push(tool);
+  });
 
-    // 所有工具列表（按类别分组）
-    const categories = {};
-    allTools.forEach(tool => {
-      if (!categories[tool.category]) {
-        categories[tool.category] = [];
-      }
-      categories[tool.category].push(tool);
-    });
-
-    const allToolsHtml = `
+  const allToolsHtml = `
     <div class="all-tools" style="max-width: 600px; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 12px;">
       <h3 style="margin-bottom: 12px; font-size: 18px;">All Developer Tools</h3>
       ${Object.entries(categories).map(([category, tools]) => `
@@ -845,9 +844,8 @@ function generateHtml(page) {
       `).join('')}
     </div>`;
 
-    // 在 </body> 之前添加
-    html = html.replace('</body>', `${relatedHtml}\n${allToolsHtml}\n  </body>`);
-  }
+  // 在 </body> 之前添加
+  html = html.replace('</body>', `${relatedHtml}\n${allToolsHtml}\n  </body>`);
 
   return html;
 }
