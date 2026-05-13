@@ -809,17 +809,44 @@ function generateHtml(page) {
   // 添加相关工具链接（内部链接）
   if (page.path !== '/') {
     const relatedTools = getRelatedTools(page);
+    const allTools = getAllToolsList(page);
+    
+    // 相关工具
+    let relatedHtml = '';
     if (relatedTools.length > 0) {
-      const relatedHtml = `
+      relatedHtml = `
     <div class="related-tools" style="max-width: 600px; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 12px;">
       <h3 style="margin-bottom: 12px; font-size: 18px;">Related Tools</h3>
       <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px;">
         ${relatedTools.map(tool => `<li><a href="${BASE_URL}${tool.path}/" style="color: #18a058; text-decoration: none; padding: 4px 8px; background: #e8f5e9; border-radius: 4px; font-size: 14px;">${tool.name}</a></li>`).join('\n        ')}
       </ul>
     </div>`;
-      // 在 </body> 之前添加相关工具
-      html = html.replace('</body>', `${relatedHtml}\n  </body>`);
     }
+
+    // 所有工具列表（按类别分组）
+    const categories = {};
+    allTools.forEach(tool => {
+      if (!categories[tool.category]) {
+        categories[tool.category] = [];
+      }
+      categories[tool.category].push(tool);
+    });
+
+    const allToolsHtml = `
+    <div class="all-tools" style="max-width: 600px; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 12px;">
+      <h3 style="margin-bottom: 12px; font-size: 18px;">All Developer Tools</h3>
+      ${Object.entries(categories).map(([category, tools]) => `
+        <div style="margin-bottom: 16px;">
+          <h4 style="margin-bottom: 8px; font-size: 14px; color: #666;">${category}</h4>
+          <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px;">
+            ${tools.map(tool => `<li><a href="${BASE_URL}${tool.path}/" style="color: #18a058; text-decoration: none; padding: 3px 6px; background: #e8f5e9; border-radius: 4px; font-size: 12px;">${tool.name}</a></li>`).join('\n            ')}
+          </ul>
+        </div>
+      `).join('')}
+    </div>`;
+
+    // 在 </body> 之前添加
+    html = html.replace('</body>', `${relatedHtml}\n${allToolsHtml}\n  </body>`);
   }
 
   return html;
@@ -844,6 +871,17 @@ function getRelatedTools(currentPage) {
     name: p.title.split(' - ')[0].split(' | ')[0],
     path: p.path
   }));
+}
+
+// 获取所有工具列表（用于底部链接）
+function getAllToolsList(currentPage) {
+  return pages
+    .filter(p => p.path !== '/' && p.path !== currentPage.path)
+    .map(p => ({
+      name: p.title.split(' - ')[0].split(' | ')[0],
+      path: p.path,
+      category: p.category || 'Tools'
+    }));
 }
 
 // 创建目录
