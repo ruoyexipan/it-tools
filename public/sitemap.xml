@@ -14,7 +14,7 @@
 
   <!-- About Page -->
   <url>
-    <loc>https://agentsaitools.com/about</loc>
+    <loc>https://agentsaitools.com/about/</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -22,7 +22,7 @@
 
   <!-- Contact Page -->
   <url>
-    <loc>https://agentsaitools.com/contact</loc>
+    <loc>https://agentsaitools.com/contact/</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -30,7 +30,7 @@
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://agentsaitools.com/privacy-policy</loc>
+    <loc>https://agentsaitools.com/privacy-policy/</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -38,7 +38,7 @@
 
   <!-- Terms of Service -->
   <url>
-    <loc>https://agentsaitools.com/terms-of-service</loc>
+    <loc>https://agentsaitools.com/terms-of-service/</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -46,28 +46,28 @@
 
   <!-- Landing Pages -->
   <url>
-    <loc>https://agentsaitools.com/docker-run-to-compose-converter</loc>
+    <loc>https://agentsaitools.com/docker-run-to-compose-converter/</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/jwt-decoder</loc>
+    <loc>https://agentsaitools.com/jwt-decoder/</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/json-formatter</loc>
+    <loc>https://agentsaitools.com/json-formatter/</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/base64-converter</loc>
+    <loc>https://agentsaitools.com/base64-converter/</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -75,77 +75,77 @@
 
   <!-- Crypto Tools -->
   <url>
-    <loc>https://agentsaitools.com/token-generator</loc>
+    <loc>https://agentsaitools.com/token-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/hash-text</loc>
+    <loc>https://agentsaitools.com/hash-text/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/bcrypt</loc>
+    <loc>https://agentsaitools.com/bcrypt/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/uuid-generator</loc>
+    <loc>https://agentsaitools.com/uuid-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/ulid-generator</loc>
+    <loc>https://agentsaitools.com/ulid-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/encryption</loc>
+    <loc>https://agentsaitools.com/encryption/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/bip39-generator</loc>
+    <loc>https://agentsaitools.com/bip39-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/hmac-generator</loc>
+    <loc>https://agentsaitools.com/hmac-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/rsa-key-pair-generator</loc>
+    <loc>https://agentsaitools.com/rsa-key-pair-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/password-strength-analyser</loc>
+    <loc>https://agentsaitools.com/password-strength-analyser/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/pdf-signature-checker</loc>
+    <loc>https://agentsaitools.com/pdf-signature-checker/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -153,140 +153,140 @@
 
   <!-- Converter Tools -->
   <url>
-    <loc>https://agentsaitools.com/date-converter</loc>
+    <loc>https://agentsaitools.com/date-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/base-converter</loc>
+    <loc>https://agentsaitools.com/base-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/roman-numeral-converter</loc>
+    <loc>https://agentsaitools.com/roman-numeral-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/base64-string-converter</loc>
+    <loc>https://agentsaitools.com/base64-string-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/base64-file-converter</loc>
+    <loc>https://agentsaitools.com/base64-file-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/color-converter</loc>
+    <loc>https://agentsaitools.com/color-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/case-converter</loc>
+    <loc>https://agentsaitools.com/case-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/text-to-nato-alphabet</loc>
+    <loc>https://agentsaitools.com/text-to-nato-alphabet/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/text-to-binary</loc>
+    <loc>https://agentsaitools.com/text-to-binary/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/text-to-unicode</loc>
+    <loc>https://agentsaitools.com/text-to-unicode/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/yaml-to-json-converter</loc>
+    <loc>https://agentsaitools.com/yaml-to-json-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/yaml-to-toml</loc>
+    <loc>https://agentsaitools.com/yaml-to-toml/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/json-to-yaml-converter</loc>
+    <loc>https://agentsaitools.com/json-to-yaml-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/json-to-toml</loc>
+    <loc>https://agentsaitools.com/json-to-toml/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/list-converter</loc>
+    <loc>https://agentsaitools.com/list-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/toml-to-json</loc>
+    <loc>https://agentsaitools.com/toml-to-json/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/toml-to-yaml</loc>
+    <loc>https://agentsaitools.com/toml-to-yaml/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/xml-to-json</loc>
+    <loc>https://agentsaitools.com/xml-to-json/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/json-to-xml</loc>
+    <loc>https://agentsaitools.com/json-to-xml/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/markdown-to-html</loc>
+    <loc>https://agentsaitools.com/markdown-to-html/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -294,112 +294,112 @@
 
   <!-- Web Tools -->
   <url>
-    <loc>https://agentsaitools.com/url-encoder</loc>
+    <loc>https://agentsaitools.com/url-encoder/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/html-entities</loc>
+    <loc>https://agentsaitools.com/html-entities/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/url-parser</loc>
+    <loc>https://agentsaitools.com/url-parser/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/device-information</loc>
+    <loc>https://agentsaitools.com/device-information/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/basic-auth-generator</loc>
+    <loc>https://agentsaitools.com/basic-auth-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/og-meta-generator</loc>
+    <loc>https://agentsaitools.com/og-meta-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/otp-generator</loc>
+    <loc>https://agentsaitools.com/otp-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/mime-types</loc>
+    <loc>https://agentsaitools.com/mime-types/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/jwt-parser</loc>
+    <loc>https://agentsaitools.com/jwt-parser/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/keycode-info</loc>
+    <loc>https://agentsaitools.com/keycode-info/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/slugify-string</loc>
+    <loc>https://agentsaitools.com/slugify-string/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/html-wysiwyg-editor</loc>
+    <loc>https://agentsaitools.com/html-wysiwyg-editor/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/user-agent-parser</loc>
+    <loc>https://agentsaitools.com/user-agent-parser/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/http-status-codes</loc>
+    <loc>https://agentsaitools.com/http-status-codes/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/json-diff</loc>
+    <loc>https://agentsaitools.com/json-diff/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/safelink-decoder</loc>
+    <loc>https://agentsaitools.com/safelink-decoder/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -407,28 +407,28 @@
 
   <!-- Images and Videos Tools -->
   <url>
-    <loc>https://agentsaitools.com/qrcode-generator</loc>
+    <loc>https://agentsaitools.com/qrcode-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/wifi-qrcode-generator</loc>
+    <loc>https://agentsaitools.com/wifi-qrcode-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/svg-placeholder-generator</loc>
+    <loc>https://agentsaitools.com/svg-placeholder-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/camera-recorder</loc>
+    <loc>https://agentsaitools.com/camera-recorder/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -436,98 +436,98 @@
 
   <!-- Development Tools -->
   <url>
-    <loc>https://agentsaitools.com/git-memo</loc>
+    <loc>https://agentsaitools.com/git-memo/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/random-port-generator</loc>
+    <loc>https://agentsaitools.com/random-port-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/crontab-generator</loc>
+    <loc>https://agentsaitools.com/crontab-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/json-prettify</loc>
+    <loc>https://agentsaitools.com/json-prettify/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/json-minify</loc>
+    <loc>https://agentsaitools.com/json-minify/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/json-to-csv</loc>
+    <loc>https://agentsaitools.com/json-to-csv/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/sql-prettify</loc>
+    <loc>https://agentsaitools.com/sql-prettify/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/chmod-calculator</loc>
+    <loc>https://agentsaitools.com/chmod-calculator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/docker-run-to-docker-compose-converter</loc>
+    <loc>https://agentsaitools.com/docker-run-to-docker-compose-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/xml-formatter</loc>
+    <loc>https://agentsaitools.com/xml-formatter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/yaml-prettify</loc>
+    <loc>https://agentsaitools.com/yaml-prettify/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/email-normalizer</loc>
+    <loc>https://agentsaitools.com/email-normalizer/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/regex-tester</loc>
+    <loc>https://agentsaitools.com/regex-tester/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/regex-memo</loc>
+    <loc>https://agentsaitools.com/regex-memo/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -535,42 +535,42 @@
 
   <!-- Network Tools -->
   <url>
-    <loc>https://agentsaitools.com/ipv4-subnet-calculator</loc>
+    <loc>https://agentsaitools.com/ipv4-subnet-calculator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/ipv4-address-converter</loc>
+    <loc>https://agentsaitools.com/ipv4-address-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/ipv4-range-expander</loc>
+    <loc>https://agentsaitools.com/ipv4-range-expander/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/mac-address-lookup</loc>
+    <loc>https://agentsaitools.com/mac-address-lookup/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/mac-address-generator</loc>
+    <loc>https://agentsaitools.com/mac-address-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/ipv6-ula-generator</loc>
+    <loc>https://agentsaitools.com/ipv6-ula-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -578,21 +578,21 @@
 
   <!-- Math Tools -->
   <url>
-    <loc>https://agentsaitools.com/math-evaluator</loc>
+    <loc>https://agentsaitools.com/math-evaluator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/eta-calculator</loc>
+    <loc>https://agentsaitools.com/eta-calculator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/percentage-calculator</loc>
+    <loc>https://agentsaitools.com/percentage-calculator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -600,21 +600,21 @@
 
   <!-- Measurement Tools -->
   <url>
-    <loc>https://agentsaitools.com/chronometer</loc>
+    <loc>https://agentsaitools.com/chronometer/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/temperature-converter</loc>
+    <loc>https://agentsaitools.com/temperature-converter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/benchmark-builder</loc>
+    <loc>https://agentsaitools.com/benchmark-builder/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -622,49 +622,49 @@
 
   <!-- Text Tools -->
   <url>
-    <loc>https://agentsaitools.com/lorem-ipsum-generator</loc>
+    <loc>https://agentsaitools.com/lorem-ipsum-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/text-statistics</loc>
+    <loc>https://agentsaitools.com/text-statistics/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/emoji-picker</loc>
+    <loc>https://agentsaitools.com/emoji-picker/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/string-obfuscator</loc>
+    <loc>https://agentsaitools.com/string-obfuscator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/text-diff</loc>
+    <loc>https://agentsaitools.com/text-diff/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/numeronym-generator</loc>
+    <loc>https://agentsaitools.com/numeronym-generator/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/ascii-text-drawer</loc>
+    <loc>https://agentsaitools.com/ascii-text-drawer/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -672,14 +672,14 @@
 
   <!-- Data Tools -->
   <url>
-    <loc>https://agentsaitools.com/phone-parser-and-formatter</loc>
+    <loc>https://agentsaitools.com/phone-parser-and-formatter/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/iban-validator-and-parser</loc>
+    <loc>https://agentsaitools.com/iban-validator-and-parser/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -687,14 +687,14 @@
 
   <!-- New Landing Pages -->
   <url>
-    <loc>https://agentsaitools.com/base64-file</loc>
+    <loc>https://agentsaitools.com/base64-file/</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://agentsaitools.com/subnet-calculator</loc>
+    <loc>https://agentsaitools.com/subnet-calculator/</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

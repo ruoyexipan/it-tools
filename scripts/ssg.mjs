@@ -675,7 +675,8 @@ const pages = [
 
 // 生成 HTML
 function generateHtml(page) {
-  const url = `${BASE_URL}${page.path}`;
+  const path = page.path === '/' ? '/' : `${page.path}/`;
+  const url = `${BASE_URL}${path}`;
   const category = page.category || 'Tools';
   
   // 替换 Title
