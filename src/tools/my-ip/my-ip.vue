@@ -13,37 +13,59 @@ const ipInfo = ref({
 const loading = ref(true);
 const error = ref('');
 
-async function fetchIP(): Promise<string> {
-  const apis = [
-    { url: 'https://api.ipify.org?format=json', parse: (d: any) => d.ip },
-    { url: 'https://api.seeip.org/jsonip', parse: (d: any) => d.ip },
-    { url: 'https://ipapi.co/json/', parse: (d: any) => d.ip },
-    { url: 'https://ipinfo.io/json', parse: (d: any) => d.ip },
-  ];
+// CORS-friendly IP APIs
+const ipApis = [
+  'https://api.ipify.org?format=json',
+  'https://api.seeip.org/jsonip',
+  'https://ipinfo.io/json',
+];
 
-  for (const api of apis) {
+// CORS-friendly Geo APIs
+function getGeoUrl(ip: string) {
+  return [
+    `https://ipinfo.io/${ip}/json`,
+    `https://ipapi.co/${ip}/json/`,
+  ];
+}
+
+async function fetchWithTimeout(url: string, timeout = 5000) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeout);
+  try {
+    const response = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeoutId);
+    return response;
+  } catch (e) {
+    clearTimeout(timeoutId);
+    throw e;
+  }
+}
+
+async function fetchIP(): Promise<{ ip: string; data?: any }> {
+  for (const url of ipApis) {
     try {
-      const response = await fetch(api.url, { signal: AbortSignal.timeout(5000) });
+      const response = await fetchWithTimeout(url);
       if (!response.ok) continue;
       const data = await response.json();
-      const ip = api.parse(data);
-      if (ip && ip !== 'undefined') return ip;
+      const ip = data.ip || data.IPv4;
+      if (ip) {
+        // If we got ipinfo.io, we already have geo data
+        if (data.city) {
+          return { ip, data };
+        }
+        return { ip };
+      }
     } catch (e) {
       continue;
     }
   }
-  throw new Error('All IP APIs failed');
+  throw new Error('Unable to fetch IP');
 }
 
 async function fetchGeoInfo(ip: string) {
-  const apis = [
-    `https://ipapi.co/${ip}/json/`,
-    `https://ipinfo.io/${ip}/json`,
-  ];
-
-  for (const url of apis) {
+  for (const url of getGeoUrl(ip)) {
     try {
-      const response = await fetch(url, { signal: AbortSignal.timeout(5000) });
+      const response = await fetchWithTimeout(url);
       if (!response.ok) continue;
       const data = await response.json();
       return {
@@ -62,9 +84,23 @@ async function fetchGeoInfo(ip: string) {
 
 onMounted(async () => {
   try {
-    const ip = await fetchIP();
-    const geo = await fetchGeoInfo(ip);
-    ipInfo.value = { ip, ...geo };
+    const result = await fetchIP();
+    let geo;
+
+    if (result.data) {
+      // We already have geo data from ipinfo.io
+      geo = {
+        city: result.data.city || 'N/A',
+        region: result.data.region || 'N/A',
+        country: result.data.country || 'N/A',
+        org: result.data.org || 'N/A',
+        timezone: result.data.timezone || 'N/A',
+      };
+    } else {
+      geo = await fetchGeoInfo(result.ip);
+    }
+
+    ipInfo.value = { ip: result.ip, ...geo };
   } catch (e) {
     error.value = 'Unable to fetch IP address. Please try again later.';
   } finally {
