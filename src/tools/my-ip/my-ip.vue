@@ -16,39 +16,55 @@ const error = ref('');
 
 async function fetchIPInfo() {
   try {
-    // Use our own API endpoint (Cloudflare Pages Function)
-    const response = await fetch('/api/ip');
-    if (!response.ok) throw new Error('API error');
-    const data = await response.json();
+    // Step 1: Get IP from our API (Cloudflare)
+    const ipResponse = await fetch('/api/ip');
+    if (!ipResponse.ok) throw new Error('API error');
+    const ipData = await ipResponse.json();
     
+    const ip = ipData.ip;
+    if (!ip || ip === 'unknown') throw new Error('No IP');
+
+    // Step 2: Get detailed location from external API
+    let geoData = {
+      city: ipData.city !== 'N/A' ? ipData.city : '',
+      region: ipData.region !== 'N/A' ? ipData.region : '',
+      country: ipData.country || '',
+      org: ipData.org !== 'N/A' ? ipData.org : '',
+      timezone: ipData.timezone !== 'N/A' ? ipData.timezone : '',
+      asn: ipData.asn !== 'N/A' ? ipData.asn : '',
+    };
+
+    // If we're missing data, fetch from external API
+    if (!geoData.city || !geoData.org) {
+      try {
+        const geoResponse = await fetch(`https://ipinfo.io/${ip}/json`);
+        if (geoResponse.ok) {
+          const geo = await geoResponse.json();
+          geoData = {
+            city: geoData.city || geo.city || 'N/A',
+            region: geoData.region || geo.region || 'N/A',
+            country: geoData.country || geo.country || 'N/A',
+            org: geoData.org || geo.org || 'N/A',
+            timezone: geoData.timezone || geo.timezone || 'N/A',
+            asn: geoData.asn || geo.org || 'N/A',
+          };
+        }
+      } catch (e) {
+        // Ignore geo API errors
+      }
+    }
+
     ipInfo.value = {
-      ip: data.ip || 'N/A',
-      city: data.city || 'N/A',
-      region: data.region || 'N/A',
-      country: data.country || 'N/A',
-      org: data.org || 'N/A',
-      timezone: data.timezone || 'N/A',
-      asn: data.asn || 'N/A',
+      ip,
+      city: geoData.city || 'N/A',
+      region: geoData.region || 'N/A',
+      country: geoData.country || 'N/A',
+      org: geoData.org || 'N/A',
+      timezone: geoData.timezone || 'N/A',
+      asn: geoData.asn || 'N/A',
     };
   } catch (e) {
-    // Fallback to external API
-    try {
-      const response = await fetch('https://ipinfo.io/json');
-      if (!response.ok) throw new Error('Fallback API error');
-      const data = await response.json();
-      
-      ipInfo.value = {
-        ip: data.ip || 'N/A',
-        city: data.city || 'N/A',
-        region: data.region || 'N/A',
-        country: data.country || 'N/A',
-        org: data.org || 'N/A',
-        timezone: data.timezone || 'N/A',
-        asn: data.org || 'N/A',
-      };
-    } catch (e2) {
-      error.value = 'Unable to fetch IP address. Please try again later.';
-    }
+    error.value = 'Unable to fetch IP address. Please try again later.';
   } finally {
     loading.value = false;
   }
