@@ -8,12 +8,6 @@
 Useful tools for developer and people working in IT. <a href="https://it-tools.tech">Try it!</a>
 </p>
 
-## Functionalities and roadmap
-
-Please check the [issues](https://github.com/CorentinTh/it-tools/issues) to see if some feature listed to be implemented.
-
-You have an idea of a tool? Submit a [feature request](https://github.com/CorentinTh/it-tools/issues/new/choose)!
-
 ## Self host
 
 Self host solutions for your homelab
@@ -29,15 +23,6 @@ docker run -d --name it-tools --restart unless-stopped -p 8080:80 corentinth/it-
 ```sh
 docker run -d --name it-tools --restart unless-stopped -p 8080:80 ghcr.io/corentinth/it-tools:latest
 ```
-
-**Other solutions:**
-
-- [Cloudron](https://www.cloudron.io/store/tech.ittools.cloudron.html)
-- [Tipi](https://www.runtipi.io/docs/apps-available)
-- [Unraid](https://unraid.net/community/apps?q=it-tools)
-
-## Contribute
-
 ### Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) with the following extensions:
