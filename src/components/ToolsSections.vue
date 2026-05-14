@@ -138,8 +138,8 @@ const showRelatedTools = computed(() => currentPath.value !== '/');
 
 <style scoped>
 .tools-sections {
-  max-width: 600px;
-  margin: 24px auto;
+  width: 100%;
+  margin: 24px 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -150,6 +150,7 @@ const showRelatedTools = computed(() => currentPath.value !== '/');
   border: 1px solid #e8e8ed;
   border-radius: 16px;
   padding: 24px;
+  width: 100%;
 }
 
 .section-title {
