@@ -393,7 +393,7 @@ const pages = [
   },
   // Images 工具
   {
-    path: '/qr-code-generator',
+    path: '/qrcode-generator',
     title: 'QR Code Generator | AgentsAITools',
     description: 'Generate QR codes online. Free QR code generator.',
     keywords: 'qr code generator, create qr code',
