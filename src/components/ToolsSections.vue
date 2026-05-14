@@ -9,24 +9,50 @@ const toolStore = useToolStore();
 
 const currentPath = computed(() => route.path);
 
-// Scroll to top function
+// Scroll to top with multiple fallbacks
 function scrollToTop() {
-  nextTick(() => {
-    // Try Naive UI scroll container first
-    const scrollContainer = document.querySelector('.n-layout-scroll-container');
-    if (scrollContainer) {
-      scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      // Fallback to window
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Try multiple selectors to find the scroll container
+  const selectors = [
+    '.n-layout-scroll-container',
+    '.content [class*="scroll"]',
+    '.n-layout .content',
+    'main',
+  ];
+  
+  for (const selector of selectors) {
+    const el = document.querySelector(selector);
+    if (el) {
+      const style = window.getComputedStyle(el);
+      if (style.overflow === 'auto' || style.overflow === 'scroll' || 
+          style.overflowY === 'auto' || style.overflowY === 'scroll') {
+        el.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
     }
-  });
+  }
+  
+  // Try finding any scrollable element
+  const allElements = document.querySelectorAll('*');
+  for (const el of allElements) {
+    if (el.scrollHeight > el.clientHeight + 10 && el.scrollTop > 0) {
+      el.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+  }
+  
+  // Fallback to window
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Navigate and scroll
 function navigateTo(path: string) {
-  router.push(path);
+  // First scroll immediately
   scrollToTop();
+  // Then navigate
+  router.push(path);
+  // Scroll again after navigation completes
+  setTimeout(scrollToTop, 150);
+  setTimeout(scrollToTop, 500);
 }
 
 // 获取相关工具（同类别）
