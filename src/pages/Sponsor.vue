@@ -35,17 +35,18 @@ const tiers = [
     description: 'Fund new tool development',
     icon: '🚀',
     color: '#8b5cf6',
-    url: 'https://www.paypal.com/ncp/payment/LRDALQQ94V4JW',
+    url: 'https://www.paypal.com/ncp/payment/3VTNAH5WCZMRG',
   },
 ];
+
+const customUrl = 'https://www.paypal.com/ncp/payment/LRDALQQ94V4JW';
 
 function donate(tier: any) {
   window.open(tier.url, '_blank');
 }
 
 function donateCustom() {
-  // Custom amount uses the $25 link as base
-  window.open('https://www.paypal.com/ncp/payment/LRDALQQ94V4JW', '_blank');
+  window.open(customUrl, '_blank');
 }
 </script>
 
@@ -106,11 +107,11 @@ function donateCustom() {
 
     <!-- Custom Amount -->
     <section class="custom-section">
-      <h2>Other Amounts</h2>
-      <p class="custom-desc">For custom amounts, please contact us directly.</p>
-      <a href="mailto:contact@agentsaitools.com" class="contact-btn">
-        📧 Contact Us
-      </a>
+      <h2>Custom Amount</h2>
+      <p class="custom-desc">Want to give a different amount? Use our custom payment link.</p>
+      <button class="custom-btn" @click="donateCustom">
+        💝 Donate Custom Amount
+      </button>
     </section>
 
     <!-- Other Ways -->
@@ -307,23 +308,21 @@ function donateCustom() {
   margin-bottom: 16px;
 }
 
-.contact-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background: #f8f9fa;
-  border: 1px solid #e8e8ed;
+.custom-btn {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  color: white;
+  border: none;
   border-radius: 8px;
-  text-decoration: none;
-  color: #1d1d1f;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
   transition: all 0.2s;
 }
 
-.contact-btn:hover {
-  background: #e8e8ed;
+.custom-btn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 /* Other Section */
