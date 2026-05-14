@@ -293,6 +293,7 @@ declare module '@vue/runtime-core' {
     'TomlToYaml.landing': typeof import('./src/pages/landing/toml-to-yaml.landing.vue')['default']
     'Tool.layout': typeof import('./src/layouts/tool.layout.vue')['default']
     ToolCard: typeof import('./src/components/ToolCard.vue')['default']
+    ToolsSections: typeof import('./src/components/ToolsSections.vue')['default']
     UlidGenerator: typeof import('./src/tools/ulid-generator/ulid-generator.vue')['default']
     'UlidGenerator.landing': typeof import('./src/pages/landing/ulid-generator.landing.vue')['default']
     UnixTimestampConverter: typeof import('./src/tools/unix-timestamp-converter/unix-timestamp-converter.vue')['default']

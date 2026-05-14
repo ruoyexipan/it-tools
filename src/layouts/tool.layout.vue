@@ -4,6 +4,7 @@ import { useHead } from '@vueuse/head';
 import type { HeadObject } from '@vueuse/head';
 import BaseLayout from './base.layout.vue';
 import Breadcrumb from '@/components/Breadcrumb.vue';
+import ToolsSections from '@/components/ToolsSections.vue';
 import FavoriteButton from '@/components/FavoriteButton.vue';
 import type { Tool } from '@/tools/tools.types';
 
@@ -70,6 +71,9 @@ const breadcrumbJsonLd = computed(() => ({
       <div class="tool-content">
         <slot />
       </div>
+
+      <!-- Related Tools & All Tools -->
+      <ToolsSections />
     </div>
   </BaseLayout>
 </template>
@@ -100,6 +104,10 @@ const breadcrumbJsonLd = computed(() => ({
   margin: 0;
 }
 
+:root.dark .tool-title {
+  color: #f5f5f7;
+}
+
 .tool-separator {
   width: 60px;
   height: 3px;
@@ -115,6 +123,10 @@ const breadcrumbJsonLd = computed(() => ({
   margin: 0;
 }
 
+:root.dark .tool-description {
+  color: #999;
+}
+
 .tool-content {
   display: flex;
   flex-direction: column;
@@ -125,7 +137,6 @@ const breadcrumbJsonLd = computed(() => ({
   .tool-title {
     font-size: 24px;
   }
-
   .tool-header {
     padding: 20px 0 16px;
   }
