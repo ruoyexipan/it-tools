@@ -1,0 +1,199 @@
+/* Apple-Inspired Design System for AgentsAITools */
+
+:root {
+  /* Colors - Apple Style */
+  --apple-bg: #f5f5f7;
+  --apple-card: #ffffff;
+  --apple-text: #1d1d1f;
+  --apple-text-secondary: #86868b;
+  --apple-text-tertiary: #6e6e73;
+  --apple-border: #d2d2d7;
+  --apple-border-light: #e8e8ed;
+  
+  /* Accent Colors */
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
+  --apple-green: #34c759;
+  --apple-red: #ff3b30;
+  --apple-orange: #ff9500;
+  --apple-purple: #af52de;
+  
+  /* Shadows - Apple Style */
+  --apple-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --apple-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --apple-shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --apple-shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+  
+  /* Border Radius - Apple Style */
+  --apple-radius-sm: 8px;
+  --apple-radius-md: 12px;
+  --apple-radius-lg: 16px;
+  --apple-radius-xl: 20px;
+  --apple-radius-2xl: 24px;
+  
+  /* Typography - Apple Style */
+  --apple-font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  --apple-font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  
+  /* Spacing */
+  --apple-space-xs: 4px;
+  --apple-space-sm: 8px;
+  --apple-space-md: 16px;
+  --apple-space-lg: 24px;
+  --apple-space-xl: 32px;
+  --apple-space-2xl: 48px;
+  --apple-space-3xl: 64px;
+  
+  /* Transitions */
+  --apple-transition: all 0.2s ease;
+  --apple-transition-slow: all 0.3s ease;
+}
+
+/* Global Styles */
+* {
+  font-family: var(--apple-font);
+}
+
+body {
+  background: var(--apple-bg);
+  color: var(--apple-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Card Styles - Apple Glass Effect */
+.apple-card {
+  background: var(--apple-card);
+  border-radius: var(--apple-radius-lg);
+  box-shadow: var(--apple-shadow-sm);
+  border: 1px solid var(--apple-border-light);
+  transition: var(--apple-transition);
+  overflow: hidden;
+}
+
+.apple-card:hover {
+  box-shadow: var(--apple-shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Button Styles - Apple Style */
+.apple-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: var(--apple-radius-sm);
+  font-weight: 500;
+  font-size: 14px;
+  transition: var(--apple-transition);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.apple-btn-primary {
+  background: var(--apple-blue);
+  color: white;
+}
+
+.apple-btn-primary:hover {
+  background: var(--apple-blue-hover);
+  transform: scale(1.02);
+}
+
+.apple-btn-secondary {
+  background: var(--apple-bg);
+  color: var(--apple-text);
+  border: 1px solid var(--apple-border);
+}
+
+.apple-btn-secondary:hover {
+  background: var(--apple-border-light);
+}
+
+/* Input Styles - Apple Style */
+.apple-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--apple-border);
+  border-radius: var(--apple-radius-sm);
+  font-size: 14px;
+  background: var(--apple-card);
+  color: var(--apple-text);
+  transition: var(--apple-transition);
+  outline: none;
+}
+
+.apple-input:focus {
+  border-color: var(--apple-blue);
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+}
+
+/* Badge Styles */
+.apple-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--apple-bg);
+  color: var(--apple-text-secondary);
+  border: 1px solid var(--apple-border-light);
+}
+
+.apple-badge-primary {
+  background: rgba(0, 113, 227, 0.1);
+  color: var(--apple-blue);
+  border-color: rgba(0, 113, 227, 0.2);
+}
+
+/* Divider */
+.apple-divider {
+  height: 1px;
+  background: var(--apple-border-light);
+  margin: var(--apple-space-md) 0;
+}
+
+/* Tag Styles */
+.apple-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: var(--apple-radius-sm);
+  font-size: 13px;
+  background: var(--apple-bg);
+  color: var(--apple-text-secondary);
+  border: 1px solid var(--apple-border-light);
+  transition: var(--apple-transition);
+}
+
+.apple-tag:hover {
+  background: var(--apple-border-light);
+  color: var(--apple-text);
+}
+
+/* Scrollbar - Apple Style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--apple-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--apple-text-tertiary);
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 113, 227, 0.2);
+  color: var(--apple-text);
+}

@@ -7,37 +7,37 @@ import ToolCard from '../components/ToolCard.vue';
 import { useToolStore } from '@/tools/tools.store';
 
 const toolStore = useToolStore();
-
 useHead({ title: 'AgentsAITools - Free Online Developer Tools Collection' });
 const { t } = useI18n();
-
 const favoriteTools = computed(() => toolStore.favoriteTools);
 
-// Update favorite tools order when drag is finished
 function onUpdateFavoriteTools() {
-  toolStore.updateFavoriteTools(favoriteTools.value); // Update the store with the new order
+  toolStore.updateFavoriteTools(favoriteTools.value);
 }
 </script>
 
 <template>
-  <div class="pt-50px">
-    <h1 class="sr-only">AgentsAITools - Free Online Developer Tools Collection</h1>
-    <div class="grid-wrapper">
-      <div class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4">
-      </div>
+  <div class="home-page">
+    <div class="hero-section">
+      <h1 class="sr-only">AgentsAITools - Free Online Developer Tools</h1>
+      <h2 class="hero-title">Developer Tools</h2>
+      <p class="hero-subtitle">Free online tools for developers. No signup required.</p>
+    </div>
 
-      <transition name="height">
-        <div v-if="toolStore.favoriteTools.length > 0">
-          <h3 class="mb-5px mt-25px text-neutral-400 font-500">
-            {{ $t('home.categories.favoriteTools') }}
-            <c-tooltip :tooltip="$t('home.categories.favoritesDndToolTip')">
-              <n-icon :component="IconDragDrop" size="18" />
-            </c-tooltip>
+    <div class="tools-section">
+      <!-- Favorite Tools -->
+      <transition name="fade">
+        <div v-if="toolStore.favoriteTools.length > 0" class="tool-group">
+          <h3 class="group-title">
+            {{ t('home.categories.favoriteTools') }}
+            <span class="drag-hint">
+              <n-icon :component="IconDragDrop" size="16" />
+            </span>
           </h3>
           <Draggable
             :list="favoriteTools"
-            class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4"
-            ghost-class="ghost-favorites-draggable"
+            class="tools-grid"
+            ghost-class="ghost-card"
             item-key="name"
             @end="onUpdateFavoriteTools"
           >
@@ -48,26 +48,100 @@ function onUpdateFavoriteTools() {
         </div>
       </transition>
 
-      <div v-if="toolStore.newTools.length > 0">
-        <h3 class="mb-5px mt-25px text-neutral-400 font-500">
-          {{ t('home.categories.newestTools') }}
-        </h3>
-        <div class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4">
+      <!-- New Tools -->
+      <div v-if="toolStore.newTools.length > 0" class="tool-group">
+        <h3 class="group-title">{{ t('home.categories.newestTools') }}</h3>
+        <div class="tools-grid">
           <ToolCard v-for="tool in toolStore.newTools" :key="tool.name" :tool="tool" />
         </div>
       </div>
 
-      <h3 class="mb-5px mt-25px text-neutral-400 font-500">
-        {{ $t('home.categories.allTools') }}
-      </h3>
-      <div class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4">
-        <ToolCard v-for="tool in toolStore.tools" :key="tool.name" :tool="tool" />
+      <!-- All Tools -->
+      <div class="tool-group">
+        <h3 class="group-title">{{ t('home.categories.allTools') }}</h3>
+        <div class="tools-grid">
+          <ToolCard v-for="tool in toolStore.tools" :key="tool.name" :tool="tool" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped lang="less">
+<style scoped>
+.home-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 48px 20px;
+  margin-bottom: 32px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1d1d1f;
+  letter-spacing: -1px;
+  margin: 0 0 12px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #6e6e73;
+  margin: 0;
+}
+
+.tools-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.tool-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.group-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d1d1f;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drag-hint {
+  color: #86868b;
+  font-size: 12px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.ghost-card {
+  opacity: 0.4;
+  background: #f5f5f7;
+  border: 2px dashed #0071e3;
+  border-radius: 12px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -80,38 +154,17 @@ function onUpdateFavoriteTools() {
   border-width: 0;
 }
 
-.height-enter-active,
-.height-leave-active {
-  transition: all 0.5s ease-in-out;
-  overflow: hidden;
-  max-height: 500px;
-}
-
-.height-enter-from,
-.height-leave-to {
-  max-height: 42px;
-  overflow: hidden;
-  opacity: 0;
-  margin-bottom: 0;
-}
-
-.ghost-favorites-draggable {
-  opacity: 0.4;
-  background-color: #ccc;
-  border: 2px dashed #666;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-  animation: ghost-favorites-draggable-animation 0.2s ease-out;
-}
-
-@keyframes ghost-favorites-draggable-animation {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
   }
-  100% {
-    opacity: 0.4;
-    transform: scale(1.0);
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>

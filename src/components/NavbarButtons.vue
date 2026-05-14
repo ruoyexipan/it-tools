@@ -7,18 +7,28 @@ const { isDarkTheme } = toRefs(styleStore);
 </script>
 
 <template>
-  <c-tooltip :tooltip="isDarkTheme ? $t('home.nav.lightMode') : $t('home.nav.darkMode')" position="bottom">
-    <c-button circle variant="text" :aria-label="$t('home.nav.mode')" @click="() => styleStore.toggleDark()">
-      <n-icon v-if="isDarkTheme" size="25" :component="IconSun" />
-      <n-icon v-else size="25" :component="IconMoon" />
-    </c-button>
-  </c-tooltip>
+  <button class="theme-toggle" :title="isDarkTheme ? 'Switch to Light Mode' : 'Switch to Dark Mode'" @click="styleStore.toggleDark()">
+    <n-icon v-if="isDarkTheme" size="18" :component="IconSun" />
+    <n-icon v-else size="18" :component="IconMoon" />
+  </button>
 </template>
 
-<style lang="less" scoped>
-.n-button {
-  &:not(:last-child) {
-    margin-right: 5px;
-  }
+<style scoped>
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1d1d1f;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 </style>
