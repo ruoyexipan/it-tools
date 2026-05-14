@@ -54,10 +54,10 @@ const paypalUrl = 'https://www.paypal.com/paypalme/ruoyexi';
           <NIcon size="16" :component="BrandTwitter" />
           <span>Twitter</span>
         </a>
-        <a :href="paypalUrl" target="_blank" rel="noopener noreferrer" class="footer-link sponsor">
+        <RouterLink to="/sponsor" class="footer-link sponsor">
           <NIcon size="16" :component="Heart" />
           <span>Sponsor</span>
-        </a>
+        </RouterLink>
         <div class="footer-divider" />
         <RouterLink to="/about" class="footer-link">
           <NIcon size="16" :component="Settings" />
@@ -99,9 +99,9 @@ const paypalUrl = 'https://www.paypal.com/paypalme/ruoyexi';
           <a :href="twitterUrl" target="_blank" rel="noopener noreferrer" class="toolbar-btn twitter-btn" title="Follow us on Twitter">
             <NIcon size="18" :component="BrandTwitter" />
           </a>
-          <a :href="paypalUrl" target="_blank" rel="noopener noreferrer" class="toolbar-btn sponsor-btn" title="Support us">
+          <RouterLink to="/sponsor" class="toolbar-btn sponsor-btn" title="Support us">
             <NIcon size="18" :component="Heart" />
-          </a>
+          </RouterLink>
         </div>
       </header>
 

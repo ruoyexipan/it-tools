@@ -263,6 +263,7 @@ declare module '@vue/runtime-core' {
     SlugifyString: typeof import('./src/tools/slugify-string/slugify-string.vue')['default']
     'SlugifyString.landing': typeof import('./src/pages/landing/slugify-string.landing.vue')['default']
     SpanCopyable: typeof import('./src/components/SpanCopyable.vue')['default']
+    Sponsor: typeof import('./src/pages/Sponsor.vue')['default']
     SqlPrettify: typeof import('./src/tools/sql-prettify/sql-prettify.vue')['default']
     'SqlPrettify.landing': typeof import('./src/pages/landing/sql-prettify.landing.vue')['default']
     StringObfuscator: typeof import('./src/tools/string-obfuscator/string-obfuscator.vue')['default']

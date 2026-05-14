@@ -46,6 +46,11 @@ const router = createRouter({
       name: 'terms-of-service',
       component: () => import('./pages/legal/terms-of-service.vue'),
     },
+    {
+      path: '/sponsor',
+      name: 'sponsor',
+      component: () => import('./pages/Sponsor.vue'),
+    },
     // Landing pages for SEO
     { path: '/docker-run-to-compose-converter', name: 'docker-landing', component: () => import('./pages/landing/docker-run-to-compose.landing.vue') },
     { path: '/jwt-decoder', name: 'jwt-landing', component: () => import('./pages/landing/jwt-decoder.landing.vue') },
