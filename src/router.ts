@@ -20,6 +20,10 @@ const toolsRedirectRoutes = tools
 
 const router = createRouter({
   history: createWebHistory(config.app.baseUrl),
+  scrollBehavior(to, from, savedPosition) {
+    // Always scroll to top when navigating to a new page
+    return { top: 0, behavior: 'smooth' };
+  },
   routes: [
     {
       path: '/',
