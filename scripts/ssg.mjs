@@ -815,8 +815,8 @@ function generateHtml(page) {
   // 添加 H1 标签
   const h1Title = page.title.split(' - ')[0].split(' | ')[0];
   const h1Html = `
-    <h1 style="max-width: 600px; margin: 40px auto 20px; font-size: 32px; font-weight: 600; color: #1a1a1a;">${h1Title}</h1>
-    <p style="max-width: 600px; margin: 0 auto 20px; color: #666; font-size: 16px;">${page.description}</p>
+    <h1 style="max-width: 600px; margin: 40px auto 20px; font-size: 32px; font-weight: 600; color: #1d1d1f;">${h1Title}</h1>
+    <p style="max-width: 600px; margin: 0 auto 20px; color: #6e6e73; font-size: 16px; line-height: 1.6;">${page.description}</p>
   `;
   // 在 <div id="app"> 之后添加 H1
   html = html.replace('<div id="app">', `<div id="app">\n    ${h1Html}`);
@@ -829,11 +829,11 @@ function generateHtml(page) {
   let relatedHtml = '';
   if (relatedTools.length > 0) {
     relatedHtml = `
-    <div class="related-tools" style="max-width: 600px; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 12px;">
-      <h3 style="margin-bottom: 12px; font-size: 18px;">Related Tools</h3>
-      <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px;">
-        ${relatedTools.map(tool => `<li><a href="${BASE_URL}${tool.path}/" style="color: #18a058; text-decoration: none; padding: 4px 8px; background: #e8f5e9; border-radius: 4px; font-size: 14px;">${tool.name}</a></li>`).join('\n        ')}
-      </ul>
+    <div class="related-tools" style="max-width: 600px; margin: 24px auto; padding: 24px; background: #ffffff; border: 1px solid #e8e8ed; border-radius: 16px;">
+      <h3 style="margin-bottom: 16px; font-size: 18px; font-weight: 600; color: #1d1d1f;">Related Tools</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        ${relatedTools.map(tool => `<a href="${BASE_URL}${tool.path}/" style="display: inline-flex; align-items: center; padding: 8px 14px; background: #f5f5f7; color: #1d1d1f; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; border: 1px solid #e8e8ed; transition: all 0.2s;">${tool.name}</a>`).join('\n        ')}
+      </div>
     </div>`;
   }
 
@@ -847,17 +847,54 @@ function generateHtml(page) {
   });
 
   const allToolsHtml = `
-    <div class="all-tools" style="max-width: 600px; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 12px;">
-      <h3 style="margin-bottom: 12px; font-size: 18px;">All Developer Tools</h3>
+    <div class="all-tools" style="max-width: 600px; margin: 24px auto; padding: 24px; background: #ffffff; border: 1px solid #e8e8ed; border-radius: 16px;">
+      <h3 style="margin-bottom: 20px; font-size: 18px; font-weight: 600; color: #1d1d1f;">All Developer Tools</h3>
       ${Object.entries(categories).map(([category, tools]) => `
-        <div style="margin-bottom: 16px;">
-          <h4 style="margin-bottom: 8px; font-size: 14px; color: #666;">${category}</h4>
-          <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px;">
-            ${tools.map(tool => `<li><a href="${BASE_URL}${tool.path}/" style="color: #18a058; text-decoration: none; padding: 3px 6px; background: #e8f5e9; border-radius: 4px; font-size: 12px;">${tool.name}</a></li>`).join('\n            ')}
-          </ul>
+        <div style="margin-bottom: 20px;">
+          <h4 style="margin-bottom: 10px; font-size: 14px; font-weight: 600; color: #6e6e73; text-transform: uppercase; letter-spacing: 0.5px;">${category}</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            ${tools.map(tool => `<a href="${BASE_URL}${tool.path}/" style="display: inline-flex; padding: 6px 12px; background: #f5f5f7; color: #1d1d1f; text-decoration: none; border-radius: 6px; font-size: 12px; border: 1px solid #e8e8ed; transition: all 0.2s;">${tool.name}</a>`).join('\n            ')}
+          </div>
         </div>
       `).join('')}
     </div>`;
+
+  // 添加暗黑模式支持的 CSS
+  const darkModeCss = `
+    <style>
+      /* Dark mode support for injected elements */
+      :root.dark .related-tools,
+      :root.dark .all-tools {
+        background: #1e1e1e !important;
+        border-color: #333 !important;
+      }
+      :root.dark .related-tools h3,
+      :root.dark .all-tools h3,
+      :root.dark .all-tools h4 {
+        color: #f5f5f7 !important;
+      }
+      :root.dark .related-tools a,
+      :root.dark .all-tools a {
+        background: #2d2d2d !important;
+        color: #f5f5f7 !important;
+        border-color: #444 !important;
+      }
+      :root.dark .related-tools a:hover,
+      :root.dark .all-tools a:hover {
+        background: #3d3d3d !important;
+        border-color: #0071e3 !important;
+      }
+      :root.dark h1 {
+        color: #f5f5f7 !important;
+      }
+      :root.dark h1 + p {
+        color: #999 !important;
+      }
+    </style>
+  `;
+
+  // 在 </head> 之前添加暗黑模式 CSS
+  html = html.replace('</head>', `${darkModeCss}\n  </head>`);
 
   // 在 </body> 之前添加
   html = html.replace('</body>', `${relatedHtml}\n${allToolsHtml}\n  </body>`);
