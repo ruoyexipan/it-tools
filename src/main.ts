@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp, nextTick } from 'vue';
 import { createPinia } from 'pinia';
 import { createHead } from '@vueuse/head';
 
@@ -25,5 +25,20 @@ app.use(router);
 app.use(naive);
 app.use(plausible);
 app.use(shadow);
+
+// Scroll to top after navigation
+router.afterEach(() => {
+  // Wait for DOM update
+  nextTick(() => {
+    // Find the scroll container (Naive UI layout)
+    const scrollContainer = document.querySelector('.n-layout-scroll-container');
+    if (scrollContainer) {
+      scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Fallback to window scroll
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+});
 
 app.mount('#app');
