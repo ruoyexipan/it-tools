@@ -818,38 +818,57 @@ function generateHtml(page) {
     <h1 style="max-width: 600px; margin: 40px auto 20px; font-size: 32px; font-weight: 600; color: #1d1d1f;">${h1Title}</h1>
     <p style="max-width: 600px; margin: 0 auto 20px; color: #6e6e73; font-size: 16px; line-height: 1.6;">${page.description}</p>
   `;
-  // 在 <div id="app"> 之后添加 H1
-  html = html.replace('<div id="app">', `<div id="app">\n    ${h1Html}`);
+  // 在 <div id="app"> 之后添加 H1（仅非首页）
+  if (page.path !== '/') {
+    html = html.replace('<div id="app">', `<div id="app">\n    ${h1Html}`);
+  }
 
-  // 添加相关工具链接（内部链接）- 包括首页
-  const relatedTools = getRelatedTools(page);
-  const allTools = getAllToolsList(page);
-  
-  // 相关工具
+  // 添加相关工具链接（仅工具页面，非首页）
   let relatedHtml = '';
-  if (relatedTools.length > 0) {
-    relatedHtml = `
+  let allToolsHtml = '';
+  
+  if (page.path !== '/') {
+    const relatedTools = getRelatedTools(page);
+    const allTools = getAllToolsList(page);
+    
+    // 相关工具（同类别）
+    if (relatedTools.length > 0) {
+      relatedHtml = `
     <div class="related-tools" style="max-width: 600px; margin: 24px auto; padding: 24px; background: #ffffff; border: 1px solid #e8e8ed; border-radius: 16px;">
       <h3 style="margin-bottom: 16px; font-size: 18px; font-weight: 600; color: #1d1d1f;">Related Tools</h3>
       <div style="display: flex; flex-wrap: wrap; gap: 8px;">
         ${relatedTools.map(tool => `<a href="${BASE_URL}${tool.path}/" style="display: inline-flex; align-items: center; padding: 8px 14px; background: #f5f5f7; color: #1d1d1f; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; border: 1px solid #e8e8ed; transition: all 0.2s;">${tool.name}</a>`).join('\n        ')}
       </div>
     </div>`;
-  }
-
-  // 所有工具列表（按类别分组）
-  const categories = {};
-  allTools.forEach(tool => {
-    if (!categories[tool.category]) {
-      categories[tool.category] = [];
     }
-    categories[tool.category].push(tool);
-  });
 
-  const allToolsHtml = `
+    // 所有工具列表（按类别分组，About/Contact/Legal 放最后）
+    const categories = {};
+    const specialPages = [];
+    
+    allTools.forEach(tool => {
+      if (['About', 'Contact', 'Legal'].includes(tool.category)) {
+        specialPages.push(tool);
+      } else {
+        if (!categories[tool.category]) {
+          categories[tool.category] = [];
+        }
+        categories[tool.category].push(tool);
+      }
+    });
+
+    // 按类别排序：Crypto, Converter, Web, Images, Development, Network, Math, Measurement, Text, Data
+    const categoryOrder = ['Crypto', 'Converter', 'Web', 'Images', 'Development', 'Network', 'Math', 'Measurement', 'Text', 'Data'];
+    const sortedCategories = Object.entries(categories).sort(([a], [b]) => {
+      const aIndex = categoryOrder.indexOf(a);
+      const bIndex = categoryOrder.indexOf(b);
+      return (aIndex === -1 ? 99 : aIndex) - (bIndex === -1 ? 99 : bIndex);
+    });
+
+    allToolsHtml = `
     <div class="all-tools" style="max-width: 600px; margin: 24px auto; padding: 24px; background: #ffffff; border: 1px solid #e8e8ed; border-radius: 16px;">
       <h3 style="margin-bottom: 20px; font-size: 18px; font-weight: 600; color: #1d1d1f;">All Developer Tools</h3>
-      ${Object.entries(categories).map(([category, tools]) => `
+      ${sortedCategories.map(([category, tools]) => `
         <div style="margin-bottom: 20px;">
           <h4 style="margin-bottom: 10px; font-size: 14px; font-weight: 600; color: #6e6e73; text-transform: uppercase; letter-spacing: 0.5px;">${category}</h4>
           <div style="display: flex; flex-wrap: wrap; gap: 6px;">
@@ -857,7 +876,15 @@ function generateHtml(page) {
           </div>
         </div>
       `).join('')}
+      ${specialPages.length > 0 ? `
+        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e8e8ed;">
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            ${specialPages.map(tool => `<a href="${BASE_URL}${tool.path}/" style="display: inline-flex; padding: 6px 12px; background: #f5f5f7; color: #6e6e73; text-decoration: none; border-radius: 6px; font-size: 12px; border: 1px solid #e8e8ed;">${tool.name}</a>`).join('\n            ')}
+          </div>
+        </div>
+      ` : ''}
     </div>`;
+  }
 
   // 添加暗黑模式支持的 CSS
   const darkModeCss = `
