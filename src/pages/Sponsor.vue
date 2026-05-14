@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head';
-import { ref } from 'vue';
 
 useHead({
   title: 'Support AgentsAITools - Sponsor & Donate',
@@ -8,9 +7,6 @@ useHead({
     { name: 'description', content: 'Support AgentsAITools development. Help us keep the tools free and improve the platform.' },
   ],
 });
-
-const paypalBase = 'https://paypal.me/ruoyexi';
-const customAmount = ref('');
 
 const tiers = [
   {
@@ -20,6 +16,7 @@ const tiers = [
     description: 'Buy us a coffee! ☕',
     icon: '☕',
     color: '#10b981',
+    url: 'https://www.paypal.com/ncp/payment/2XHMPQ9BV8Z22',
   },
   {
     amount: 15,
@@ -29,6 +26,7 @@ const tiers = [
     icon: '🏆',
     color: '#3b82f6',
     featured: true,
+    url: 'https://www.paypal.com/ncp/payment/RVX6SUHYVUM4A',
   },
   {
     amount: 25,
@@ -37,18 +35,17 @@ const tiers = [
     description: 'Fund new tool development',
     icon: '🚀',
     color: '#8b5cf6',
+    url: 'https://www.paypal.com/ncp/payment/LRDALQQ94V4JW',
   },
 ];
 
-function donate(amount: number) {
-  window.open(`${paypalBase}/${amount}`, '_blank');
+function donate(tier: any) {
+  window.open(tier.url, '_blank');
 }
 
 function donateCustom() {
-  const amount = parseFloat(customAmount.value);
-  if (amount > 0) {
-    window.open(`${paypalBase}/${amount}`, '_blank');
-  }
+  // Custom amount uses the $25 link as base
+  window.open('https://www.paypal.com/ncp/payment/LRDALQQ94V4JW', '_blank');
 }
 </script>
 
@@ -94,7 +91,7 @@ function donateCustom() {
           :key="tier.amount"
           class="tier-card"
           :class="{ featured: tier.featured }"
-          @click="donate(tier.amount)"
+          @click="donate(tier)"
         >
           <div class="tier-icon">{{ tier.icon }}</div>
           <div class="tier-amount">{{ tier.label }}</div>
@@ -109,22 +106,11 @@ function donateCustom() {
 
     <!-- Custom Amount -->
     <section class="custom-section">
-      <h2>Custom Amount</h2>
-      <div class="custom-form">
-        <div class="amount-input">
-          <span class="currency">$</span>
-          <input
-            v-model="customAmount"
-            type="number"
-            min="1"
-            placeholder="Enter amount"
-            @keyup.enter="donateCustom"
-          />
-        </div>
-        <button class="custom-btn" @click="donateCustom">
-          Donate via PayPal
-        </button>
-      </div>
+      <h2>Other Amounts</h2>
+      <p class="custom-desc">For custom amounts, please contact us directly.</p>
+      <a href="mailto:contact@agentsaitools.com" class="contact-btn">
+        📧 Contact Us
+      </a>
     </section>
 
     <!-- Other Ways -->
@@ -313,53 +299,31 @@ function donateCustom() {
 
 .custom-section h2 {
   font-size: 28px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
-.custom-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
+.custom-desc {
+  color: #666;
+  margin-bottom: 16px;
 }
 
-.amount-input {
-  display: flex;
+.contact-btn {
+  display: inline-flex;
   align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
   background: #f8f9fa;
-  border: 2px solid #e8e8ed;
+  border: 1px solid #e8e8ed;
   border-radius: 8px;
-  padding: 12px 16px;
-}
-
-.currency {
-  font-size: 20px;
-  font-weight: 600;
+  text-decoration: none;
   color: #1d1d1f;
-  margin-right: 8px;
+  font-size: 14px;
+  transition: all 0.2s;
 }
 
-.amount-input input {
-  border: none;
-  background: transparent;
-  font-size: 20px;
-  width: 120px;
-  outline: none;
-}
-
-.custom-btn {
-  padding: 14px 24px;
-  background: #0070ba;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.custom-btn:hover {
-  background: #005ea6;
+.contact-btn:hover {
+  background: #e8e8ed;
+  transform: translateY(-2px);
 }
 
 /* Other Section */
