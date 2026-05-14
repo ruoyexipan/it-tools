@@ -108,7 +108,10 @@ function retry() {
 </template>
 
 <style scoped>
-.ip-info { max-width: 600px; margin: 0 auto; }
+.ip-info { 
+  width: 100%; 
+  margin: 0; 
+}
 .loading { text-align: center; padding: 60px 20px; }
 .spinner {
   width: 40px; height: 40px;
