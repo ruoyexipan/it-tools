@@ -13,7 +13,7 @@ function handleClick() {
 <template>
   <div class="tool-card" @click="handleClick">
     <div class="tool-card-icon">
-      <n-icon :component="tool.icon" size="24" />
+      <n-icon :component="tool.icon" size="22" />
     </div>
     <div class="tool-card-content">
       <h3 class="tool-card-name">{{ tool.name }}</h3>
@@ -27,15 +27,13 @@ function handleClick() {
 .tool-card {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px;
+  gap: 14px;
+  padding: 14px;
   background: #ffffff;
   border: 1px solid #e8e8ed;
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
-  text-decoration: none;
-  color: inherit;
 }
 
 .tool-card:hover {
@@ -44,14 +42,25 @@ function handleClick() {
   transform: translateY(-2px);
 }
 
+/* Dark mode */
+:root.dark .tool-card {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+:root.dark .tool-card:hover {
+  border-color: #0071e3;
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.2);
+}
+
 .tool-card-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 12px;
+  border-radius: 10px;
   color: white;
   flex-shrink: 0;
 }
@@ -62,7 +71,7 @@ function handleClick() {
 }
 
 .tool-card-name {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: #1d1d1f;
   margin: 0 0 4px;
@@ -71,8 +80,12 @@ function handleClick() {
   text-overflow: ellipsis;
 }
 
+:root.dark .tool-card-name {
+  color: #f5f5f7;
+}
+
 .tool-card-desc {
-  font-size: 13px;
+  font-size: 12px;
   color: #6e6e73;
   margin: 0;
   line-height: 1.4;
@@ -82,9 +95,13 @@ function handleClick() {
   overflow: hidden;
 }
 
+:root.dark .tool-card-desc {
+  color: #999;
+}
+
 .tool-card-arrow {
   color: #86868b;
-  font-size: 18px;
+  font-size: 16px;
   opacity: 0;
   transition: opacity 0.2s ease;
   flex-shrink: 0;

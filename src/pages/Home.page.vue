@@ -18,21 +18,37 @@ function onUpdateFavoriteTools() {
 
 <template>
   <div class="home-page">
-    <div class="hero-section">
-      <h1 class="sr-only">AgentsAITools - Free Online Developer Tools</h1>
-      <h2 class="hero-title">Developer Tools</h2>
-      <p class="hero-subtitle">Free online tools for developers. No signup required.</p>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="sr-only">AgentsAITools</h1>
+      <div class="hero-content">
+        <h2 class="hero-title">Developer Tools</h2>
+        <p class="hero-subtitle">Free online tools for developers. No signup required.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">90+</span>
+            <span class="stat-label">Tools</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Free</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Signup</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="tools-section">
+    <!-- Tools Section -->
+    <section class="tools-section">
       <!-- Favorite Tools -->
       <transition name="fade">
         <div v-if="toolStore.favoriteTools.length > 0" class="tool-group">
           <h3 class="group-title">
-            {{ t('home.categories.favoriteTools') }}
-            <span class="drag-hint">
-              <n-icon :component="IconDragDrop" size="16" />
-            </span>
+            ⭐ {{ t('home.categories.favoriteTools') }}
+            <span class="drag-hint">(drag to reorder)</span>
           </h3>
           <Draggable
             :list="favoriteTools"
@@ -50,7 +66,7 @@ function onUpdateFavoriteTools() {
 
       <!-- New Tools -->
       <div v-if="toolStore.newTools.length > 0" class="tool-group">
-        <h3 class="group-title">{{ t('home.categories.newestTools') }}</h3>
+        <h3 class="group-title">🆕 {{ t('home.categories.newestTools') }}</h3>
         <div class="tools-grid">
           <ToolCard v-for="tool in toolStore.newTools" :key="tool.name" :tool="tool" />
         </div>
@@ -58,12 +74,12 @@ function onUpdateFavoriteTools() {
 
       <!-- All Tools -->
       <div class="tool-group">
-        <h3 class="group-title">{{ t('home.categories.allTools') }}</h3>
+        <h3 class="group-title">🛠️ {{ t('home.categories.allTools') }}</h3>
         <div class="tools-grid">
           <ToolCard v-for="tool in toolStore.tools" :key="tool.name" :tool="tool" />
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -73,26 +89,52 @@ function onUpdateFavoriteTools() {
   margin: 0 auto;
 }
 
-.hero-section {
+/* Hero Section */
+.hero {
   text-align: center;
-  padding: 48px 20px;
-  margin-bottom: 32px;
+  padding: 48px 24px;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  color: white;
 }
 
 .hero-title {
   font-size: 48px;
   font-weight: 700;
-  color: #1d1d1f;
   letter-spacing: -1px;
   margin: 0 0 12px;
 }
 
 .hero-subtitle {
   font-size: 18px;
-  color: #6e6e73;
-  margin: 0;
+  opacity: 0.9;
+  margin: 0 0 24px;
 }
 
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Tools Section */
 .tools-section {
   display: flex;
   flex-direction: column;
@@ -114,15 +156,20 @@ function onUpdateFavoriteTools() {
   gap: 8px;
 }
 
+:root.dark .group-title {
+  color: #f5f5f7;
+}
+
 .drag-hint {
-  color: #86868b;
   font-size: 12px;
+  color: #86868b;
+  font-weight: 400;
 }
 
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
+  gap: 12px;
 }
 
 .ghost-card {
@@ -161,6 +208,14 @@ function onUpdateFavoriteTools() {
 
   .hero-subtitle {
     font-size: 16px;
+  }
+
+  .hero-stats {
+    gap: 24px;
+  }
+
+  .stat-number {
+    font-size: 24px;
   }
 
   .tools-grid {

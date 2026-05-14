@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 import { NIcon, useThemeVars } from 'naive-ui';
 import { RouterLink } from 'vue-router';
-import { Home2, Menu2 } from '@vicons/tabler';
+import { Home2, Menu2, Settings, MessageCircle, FileText, Shield, ChevronDown } from '@vicons/tabler';
 import { storeToRefs } from 'pinia';
-import HeroGradient from '../assets/hero-gradient.svg?component';
 import MenuLayout from '../components/MenuLayout.vue';
 import NavbarButtons from '../components/NavbarButtons.vue';
 import { useStyleStore } from '@/stores/style.store';
@@ -18,6 +17,7 @@ const version = config.app.version;
 const { t } = useI18n();
 const toolStore = useToolStore();
 const { favoriteTools, toolsByCategory } = storeToRefs(toolStore);
+const showMore = ref(false);
 
 const tools = computed<ToolCategory[]>(() => [
   ...(favoriteTools.value.length > 0 ? [{ name: t('tools.categories.favorite-tools'), components: favoriteTools.value }] : []),
@@ -28,39 +28,62 @@ const tools = computed<ToolCategory[]>(() => [
 <template>
   <MenuLayout class="menu-layout" :class="{ isSmallScreen: styleStore.isSmallScreen }">
     <template #sider>
-      <RouterLink to="/" class="hero-wrapper">
-        <HeroGradient class="gradient" />
-        <div class="text-wrapper">
-          <div class="title">AgentsAITools</div>
-          <div class="divider" />
-          <div class="subtitle">{{ $t('home.subtitle') }}</div>
-        </div>
-      </RouterLink>
-
-      <div class="sider-content">
-        <div v-if="styleStore.isSmallScreen" flex flex-col items-center>
-          <locale-selector w="90%" />
-          <div flex justify-center>
-            <NavbarButtons />
+      <!-- Logo Section -->
+      <div class="sidebar-header">
+        <RouterLink to="/" class="logo-link">
+          <div class="logo-icon">
+            <span class="logo-text">AI</span>
           </div>
-        </div>
+          <div class="logo-info">
+            <span class="logo-name">AgentsAITools</span>
+            <span class="logo-desc">Developer Tools</span>
+          </div>
+        </RouterLink>
+      </div>
 
+      <!-- Navigation -->
+      <div class="sidebar-nav">
+        <RouterLink to="/" class="nav-item">
+          <NIcon size="18" :component="Home2" />
+          <span>Home</span>
+        </RouterLink>
+      </div>
+
+      <!-- Tools Menu -->
+      <div class="sidebar-tools">
         <CollapsibleToolMenu :tools-by-category="tools" />
+      </div>
 
-        <div class="footer">
-          <div>AgentsAITools <span>v{{ version }}</span></div>
-          <div>© {{ new Date().getFullYear() }} <span>AgentsAITools</span></div>
-        </div>
+      <!-- Bottom Links -->
+      <div class="sidebar-footer">
+        <RouterLink to="/about" class="footer-link">
+          <NIcon size="16" :component="Settings" />
+          <span>About</span>
+        </RouterLink>
+        <RouterLink to="/contact" class="footer-link">
+          <NIcon size="16" :component="MessageCircle" />
+          <span>Contact</span>
+        </RouterLink>
+        <RouterLink to="/privacy-policy" class="footer-link">
+          <NIcon size="16" :component="Shield" />
+          <span>Privacy</span>
+        </RouterLink>
+        <RouterLink to="/terms-of-service" class="footer-link">
+          <NIcon size="16" :component="FileText" />
+          <span>Terms</span>
+        </RouterLink>
+        <div class="footer-version">v{{ version }}</div>
       </div>
     </template>
 
     <template #content>
-      <div class="toolbar">
+      <!-- Toolbar -->
+      <header class="toolbar">
         <div class="toolbar-left">
-          <button class="menu-btn" @click="styleStore.isMenuCollapsed = !styleStore.isMenuCollapsed">
+          <button class="toolbar-btn" @click="styleStore.isMenuCollapsed = !styleStore.isMenuCollapsed">
             <NIcon size="20" :component="Menu2" />
           </button>
-          <RouterLink to="/" class="home-btn">
+          <RouterLink to="/" class="toolbar-btn">
             <NIcon size="20" :component="Home2" />
           </RouterLink>
         </div>
@@ -69,9 +92,11 @@ const tools = computed<ToolCategory[]>(() => [
         </div>
         <div class="toolbar-right">
           <locale-selector v-if="!styleStore.isSmallScreen" />
-          <NavbarButtons v-if="!styleStore.isSmallScreen" />
+          <NavbarButtons />
         </div>
-      </div>
+      </header>
+
+      <!-- Content -->
       <main class="main-content">
         <slot />
       </main>
@@ -80,6 +105,133 @@ const tools = computed<ToolCategory[]>(() => [
 </template>
 
 <style scoped>
+/* Sidebar Header */
+.sidebar-header {
+  padding: 20px 16px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.logo-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.logo-desc {
+  font-size: 12px;
+  color: #86868b;
+}
+
+/* Dark mode logo text */
+:root.dark .logo-name {
+  color: #f5f5f7;
+}
+
+/* Navigation */
+.sidebar-nav {
+  padding: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #1d1d1f;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+:root.dark .nav-item {
+  color: #f5f5f7;
+}
+
+:root.dark .nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Tools Section */
+.sidebar-tools {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+/* Footer */
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid rgba(128, 128, 128, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #86868b;
+  text-decoration: none;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.footer-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #1d1d1f;
+}
+
+:root.dark .footer-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f5f5f7;
+}
+
+.footer-version {
+  text-align: center;
+  font-size: 12px;
+  color: #86868b;
+  margin-top: 8px;
+}
+
+/* Toolbar - Apple Style with Dark Mode Support */
 .toolbar {
   display: flex;
   align-items: center;
@@ -88,10 +240,15 @@ const tools = computed<ToolCategory[]>(() => [
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--apple-border-light, #e8e8ed);
+  border-bottom: 1px solid #e8e8ed;
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+:root.dark .toolbar {
+  background: rgba(30, 30, 30, 0.8);
+  border-bottom-color: #2d2d2d;
 }
 
 .toolbar-left,
@@ -105,10 +262,10 @@ const tools = computed<ToolCategory[]>(() => [
   flex: 1;
   display: flex;
   justify-content: center;
+  max-width: 400px;
 }
 
-.menu-btn,
-.home-btn {
+.toolbar-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,73 +277,31 @@ const tools = computed<ToolCategory[]>(() => [
   cursor: pointer;
   color: #1d1d1f;
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
-.menu-btn:hover,
-.home-btn:hover {
+.toolbar-btn:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
+:root.dark .toolbar-btn {
+  color: #f5f5f7;
+}
+
+:root.dark .toolbar-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content */
 .main-content {
   padding: 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.footer {
-  text-align: center;
-  color: #86868b;
-  margin-top: 20px;
-  padding: 20px 0;
-  font-size: 13px;
-}
-
-.footer span {
-  opacity: 0.7;
-}
-
-.hero-wrapper {
-  display: block;
-  position: relative;
-  text-decoration: none;
-  color: white;
-}
-
-.gradient {
-  width: 100%;
-  display: block;
-}
-
-.text-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-}
-
-.title {
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
-
-.divider {
-  width: 40px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.5);
-  margin: 8px auto;
-  border-radius: 1px;
-}
-
-.subtitle {
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-.sider-content {
-  padding: 16px;
-  padding-top: 200px;
+@media (max-width: 768px) {
+  .toolbar-center {
+    max-width: 200px;
+  }
 }
 </style>

@@ -7,7 +7,11 @@ const { isDarkTheme } = toRefs(styleStore);
 </script>
 
 <template>
-  <button class="theme-toggle" :title="isDarkTheme ? 'Switch to Light Mode' : 'Switch to Dark Mode'" @click="styleStore.toggleDark()">
+  <button 
+    class="theme-toggle" 
+    :title="isDarkTheme ? 'Switch to Light Mode' : 'Switch to Dark Mode'" 
+    @click="styleStore.toggleDark()"
+  >
     <n-icon v-if="isDarkTheme" size="18" :component="IconSun" />
     <n-icon v-else size="18" :component="IconMoon" />
   </button>
@@ -30,5 +34,14 @@ const { isDarkTheme } = toRefs(styleStore);
 
 .theme-toggle:hover {
   background: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode */
+:root.dark .theme-toggle {
+  color: #f5f5f7;
+}
+
+:root.dark .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 </style>
