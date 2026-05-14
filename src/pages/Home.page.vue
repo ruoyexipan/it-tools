@@ -33,10 +33,6 @@ function onUpdateFavoriteTools() {
             <span class="stat-number">100%</span>
             <span class="stat-label">Free</span>
           </div>
-          <div class="stat">
-            <span class="stat-number">0</span>
-            <span class="stat-label">Signup</span>
-          </div>
         </div>
       </div>
     </section>

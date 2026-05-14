@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { NIcon, useThemeVars } from 'naive-ui';
 import { RouterLink } from 'vue-router';
-import { Home2, Menu2, Settings, MessageCircle, FileText, Shield, ChevronDown } from '@vicons/tabler';
+import { Menu2, Settings, MessageCircle, FileText, Shield, BrandTwitter, Heart } from '@vicons/tabler';
 import { storeToRefs } from 'pinia';
 import MenuLayout from '../components/MenuLayout.vue';
 import NavbarButtons from '../components/NavbarButtons.vue';
@@ -17,12 +17,14 @@ const version = config.app.version;
 const { t } = useI18n();
 const toolStore = useToolStore();
 const { favoriteTools, toolsByCategory } = storeToRefs(toolStore);
-const showMore = ref(false);
 
 const tools = computed<ToolCategory[]>(() => [
   ...(favoriteTools.value.length > 0 ? [{ name: t('tools.categories.favorite-tools'), components: favoriteTools.value }] : []),
   ...toolsByCategory.value,
 ]);
+
+const twitterUrl = 'https://x.com/ruoyexi666';
+const paypalUrl = 'https://www.paypal.com/paypalme/ruoyexi';
 </script>
 
 <template>
@@ -41,14 +43,6 @@ const tools = computed<ToolCategory[]>(() => [
         </RouterLink>
       </div>
 
-      <!-- Navigation -->
-      <div class="sidebar-nav">
-        <RouterLink to="/" class="nav-item">
-          <NIcon size="18" :component="Home2" />
-          <span>Home</span>
-        </RouterLink>
-      </div>
-
       <!-- Tools Menu -->
       <div class="sidebar-tools">
         <CollapsibleToolMenu :tools-by-category="tools" />
@@ -56,6 +50,15 @@ const tools = computed<ToolCategory[]>(() => [
 
       <!-- Bottom Links -->
       <div class="sidebar-footer">
+        <a :href="twitterUrl" target="_blank" rel="noopener noreferrer" class="footer-link twitter">
+          <NIcon size="16" :component="BrandTwitter" />
+          <span>Twitter</span>
+        </a>
+        <a :href="paypalUrl" target="_blank" rel="noopener noreferrer" class="footer-link sponsor">
+          <NIcon size="16" :component="Heart" />
+          <span>Sponsor</span>
+        </a>
+        <div class="footer-divider" />
         <RouterLink to="/about" class="footer-link">
           <NIcon size="16" :component="Settings" />
           <span>About</span>
@@ -83,8 +86,8 @@ const tools = computed<ToolCategory[]>(() => [
           <button class="toolbar-btn" @click="styleStore.isMenuCollapsed = !styleStore.isMenuCollapsed">
             <NIcon size="20" :component="Menu2" />
           </button>
-          <RouterLink to="/" class="toolbar-btn">
-            <NIcon size="20" :component="Home2" />
+          <RouterLink to="/" class="toolbar-btn home-btn">
+            <span style="font-size: 14px; font-weight: 600;">🏠 Home</span>
           </RouterLink>
         </div>
         <div class="toolbar-center">
@@ -93,6 +96,12 @@ const tools = computed<ToolCategory[]>(() => [
         <div class="toolbar-right">
           <locale-selector v-if="!styleStore.isSmallScreen" />
           <NavbarButtons />
+          <a :href="twitterUrl" target="_blank" rel="noopener noreferrer" class="toolbar-btn twitter-btn" title="Follow us on Twitter">
+            <NIcon size="18" :component="BrandTwitter" />
+          </a>
+          <a :href="paypalUrl" target="_blank" rel="noopener noreferrer" class="toolbar-btn sponsor-btn" title="Support us">
+            <NIcon size="18" :component="Heart" />
+          </a>
         </div>
       </header>
 
@@ -151,39 +160,8 @@ const tools = computed<ToolCategory[]>(() => [
   color: #86868b;
 }
 
-/* Dark mode logo text */
 :root.dark .logo-name {
   color: #f5f5f7;
-}
-
-/* Navigation */
-.sidebar-nav {
-  padding: 8px;
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  border-radius: 8px;
-  color: #1d1d1f;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.nav-item:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-:root.dark .nav-item {
-  color: #f5f5f7;
-}
-
-:root.dark .nav-item:hover {
-  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Tools Section */
@@ -219,9 +197,23 @@ const tools = computed<ToolCategory[]>(() => [
   color: #1d1d1f;
 }
 
+.footer-link.twitter:hover {
+  color: #1da1f2;
+}
+
+.footer-link.sponsor:hover {
+  color: #ff6b6b;
+}
+
 :root.dark .footer-link:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #f5f5f7;
+}
+
+.footer-divider {
+  height: 1px;
+  background: rgba(128, 128, 128, 0.1);
+  margin: 8px 0;
 }
 
 .footer-version {
@@ -231,7 +223,7 @@ const tools = computed<ToolCategory[]>(() => [
   margin-top: 8px;
 }
 
-/* Toolbar - Apple Style with Dark Mode Support */
+/* Toolbar */
 .toolbar {
   display: flex;
   align-items: center;
@@ -269,8 +261,8 @@ const tools = computed<ToolCategory[]>(() => [
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
   height: 36px;
+  padding: 0 12px;
   border: none;
   background: transparent;
   border-radius: 8px;
@@ -278,10 +270,29 @@ const tools = computed<ToolCategory[]>(() => [
   color: #1d1d1f;
   transition: all 0.2s ease;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .toolbar-btn:hover {
   background: rgba(0, 0, 0, 0.05);
+}
+
+.home-btn {
+  padding: 0 16px;
+}
+
+.twitter-btn:hover {
+  color: #1da1f2;
+  background: rgba(29, 161, 242, 0.1);
+}
+
+.sponsor-btn {
+  color: #86868b;
+}
+
+.sponsor-btn:hover {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
 }
 
 :root.dark .toolbar-btn {
