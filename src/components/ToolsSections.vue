@@ -1,12 +1,33 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
+import { computed, nextTick } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { useToolStore } from '@/tools/tools.store';
 
 const route = useRoute();
+const router = useRouter();
 const toolStore = useToolStore();
 
 const currentPath = computed(() => route.path);
+
+// Scroll to top function
+function scrollToTop() {
+  nextTick(() => {
+    // Try Naive UI scroll container first
+    const scrollContainer = document.querySelector('.n-layout-scroll-container');
+    if (scrollContainer) {
+      scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Fallback to window
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+}
+
+// Navigate and scroll
+function navigateTo(path: string) {
+  router.push(path);
+  scrollToTop();
+}
 
 // 获取相关工具（同类别）
 const relatedTools = computed(() => {
@@ -90,14 +111,15 @@ const showRelatedTools = computed(() => currentPath.value !== '/');
     <div v-if="showRelatedTools && relatedTools.length > 0" class="section-card">
       <h3 class="section-title">Related Tools</h3>
       <div class="tools-grid">
-        <router-link
+        <a
           v-for="tool in relatedTools"
           :key="tool.path"
-          :to="tool.path"
+          href="#"
           class="tool-link"
+          @click.prevent="navigateTo(tool.path)"
         >
           {{ tool.name }}
-        </router-link>
+        </a>
       </div>
     </div>
 
@@ -108,28 +130,30 @@ const showRelatedTools = computed(() => currentPath.value !== '/');
       <div v-for="category in allToolsByCategory" :key="category.name" class="category-group">
         <h4 class="category-title">{{ category.name }}</h4>
         <div class="tools-grid">
-          <router-link
+          <a
             v-for="tool in category.tools"
             :key="tool.path"
-            :to="tool.path"
+            href="#"
             class="tool-link"
+            @click.prevent="navigateTo(tool.path)"
           >
             {{ tool.name }}
-          </router-link>
+          </a>
         </div>
       </div>
 
       <!-- Special Pages -->
       <div class="special-pages">
         <div class="tools-grid">
-          <router-link
+          <a
             v-for="page in specialPages"
             :key="page.path"
-            :to="page.path"
+            href="#"
             class="tool-link special"
+            @click.prevent="navigateTo(page.path)"
           >
             {{ page.name }}
-          </router-link>
+          </a>
         </div>
       </div>
     </div>
