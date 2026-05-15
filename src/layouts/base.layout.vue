@@ -36,15 +36,19 @@ const paypalUrl = 'https://www.paypal.com/paypalme/ruoyexi';
           <div class="logo-icon">
             <svg viewBox="0 0 512 512" class="logo-svg">
               <defs>
-                <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-                  <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
                 </linearGradient>
               </defs>
-              <rect width="512" height="512" rx="96" fill="url(#logo-grad)"/>
-              <text x="256" y="180" font-family="SF Pro Display, -apple-system, sans-serif" font-size="120" font-weight="700" fill="white" text-anchor="middle">AI</text>
-              <text x="256" y="320" font-family="SF Pro Display, -apple-system, sans-serif" font-size="48" font-weight="600" fill="rgba(255,255,255,0.9)" text-anchor="middle">Tools</text>
-              <line x1="180" y1="220" x2="332" y2="220" stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-linecap="round"/>
+              <rect width="512" height="512" rx="108" fill="url(#bg)"/>
+              <path d="M140 180 L90 256 L140 332" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+              <path d="M372 180 L422 256 L372 332" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+              <g transform="translate(200, 150) scale(0.22)">
+                <path d="M240 128c-62 0-112 50-112 112s50 112 112 112 112-50 112-112-50-112-112-112zm0 192c-44 0-80-36-80-80s36-80 80-80 80 36 80 80-36 80-80 80z" fill="white" opacity="0.3"/>
+                <path d="M351 176l-51-51-96 96-48-48-51 51 99 99z" fill="white"/>
+              </g>
+              <rect x="220" y="340" width="72" height="8" rx="4" fill="white" opacity="0.8"/>
             </svg>
           </div>
           <div class="logo-info">
