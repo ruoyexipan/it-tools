@@ -2,6 +2,7 @@
 import { useRoute } from 'vue-router';
 import { useHead } from '@vueuse/head';
 import type { HeadObject } from '@vueuse/head';
+import { ref, onMounted, watch } from 'vue';
 import BaseLayout from './base.layout.vue';
 import Breadcrumb from '@/components/Breadcrumb.vue';
 import ToolsSections from '@/components/ToolsSections.vue';
@@ -12,6 +13,18 @@ const route = useRoute();
 const toolName = computed(() => String(route.meta.name || ''));
 const toolDesc = computed(() => String(route.meta?.description || ''));
 const toolUrl = computed(() => `https://agentsaitools.com${route.path}`);
+
+// Scroll to top ref
+const topRef = ref<HTMLElement | null>(null);
+
+// Scroll to top when route changes
+watch(() => route.path, () => {
+  if (topRef.value) {
+    setTimeout(() => {
+      topRef.value?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }
+}, { immediate: true });
 
 const head = computed<HeadObject>(() => ({
   title: `${toolName.value} - Free Online Tool | AgentsAITools`,
@@ -55,6 +68,9 @@ const breadcrumbJsonLd = computed(() => ({
 <template>
   <BaseLayout>
     <div class="tool-layout">
+      <!-- Scroll target -->
+      <div ref="topRef" id="tool-top" style="scroll-margin-top: 60px;" />
+      
       <Breadcrumb />
       <script type="application/ld+json">{{ JSON.stringify(toolJsonLd) }}</script>
       <script type="application/ld+json">{{ JSON.stringify(breadcrumbJsonLd) }}</script>
