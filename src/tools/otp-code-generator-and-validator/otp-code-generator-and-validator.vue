@@ -52,80 +52,98 @@ const secretValidationRules = [
 </script>
 
 <template>
-  <div style="max-width: 350px">
-    <c-input-text
-      v-model:value="secret"
-      label="Secret"
-      placeholder="Paste your TOTP secret..."
-      mb-5
-      :validation-rules="secretValidationRules"
-    >
-      <template #suffix>
-        <c-tooltip tooltip="Generate a new random secret">
-          <c-button circle variant="text" size="small" @click="refreshSecret">
-            <icon-mdi-refresh />
-          </c-button>
-        </c-tooltip>
-      </template>
-    </c-input-text>
+  <div class="otp-container">
+    <div class="otp-main">
+      <c-input-text
+        v-model:value="secret"
+        label="Secret"
+        placeholder="Paste your TOTP secret..."
+        mb-5
+        :validation-rules="secretValidationRules"
+      >
+        <template #suffix>
+          <c-tooltip tooltip="Generate a new random secret">
+            <c-button circle variant="text" size="small" @click="refreshSecret">
+              <icon-mdi-refresh />
+            </c-button>
+          </c-tooltip>
+        </template>
+      </c-input-text>
 
-    <div>
-      <TokenDisplay :tokens="tokens" />
+      <div>
+        <TokenDisplay :tokens="tokens" />
 
-      <n-progress :percentage="(100 * interval) / 30" :color="theme.primaryColor" :show-indicator="false" />
-      <div style="text-align: center">
-        Next in {{ String(Math.floor(30 - interval)).padStart(2, '0') }}s
+        <n-progress :percentage="(100 * interval) / 30" :color="theme.primaryColor" :show-indicator="false" />
+        <div style="text-align: center">
+          Next in {{ String(Math.floor(30 - interval)).padStart(2, '0') }}s
+        </div>
+      </div>
+      <div mt-4 flex flex-col items-center justify-center gap-3>
+        <n-image :src="qrcode" />
+        <c-button :href="keyUri" target="_blank">
+          Open Key URI in new tab
+        </c-button>
       </div>
     </div>
-    <div mt-4 flex flex-col items-center justify-center gap-3>
-      <n-image :src="qrcode" />
-      <c-button :href="keyUri" target="_blank">
-        Open Key URI in new tab
-      </c-button>
+    <div class="otp-sidebar">
+      <InputCopyable
+        label="Secret in hexadecimal"
+        :value="base32toHex(secret)"
+        readonly
+        placeholder="Secret in hex will be displayed here"
+        mb-5
+      />
+
+      <InputCopyable
+        label="Epoch"
+        :value="Math.floor(now / 1000).toString()"
+        readonly
+        mb-5
+        placeholder="Epoch in sec will be displayed here"
+      />
+
+      <p>Iteration</p>
+
+      <InputCopyable
+        :value="String(getCounterFromTime({ now, timeStep: 30 }))"
+        readonly
+        label="Count:"
+        label-position="left"
+        label-width="90px"
+        label-align="right"
+        placeholder="Iteration count will be displayed here"
+      />
+
+      <InputCopyable
+        :value="getCounterFromTime({ now, timeStep: 30 }).toString(16).padStart(16, '0')"
+        readonly
+        placeholder="Iteration count in hex will be displayed here"
+        label-position="left"
+        label-width="90px"
+        label-align="right"
+        label="Padded hex:"
+      />
     </div>
-  </div>
-  <div style="max-width: 350px">
-    <InputCopyable
-      label="Secret in hexadecimal"
-      :value="base32toHex(secret)"
-      readonly
-      placeholder="Secret in hex will be displayed here"
-      mb-5
-    />
-
-    <InputCopyable
-      label="Epoch"
-      :value="Math.floor(now / 1000).toString()"
-      readonly
-      mb-5
-      placeholder="Epoch in sec will be displayed here"
-    />
-
-    <p>Iteration</p>
-
-    <InputCopyable
-      :value="String(getCounterFromTime({ now, timeStep: 30 }))"
-      readonly
-      label="Count:"
-      label-position="left"
-      label-width="90px"
-      label-align="right"
-      placeholder="Iteration count will be displayed here"
-    />
-
-    <InputCopyable
-      :value="getCounterFromTime({ now, timeStep: 30 }).toString(16).padStart(16, '0')"
-      readonly
-      placeholder="Iteration count in hex will be displayed here"
-      label-position="left"
-      label-width="90px"
-      label-align="right"
-      label="Padded hex:"
-    />
   </div>
 </template>
 
 <style lang="less" scoped>
+.otp-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.otp-main {
+  flex: 1;
+  min-width: 300px;
+}
+
+.otp-sidebar {
+  flex: 1;
+  min-width: 300px;
+}
+
 .n-progress {
   margin-top: 10px;
   ::v-deep(.n-progress-graph-line-fill) {
