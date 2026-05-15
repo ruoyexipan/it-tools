@@ -34,7 +34,7 @@ const paypalUrl = 'https://www.paypal.com/paypalme/ruoyexi';
       <div class="sidebar-header">
         <RouterLink to="/" class="logo-link">
           <div class="logo-icon">
-            <img src="/logo.png" alt="AgentsAITools" class="logo-img" />
+            <img src="/sidebar-logo.png" alt="AgentsAITools" class="logo-img" />
           </div>
           <div class="logo-info">
             <span class="logo-name">AgentsAITools</span>
