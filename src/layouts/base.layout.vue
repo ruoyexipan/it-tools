@@ -34,7 +34,18 @@ const paypalUrl = 'https://www.paypal.com/paypalme/ruoyexi';
       <div class="sidebar-header">
         <RouterLink to="/" class="logo-link">
           <div class="logo-icon">
-            <img src="/sidebar-logo.png" alt="AgentsAITools" class="logo-img" />
+            <svg viewBox="0 0 512 512" class="logo-svg">
+              <defs>
+                <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <rect width="512" height="512" rx="108" fill="url(#logo-grad)"/>
+              <text x="256" y="180" font-family="SF Pro Display, -apple-system, sans-serif" font-size="120" font-weight="700" fill="white" text-anchor="middle">AI</text>
+              <text x="256" y="320" font-family="SF Pro Display, -apple-system, sans-serif" font-size="48" font-weight="600" fill="rgba(255,255,255,0.9)" text-anchor="middle">Tools</text>
+              <line x1="180" y1="220" x2="332" y2="220" stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
           </div>
           <div class="logo-info">
             <span class="logo-name">AgentsAITools</span>
@@ -132,19 +143,13 @@ const paypalUrl = 'https://www.paypal.com/paypalme/ruoyexi';
   width: 44px;
   height: 44px;
   flex-shrink: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
 }
 
-.logo-img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+.logo-svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
 }
 
 .logo-info {
