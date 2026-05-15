@@ -8,9 +8,9 @@ useHead({
     { name: 'description', content: 'Generate OTP (One-Time Password) codes online. Free TOTP and HOTP generator for 2FA authentication. Compatible with Google Authenticator.' },
     { name: 'keywords', content: 'otp generator, totp generator, hotp generator, 2fa code generator, one time password, authenticator app, otp online tool' },
     { property: 'og:title', content: 'OTP Generator Online - Free TOTP/HOTP Code Generator | AgentsAITools' },
-    { property: 'og:url', content: 'https://agentsaitools.com/otp-generator' },
+    { property: 'og:url', content: 'https://agentsaitools.com/otp-generator-landing' },
   ],
-  link: [{ rel: 'canonical', href: 'https://agentsaitools.com/otp-generator' }],
+  link: [{ rel: 'canonical', href: 'https://agentsaitools.com/otp-generator-landing' }],
 });
 const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
   { '@type': 'Question', 'name': 'What is OTP?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OTP stands for One-Time Password. It is a temporary code used for two-factor authentication (2FA). TOTP is time-based, HOTP is counter-based.' } },
