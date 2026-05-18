@@ -23,7 +23,7 @@ function onUpdateFavoriteTools() {
 
 <template>
   <div class="home-page">
-    <!-- Hero Section with BLUF intro -->
+    <!-- Hero Section -->
     <section class="hero">
       <h1 class="sr-only">AgentsAITools - Free Online Developer Tools</h1>
       <div class="hero-content">
@@ -44,10 +44,6 @@ function onUpdateFavoriteTools() {
           <div class="stat">
             <span class="stat-number">100%</span>
             <span class="stat-label">Free</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">0</span>
-            <span class="stat-label">Signup</span>
           </div>
         </div>
       </div>
@@ -169,7 +165,7 @@ function onUpdateFavoriteTools() {
 
 .hero {
   text-align: center;
-  padding: 48px 20px;
+  padding: 32px 20px;
   margin-bottom: 40px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 16px;
@@ -177,31 +173,31 @@ function onUpdateFavoriteTools() {
 }
 
 .hero-title {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 700;
   letter-spacing: -1px;
-  margin: 0 0 12px;
+  margin: 0 0 8px;
 }
 
 .hero-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   opacity: 0.9;
-  margin: 0 0 24px;
+  margin: 0 0 16px;
 }
 
 .bluf-intro {
   max-width: 600px;
-  margin: 0 auto 24px;
+  margin: 0 auto 16px;
   text-align: left;
   background: rgba(255, 255, 255, 0.1);
-  padding: 16px;
+  padding: 12px 16px;
   border-radius: 8px;
 }
 
 .bluf-intro p {
-  margin: 0 0 8px;
-  font-size: 14px;
-  line-height: 1.6;
+  margin: 0 0 4px;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 .bluf-intro p:last-child {
@@ -211,7 +207,7 @@ function onUpdateFavoriteTools() {
 .hero-stats {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 48px;
 }
 
 .stat {
@@ -221,12 +217,12 @@ function onUpdateFavoriteTools() {
 }
 
 .stat-number {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
 }
 
 .stat-label {
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.8;
 }
 
