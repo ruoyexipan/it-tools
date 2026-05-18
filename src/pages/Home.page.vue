@@ -383,6 +383,61 @@ function onUpdateFavoriteTools() {
   border-width: 0;
 }
 
+/* Dark Mode */
+:root.dark .group-title {
+  color: #f5f5f7;
+}
+
+:root.dark .seo-content {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+:root.dark .seo-content h2 {
+  color: #f5f5f7;
+}
+
+:root.dark .seo-content p,
+:root.dark .seo-content li {
+  color: #ccc;
+}
+
+:root.dark .benefit {
+  background: #2d2d2d;
+  border-color: #444;
+}
+
+:root.dark .benefit h3 {
+  color: #34c759;
+}
+
+:root.dark .benefit p {
+  color: #999;
+}
+
+:root.dark .categories-list li {
+  background: #2d2d2d;
+  border-color: #444;
+  color: #ccc;
+}
+
+:root.dark .faq-item {
+  background: #2d2d2d;
+  border-color: #444;
+}
+
+:root.dark .faq-item h3 {
+  color: #34c759;
+}
+
+:root.dark .faq-item p {
+  color: #999;
+}
+
+:root.dark .seo-content a {
+  color: #0071e3;
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 32px;
