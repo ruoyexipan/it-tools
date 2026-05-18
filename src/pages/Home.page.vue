@@ -27,13 +27,10 @@ function onUpdateFavoriteTools() {
     <section class="hero">
       <h1 class="sr-only">AgentsAITools - Free Online Developer Tools</h1>
       <div class="hero-content">
-        <h2 class="hero-title">Developer Tools</h2>
-        <p class="hero-subtitle">Free online tools for developers. No signup required.</p>
-        
-        <!-- BLUF Intro -->
-        <div class="bluf-intro">
-          <p><strong>AgentsAITools</strong> is a free online developer tools platform providing 90+ tools for developers and IT professionals.</p>
-          <p>Tools include JSON formatter, Base64 encoder, hash generator, JWT decoder, UUID generator, regex tester, and more.</p>
+        <div class="hero-text">
+          <h2 class="hero-title">Developer Tools</h2>
+          <p class="hero-subtitle">Free online tools for developers. No signup required.</p>
+          <p class="hero-desc">AgentsAITools is a free online developer tools platform providing 90+ tools for developers and IT professionals. Tools include JSON formatter, Base64 encoder, hash generator, JWT decoder, UUID generator, regex tester, and more.</p>
         </div>
 
         <div class="hero-stats">
@@ -165,11 +162,20 @@ function onUpdateFavoriteTools() {
 
 .hero {
   text-align: center;
-  padding: 32px 20px;
+  padding: 40px 20px;
   margin-bottom: 40px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 16px;
   color: white;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  margin-bottom: 24px;
 }
 
 .hero-title {
@@ -182,26 +188,17 @@ function onUpdateFavoriteTools() {
 .hero-subtitle {
   font-size: 16px;
   opacity: 0.9;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
 }
 
-.bluf-intro {
+.hero-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.85;
+  margin: 0;
   max-width: 600px;
-  margin: 0 auto 16px;
-  text-align: left;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 12px 16px;
-  border-radius: 8px;
-}
-
-.bluf-intro p {
-  margin: 0 0 4px;
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-.bluf-intro p:last-child {
-  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-stats {
