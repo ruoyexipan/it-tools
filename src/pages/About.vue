@@ -2,206 +2,232 @@
 import { useHead } from '@vueuse/head';
 
 useHead({
-  title: 'About - AgentsAITools',
+  title: 'About AgentsAITools - Free Developer Tools Platform',
   meta: [
-    { name: 'description', content: 'About AgentsAITools - Free online developer tools collection created by ruoyeAi.' },
+    { name: 'description', content: 'Learn about AgentsAITools - a free online developer tools platform with 90+ tools for developers and IT professionals.' },
   ],
 });
 </script>
 
 <template>
-  <div class="about-page">
-    <h1>About AgentsAITools</h1>
-    <p class="last-updated">Created by ruoyeAi</p>
+  <div class="page-container">
+    <header class="page-header">
+      <h1>About AgentsAITools</h1>
+      <p class="page-subtitle">Free Online Developer Tools Platform</p>
+    </header>
 
-    <section>
-      <h2>What is AgentsAITools?</h2>
-      <p>AgentsAITools is a comprehensive collection of free online developer tools designed to make your daily development tasks easier. Whether you're a developer, designer, or IT professional, you'll find useful tools to help you work more efficiently.</p>
-      <p>All tools run directly in your browser - no installation required, no data sent to servers, completely free to use.</p>
-    </section>
+    <main class="page-content">
+      <section class="content-section">
+        <h2>Our Mission</h2>
+        <p>AgentsAITools is a free online developer tools platform providing 90+ tools for developers and IT professionals worldwide.</p>
+        <p>We believe that essential developer tools should be accessible to everyone, without signup requirements or hidden fees.</p>
+      </section>
 
-    <section>
-      <h2>Available Tools</h2>
-      <div class="tools-grid">
-        <div class="tool-category">
-          <h3>Crypto Tools</h3>
-          <ul>
-            <li>Token Generator</li>
-            <li>Hash Text (MD5, SHA256, etc.)</li>
-            <li>Bcrypt Generator</li>
-            <li>UUID Generator</li>
-            <li>JWT Parser</li>
-            <li>Encryption/Decryption</li>
-          </ul>
+      <section class="content-section">
+        <h2>What We Offer</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🔧</div>
+            <h3>90+ Tools</h3>
+            <p>JSON formatter, Base64 encoder, hash generator, JWT decoder, UUID generator, regex tester, and more.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🆓</div>
+            <h3>100% Free</h3>
+            <p>All tools are completely free to use. No hidden fees, no premium tiers.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Privacy First</h3>
+            <p>All processing happens in your browser. No data sent to servers.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Mobile Friendly</h3>
+            <p>Works on desktop, tablet, and mobile devices.</p>
+          </div>
         </div>
+      </section>
 
-        <div class="tool-category">
-          <h3>Converter Tools</h3>
-          <ul>
-            <li>Base64 Encoder/Decoder</li>
-            <li>JSON Formatter</li>
-            <li>YAML Converter</li>
-            <li>XML Converter</li>
-            <li>Color Converter</li>
-            <li>Case Converter</li>
-          </ul>
-        </div>
+      <section class="content-section">
+        <h2>Tool Categories</h2>
+        <ul class="category-list">
+          <li><strong>Crypto:</strong> Hash generators, encryption, UUID, JWT tools</li>
+          <li><strong>Converters:</strong> JSON, YAML, Base64, color converters</li>
+          <li><strong>Web:</strong> URL encoder, HTML entities, meta tags</li>
+          <li><strong>Development:</strong> SQL formatter, regex tester, Docker tools</li>
+          <li><strong>Network:</strong> IP calculators, MAC address tools</li>
+          <li><strong>Text:</strong> Lorem ipsum, text diff, case converter</li>
+        </ul>
+      </section>
 
-        <div class="tool-category">
-          <h3>Web Tools</h3>
-          <ul>
-            <li>URL Encoder/Decoder</li>
-            <li>HTML Entities</li>
-            <li>Meta Tag Generator</li>
-            <li>MIME Types</li>
-            <li>User Agent Parser</li>
-            <li>HTTP Status Codes</li>
-          </ul>
-        </div>
+      <section class="content-section">
+        <h2>Technology</h2>
+        <p>AgentsAITools is built with modern web technologies:</p>
+        <ul class="tech-list">
+          <li>Vue.js 3 with TypeScript</li>
+          <li>Vite build tool</li>
+          <li>Cloudflare Pages hosting</li>
+          <li>Cloudflare CDN for global performance</li>
+        </ul>
+      </section>
 
-        <div class="tool-category">
-          <h3>Development Tools</h3>
-          <ul>
-            <li>Docker Converter</li>
-            <li>Git Cheatsheet</li>
-            <li>Crontab Generator</li>
-            <li>JSON Viewer</li>
-            <li>SQL Formatter</li>
-            <li>Regex Tester</li>
-          </ul>
-        </div>
-
-        <div class="tool-category">
-          <h3>Network Tools</h3>
-          <ul>
-            <li>IPv4 Calculator</li>
-            <li>MAC Address Lookup</li>
-            <li>IPv6 Generator</li>
-          </ul>
-        </div>
-
-        <div class="tool-category">
-          <h3>Text Tools</h3>
-          <ul>
-            <li>Lorem Ipsum Generator</li>
-            <li>Text Diff</li>
-            <li>Text Statistics</li>
-            <li>Emoji Picker</li>
-            <li>ASCII Art Generator</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Why Choose AgentsAITools?</h2>
-      <ul>
-        <li><strong>100% Free:</strong> All tools are completely free to use, forever.</li>
-        <li><strong>Privacy First:</strong> All processing happens in your browser. Your data never leaves your device.</li>
-        <li><strong>No Signup:</strong> Use any tool instantly without creating an account.</li>
-        <li><strong>Fast & Reliable:</strong> Tools load quickly and work reliably.</li>
-        <li><strong>Mobile Friendly:</strong> All tools work on desktop, tablet, and mobile devices.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Technology</h2>
-      <p>AgentsAITools is built with modern web technologies including Vue.js and hosted on Cloudflare Pages for fast, reliable access worldwide.</p>
-    </section>
-
-    <section>
-      <h2>Feedback</h2>
-      <p>Have a suggestion for a new tool or found a bug? We'd love to hear from you!</p>
-      <p>Contact us at: contact@agentsaitools.com</p>
-    </section>
+      <section class="content-section">
+        <h2>Contact Us</h2>
+        <p>Have questions, suggestions, or feedback? We'd love to hear from you.</p>
+        <p>Email: <a href="mailto:contact@agentsaitools.com" class="apple-link">contact@agentsaitools.com</a></p>
+      </section>
+    </main>
   </div>
 </template>
 
-<style scoped lang="less">
-.about-page {
+<style scoped>
+.page-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
-  line-height: 1.8;
 }
 
-h1 {
-  font-size: 36px;
-  margin-bottom: 8px;
-}
-
-.last-updated {
-  color: #666;
+.page-header {
+  text-align: center;
   margin-bottom: 40px;
-  font-style: italic;
 }
 
-h2 {
-  font-size: 24px;
-  margin-top: 32px;
-  margin-bottom: 16px;
-  color: #1a1a1a;
+.page-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
 }
 
-h3 {
+.page-subtitle {
   font-size: 18px;
-  margin-top: 24px;
-  margin-bottom: 12px;
-  color: #18a058;
+  color: #86868b;
+  margin: 0;
 }
 
-p {
-  margin-bottom: 16px;
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.content-section {
+  background: #ffffff;
+  border: 1px solid #e8e8ed;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.content-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0 0 16px;
+}
+
+.content-section p {
+  font-size: 15px;
+  line-height: 1.6;
   color: #333;
+  margin: 0 0 12px;
 }
 
-ul {
-  padding-left: 24px;
-  margin-bottom: 16px;
-
-  li {
-    margin-bottom: 8px;
-    color: #333;
-  }
+.content-section p:last-child {
+  margin-bottom: 0;
 }
 
-section {
-  margin-bottom: 32px;
-}
-
-.tools-grid {
+.features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-top: 16px;
+  gap: 16px;
 }
 
-.tool-category {
-  background: #f8f9fa;
+.feature-card {
   padding: 20px;
+  background: #f5f5f7;
   border-radius: 12px;
-
-  h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    color: #18a058;
-  }
-
-  ul {
-    margin-bottom: 0;
-    
-    li {
-      color: #555;
-    }
-  }
 }
 
-strong {
-  color: #18a058;
+.feature-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0 0 8px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #6e6e73;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.category-list,
+.tech-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.category-list li,
+.tech-list li {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.apple-link {
+  color: #0071e3;
+  text-decoration: none;
+}
+
+.apple-link:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode */
+:root.dark .page-header h1,
+:root.dark .content-section h2,
+:root.dark .feature-card h3 {
+  color: #f5f5f7;
+}
+
+:root.dark .page-subtitle {
+  color: #999;
+}
+
+:root.dark .content-section {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+:root.dark .content-section p,
+:root.dark .category-list li,
+:root.dark .tech-list li {
+  color: #ccc;
+}
+
+:root.dark .feature-card {
+  background: #2d2d2d;
+}
+
+:root.dark .feature-card p {
+  color: #999;
 }
 
 @media (max-width: 768px) {
-  .tools-grid {
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .features-grid {
     grid-template-columns: 1fr;
   }
 }

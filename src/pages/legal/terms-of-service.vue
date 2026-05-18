@@ -4,141 +4,190 @@ import { useHead } from '@vueuse/head';
 useHead({
   title: 'Terms of Service - AgentsAITools',
   meta: [
-    { name: 'description', content: 'Terms of Service for AgentsAITools - Free online developer tools collection.' },
+    { name: 'description', content: 'Terms of Service for AgentsAITools - Free online developer tools.' },
   ],
 });
 </script>
 
 <template>
-  <div class="legal-page">
-    <h1>Terms of Service</h1>
-    <p class="last-updated">Last updated: May 8, 2026</p>
+  <div class="page-container">
+    <header class="page-header">
+      <h1>Terms of Service</h1>
+      <p class="page-subtitle">Last updated: May 2026</p>
+    </header>
 
-    <section>
-      <h2>1. Acceptance of Terms</h2>
-      <p>By accessing and using AgentsAITools (the "Service"), you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Service.</p>
-    </section>
+    <main class="page-content">
+      <section class="content-section">
+        <h2>Agreement to Terms</h2>
+        <p>By accessing and using AgentsAITools, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our service.</p>
+      </section>
 
-    <section>
-      <h2>2. Description of Service</h2>
-      <p>AgentsAITools provides a collection of free online developer tools, including but not limited to:</p>
-      <ul>
-        <li>JSON Formatter and Validator</li>
-        <li>Base64 Encoder/Decoder</li>
-        <li>Hash Generator</li>
-        <li>Docker Converter</li>
-        <li>JWT Decoder</li>
-        <li>Various other developer utilities</li>
-      </ul>
-    </section>
+      <section class="content-section">
+        <h2>Description of Service</h2>
+        <p>AgentsAITools provides free online developer tools including:</p>
+        <ul>
+          <li>JSON formatter and validator</li>
+          <li>Base64 encoder/decoder</li>
+          <li>Hash generators (MD5, SHA256, etc.)</li>
+          <li>JWT decoder</li>
+          <li>UUID generator</li>
+          <li>Regex tester</li>
+          <li>And 80+ more developer tools</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>3. User Responsibilities</h2>
-      <p>You agree to:</p>
-      <ul>
-        <li>Use the Service for lawful purposes only</li>
-        <li>Not attempt to disrupt or overload the Service</li>
-        <li>Not use automated tools to access the Service excessively</li>
-        <li>Not redistribute or resell the Service without permission</li>
-      </ul>
-    </section>
+      <section class="content-section">
+        <h2>User Responsibilities</h2>
+        <p>When using our service, you agree to:</p>
+        <ul>
+          <li>Use the tools for lawful purposes only</li>
+          <li>Not attempt to disrupt or overload our service</li>
+          <li>Not use automated tools to access our service excessively</li>
+          <li>Not redistribute or resell our tools without permission</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>4. Intellectual Property</h2>
-      <p>The Service and its original content, features, and functionality are owned by AgentsAITools and are protected by international copyright, trademark, and other intellectual property laws.</p>
-    </section>
+      <section class="content-section">
+        <h2>Intellectual Property</h2>
+        <p>The AgentsAITools website, including its design, code, and content, is protected by copyright and other intellectual property laws.</p>
+        <p>Our tools are open-source and available under the GPL-3.0 license.</p>
+      </section>
 
-    <section>
-      <h2>5. Privacy</h2>
-      <p>Your use of the Service is also governed by our <router-link to="/privacy-policy">Privacy Policy</router-link>, which is incorporated into these Terms by reference.</p>
-    </section>
+      <section class="content-section">
+        <h2>Disclaimer of Warranties</h2>
+        <p>Our service is provided "as is" without warranties of any kind. We do not guarantee:</p>
+        <ul>
+          <li>Uninterrupted or error-free service</li>
+          <li>Accuracy of tool results</li>
+          <li>Availability of specific tools</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>6. Disclaimer of Warranties</h2>
-      <p>The Service is provided "as is" and "as available" without warranties of any kind, either express or implied. We do not warrant that:</p>
-      <ul>
-        <li>The Service will be uninterrupted or error-free</li>
-        <li>The results obtained from the Service will be accurate or reliable</li>
-        <li>The quality of any products, services, or information obtained through the Service will meet your expectations</li>
-      </ul>
-    </section>
+      <section class="content-section">
+        <h2>Limitation of Liability</h2>
+        <p>AgentsAITools shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our service.</p>
+      </section>
 
-    <section>
-      <h2>7. Limitation of Liability</h2>
-      <p>In no event shall AgentsAITools be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.</p>
-    </section>
+      <section class="content-section">
+        <h2>Third-Party Links</h2>
+        <p>Our service may contain links to third-party websites. We are not responsible for the content or practices of these external sites.</p>
+      </section>
 
-    <section>
-      <h2>8. Third-Party Links</h2>
-      <p>The Service may contain links to third-party websites or services that are not owned or controlled by AgentsAITools. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites.</p>
-    </section>
+      <section class="content-section">
+        <h2>Changes to Terms</h2>
+        <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting on this page.</p>
+      </section>
 
-    <section>
-      <h2>9. Changes to Terms</h2>
-      <p>We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect.</p>
-    </section>
-
-    <section>
-      <h2>10. Contact Us</h2>
-      <p>If you have any questions about these Terms, please contact us at:</p>
-      <ul>
-        <li>Email: contact@agentsaitools.com</li>
-        <li>Website: https://agentsaitools.com/contact</li>
-      </ul>
-    </section>
+      <section class="content-section">
+        <h2>Contact Us</h2>
+        <p>If you have questions about these terms, please contact us:</p>
+        <p>Email: <a href="mailto:contact@agentsaitools.com" class="apple-link">contact@agentsaitools.com</a></p>
+      </section>
+    </main>
   </div>
 </template>
 
-<style scoped lang="less">
-.legal-page {
+<style scoped>
+.page-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
-  line-height: 1.8;
 }
 
-h1 {
-  font-size: 36px;
-  margin-bottom: 8px;
-}
-
-.last-updated {
-  color: #666;
+.page-header {
+  text-align: center;
   margin-bottom: 40px;
 }
 
-h2 {
-  font-size: 24px;
-  margin-top: 32px;
-  margin-bottom: 16px;
-  color: #1a1a1a;
+.page-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
 }
 
-p {
-  margin-bottom: 16px;
+.page-subtitle {
+  font-size: 16px;
+  color: #86868b;
+  margin: 0;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.content-section {
+  background: #ffffff;
+  border: 1px solid #e8e8ed;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.content-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0 0 12px;
+}
+
+.content-section p {
+  font-size: 15px;
+  line-height: 1.6;
   color: #333;
+  margin: 0 0 12px;
 }
 
-ul {
-  padding-left: 24px;
-  margin-bottom: 16px;
-
-  li {
-    margin-bottom: 8px;
-    color: #333;
-  }
+.content-section p:last-child {
+  margin-bottom: 0;
 }
 
-section {
-  margin-bottom: 32px;
+.content-section ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
 }
 
-a {
-  color: #18a058;
+.content-section li {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.apple-link {
+  color: #0071e3;
   text-decoration: none;
+}
 
-  &:hover {
-    text-decoration: underline;
+.apple-link:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode */
+:root.dark .page-header h1,
+:root.dark .content-section h2 {
+  color: #f5f5f7;
+}
+
+:root.dark .page-subtitle {
+  color: #999;
+}
+
+:root.dark .content-section {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+:root.dark .content-section p,
+:root.dark .content-section li {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 28px;
   }
 }
 </style>

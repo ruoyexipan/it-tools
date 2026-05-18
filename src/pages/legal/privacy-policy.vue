@@ -4,136 +4,209 @@ import { useHead } from '@vueuse/head';
 useHead({
   title: 'Privacy Policy - AgentsAITools',
   meta: [
-    { name: 'description', content: 'Privacy Policy for AgentsAITools - Free online developer tools collection.' },
+    { name: 'description', content: 'Privacy Policy for AgentsAITools - Free online developer tools.' },
   ],
 });
 </script>
 
 <template>
-  <div class="legal-page">
-    <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: May 8, 2026</p>
+  <div class="page-container">
+    <header class="page-header">
+      <h1>Privacy Policy</h1>
+      <p class="page-subtitle">Last updated: May 2026</p>
+    </header>
 
-    <section>
-      <h2>1. Introduction</h2>
-      <p>Welcome to AgentsAITools ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website https://agentsaitools.com (the "Service").</p>
-    </section>
+    <main class="page-content">
+      <section class="content-section">
+        <h2>Introduction</h2>
+        <p>Welcome to AgentsAITools. We respect your privacy and are committed to protecting your personal data.</p>
+        <p>This privacy policy explains how we collect, use, and protect your information when you use our website.</p>
+      </section>
 
-    <section>
-      <h2>2. Information We Collect</h2>
-      <h3>2.1 Automatically Collected Information</h3>
-      <p>When you visit our Service, we may automatically collect certain information, including:</p>
-      <ul>
-        <li>Browser type and version</li>
-        <li>Operating system</li>
-        <li>IP address (anonymized)</li>
-        <li>Pages visited and time spent</li>
-        <li>Referring website addresses</li>
-      </ul>
+      <section class="content-section">
+        <h2>Information We Collect</h2>
+        <p>We collect minimal information to provide and improve our service:</p>
+        <ul>
+          <li><strong>Usage Data:</strong> Anonymous analytics about how you use our tools</li>
+          <li><strong>Device Information:</strong> Browser type, operating system, screen resolution</li>
+          <li><strong>IP Address:</strong> For security and analytics purposes</li>
+        </ul>
+      </section>
 
-      <h3>2.2 Tools Usage Data</h3>
-      <p>All tools on our website operate entirely within your browser. We do not collect, store, or transmit any data you input into our tools. Your data remains on your device.</p>
-    </section>
+      <section class="content-section">
+        <h2>How We Use Your Information</h2>
+        <p>We use the collected information to:</p>
+        <ul>
+          <li>Provide and maintain our tools</li>
+          <li>Improve user experience</li>
+          <li>Analyze usage patterns</li>
+          <li>Detect and prevent abuse</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>3. Use of Information</h2>
-      <p>We use the collected information to:</p>
-      <ul>
-        <li>Provide and maintain our Service</li>
-        <li>Improve user experience</li>
-        <li>Monitor and analyze usage patterns</li>
-        <li>Detect and prevent technical issues</li>
-      </ul>
-    </section>
+      <section class="content-section">
+        <h2>Data Processing</h2>
+        <p><strong>All tool processing happens locally in your browser.</strong></p>
+        <p>When you use our tools (JSON formatter, hash generator, etc.), your data is processed entirely on your device. No data is sent to our servers.</p>
+      </section>
 
-    <section>
-      <h2>4. Cookies</h2>
-      <p>We use cookies to enhance your experience. You can set your browser to refuse all cookies or indicate when a cookie is being sent.</p>
-    </section>
+      <section class="content-section">
+        <h2>Cookies</h2>
+        <p>We use cookies for:</p>
+        <ul>
+          <li><strong>Essential cookies:</strong> Required for the website to function</li>
+          <li><strong>Analytics cookies:</strong> To understand how visitors use our site</li>
+          <li><strong>Advertising cookies:</strong> To display relevant ads (Google AdSense)</li>
+        </ul>
+        <p>You can control cookies through your browser settings.</p>
+      </section>
 
-    <section>
-      <h2>5. Third-Party Services</h2>
-      <p>We may use third-party services for:</p>
-      <ul>
-        <li><strong>Analytics:</strong> Google Analytics to understand website usage</li>
-        <li><strong>Advertising:</strong> Google AdSense to display advertisements</li>
-        <li><strong>Hosting:</strong> Cloudflare for content delivery and security</li>
-      </ul>
-    </section>
+      <section class="content-section">
+        <h2>Third-Party Services</h2>
+        <p>We use the following third-party services:</p>
+        <ul>
+          <li><strong>Google Analytics:</strong> Website analytics</li>
+          <li><strong>Google AdSense:</strong> Advertising</li>
+          <li><strong>Cloudflare:</strong> CDN and security</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>6. Data Security</h2>
-      <p>We implement appropriate security measures to protect your information. However, no method of transmission over the Internet is 100% secure.</p>
-    </section>
+      <section class="content-section">
+        <h2>Data Security</h2>
+        <p>We implement appropriate security measures to protect your information, including:</p>
+        <ul>
+          <li>HTTPS encryption</li>
+          <li>Cloudflare security features</li>
+          <li>Regular security updates</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>7. Children's Privacy</h2>
-      <p>Our Service is not intended for children under 13. We do not knowingly collect personal information from children.</p>
-    </section>
+      <section class="content-section">
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access your personal data</li>
+          <li>Request data deletion</li>
+          <li>Opt-out of analytics tracking</li>
+          <li>Disable cookies</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>8. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
-    </section>
+      <section class="content-section">
+        <h2>Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
+      </section>
 
-    <section>
-      <h2>9. Contact Us</h2>
-      <p>If you have questions about this Privacy Policy, please contact us at:</p>
-      <ul>
-        <li>Email: contact@agentsaitools.com</li>
-        <li>Website: https://agentsaitools.com/contact</li>
-      </ul>
-    </section>
+      <section class="content-section">
+        <h2>Contact Us</h2>
+        <p>If you have questions about this privacy policy, please contact us:</p>
+        <p>Email: <a href="mailto:contact@agentsaitools.com" class="apple-link">contact@agentsaitools.com</a></p>
+      </section>
+    </main>
   </div>
 </template>
 
-<style scoped lang="less">
-.legal-page {
+<style scoped>
+.page-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
-  line-height: 1.8;
 }
 
-h1 {
-  font-size: 36px;
-  margin-bottom: 8px;
-}
-
-.last-updated {
-  color: #666;
+.page-header {
+  text-align: center;
   margin-bottom: 40px;
 }
 
-h2 {
-  font-size: 24px;
-  margin-top: 32px;
-  margin-bottom: 16px;
-  color: #1a1a1a;
+.page-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
 }
 
-h3 {
-  font-size: 18px;
-  margin-top: 24px;
-  margin-bottom: 12px;
+.page-subtitle {
+  font-size: 16px;
+  color: #86868b;
+  margin: 0;
 }
 
-p {
-  margin-bottom: 16px;
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.content-section {
+  background: #ffffff;
+  border: 1px solid #e8e8ed;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.content-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0 0 12px;
+}
+
+.content-section p {
+  font-size: 15px;
+  line-height: 1.6;
   color: #333;
+  margin: 0 0 12px;
 }
 
-ul {
-  padding-left: 24px;
-  margin-bottom: 16px;
+.content-section p:last-child {
+  margin-bottom: 0;
+}
 
-  li {
-    margin-bottom: 8px;
-    color: #333;
+.content-section ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
+}
+
+.content-section li {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.apple-link {
+  color: #0071e3;
+  text-decoration: none;
+}
+
+.apple-link:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode */
+:root.dark .page-header h1,
+:root.dark .content-section h2 {
+  color: #f5f5f7;
+}
+
+:root.dark .page-subtitle {
+  color: #999;
+}
+
+:root.dark .content-section {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+:root.dark .content-section p,
+:root.dark .content-section li {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 28px;
   }
-}
-
-section {
-  margin-bottom: 32px;
 }
 </style>
