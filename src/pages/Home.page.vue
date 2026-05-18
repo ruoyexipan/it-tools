@@ -7,7 +7,12 @@ import ToolCard from '../components/ToolCard.vue';
 import { useToolStore } from '@/tools/tools.store';
 
 const toolStore = useToolStore();
-useHead({ title: 'AgentsAITools - Free Online Developer Tools Collection' });
+useHead({ 
+  title: 'AgentsAITools - Free Online Developer Tools for JSON, Base64, Hash & More',
+  meta: [
+    { name: 'description', content: 'AgentsAITools provides 90+ free online developer tools including JSON formatter, Base64 encoder, hash generator, JWT decoder, UUID generator, and more. No signup required.' },
+  ],
+});
 const { t } = useI18n();
 const favoriteTools = computed(() => toolStore.favoriteTools);
 
@@ -18,12 +23,19 @@ function onUpdateFavoriteTools() {
 
 <template>
   <div class="home-page">
-    <!-- Hero Section -->
+    <!-- Hero Section with BLUF intro -->
     <section class="hero">
-      <h1 class="sr-only">AgentsAITools</h1>
+      <h1 class="sr-only">AgentsAITools - Free Online Developer Tools</h1>
       <div class="hero-content">
         <h2 class="hero-title">Developer Tools</h2>
         <p class="hero-subtitle">Free online tools for developers. No signup required.</p>
+        
+        <!-- BLUF Intro -->
+        <div class="bluf-intro">
+          <p><strong>AgentsAITools</strong> is a free online developer tools platform providing 90+ tools for developers and IT professionals.</p>
+          <p>Tools include JSON formatter, Base64 encoder, hash generator, JWT decoder, UUID generator, regex tester, and more.</p>
+        </div>
+
         <div class="hero-stats">
           <div class="stat">
             <span class="stat-number">90+</span>
@@ -32,6 +44,10 @@ function onUpdateFavoriteTools() {
           <div class="stat">
             <span class="stat-number">100%</span>
             <span class="stat-label">Free</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Signup</span>
           </div>
         </div>
       </div>
@@ -76,6 +92,72 @@ function onUpdateFavoriteTools() {
         </div>
       </div>
     </section>
+
+    <!-- SEO Content Section -->
+    <section class="seo-content">
+      <h2>Why Choose AgentsAITools?</h2>
+      
+      <div class="benefits-grid">
+        <div class="benefit">
+          <h3>100% Free</h3>
+          <p>All tools are completely free to use. No hidden fees, no premium tiers.</p>
+        </div>
+        <div class="benefit">
+          <h3>No Signup Required</h3>
+          <p>Start using tools immediately. No registration or email required.</p>
+        </div>
+        <div class="benefit">
+          <h3>Privacy First</h3>
+          <p>All processing happens in your browser. No data sent to servers.</p>
+        </div>
+        <div class="benefit">
+          <h3>Mobile Friendly</h3>
+          <p>Works on desktop, tablet, and mobile devices.</p>
+        </div>
+      </div>
+
+      <h2>Popular Tool Categories</h2>
+      
+      <div class="categories-list">
+        <ul>
+          <li><strong>Crypto Tools:</strong> Hash generator, JWT decoder, UUID generator, encryption</li>
+          <li><strong>Converters:</strong> JSON formatter, Base64 encoder, YAML converter, color converter</li>
+          <li><strong>Web Tools:</strong> URL encoder, HTML entities, meta tag generator</li>
+          <li><strong>Development:</strong> SQL formatter, regex tester, Docker converter</li>
+          <li><strong>Network:</strong> IP calculator, MAC address lookup, subnet calculator</li>
+          <li><strong>Text Tools:</strong> Lorem ipsum generator, text diff, case converter</li>
+        </ul>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-section">
+        <div class="faq-item">
+          <h3>What is AgentsAITools?</h3>
+          <p>AgentsAITools is a free online developer tools collection with 90+ tools including JSON formatter, Base64 encoder, hash generator, JWT decoder, UUID generator, regex tester, and more.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is AgentsAITools free to use?</h3>
+          <p>Yes, AgentsAITools is completely free. No signup or registration required. All tools run directly in your browser.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is my data safe?</h3>
+          <p>Yes, all tools run entirely in your browser. No data is sent to any server. Your information stays on your device.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What tools are available?</h3>
+          <p>90+ tools including: JSON formatter, Base64 encoder, hash generator, JWT decoder, UUID generator, regex tester, color converter, SQL formatter, Docker converter, and many more.</p>
+        </div>
+      </div>
+
+      <h2>External Resources</h2>
+      <p>Learn more about developer tools from these authoritative sources:</p>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">MDN Web Docs - JavaScript</a></li>
+        <li><a href="https://json.org" target="_blank" rel="noopener">JSON.org - JSON Specification</a></li>
+        <li><a href="https://base64.guru" target="_blank" rel="noopener">Base64.guru - Base64 Encoding Guide</a></li>
+      </ul>
+    </section>
   </div>
 </template>
 
@@ -85,10 +167,9 @@ function onUpdateFavoriteTools() {
   margin: 0 auto;
 }
 
-/* Hero Section */
 .hero {
   text-align: center;
-  padding: 48px 24px;
+  padding: 48px 20px;
   margin-bottom: 40px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 16px;
@@ -106,6 +187,25 @@ function onUpdateFavoriteTools() {
   font-size: 18px;
   opacity: 0.9;
   margin: 0 0 24px;
+}
+
+.bluf-intro {
+  max-width: 600px;
+  margin: 0 auto 24px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.bluf-intro p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.bluf-intro p:last-child {
+  margin-bottom: 0;
 }
 
 .hero-stats {
@@ -130,11 +230,11 @@ function onUpdateFavoriteTools() {
   opacity: 0.8;
 }
 
-/* Tools Section */
 .tools-section {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: 40px;
 }
 
 .tool-group {
@@ -152,10 +252,6 @@ function onUpdateFavoriteTools() {
   gap: 8px;
 }
 
-:root.dark .group-title {
-  color: #f5f5f7;
-}
-
 .drag-hint {
   font-size: 12px;
   color: #86868b;
@@ -166,6 +262,103 @@ function onUpdateFavoriteTools() {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 12px;
+}
+
+.seo-content {
+  background: #f8f9fa;
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+
+.seo-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: #1d1d1f;
+}
+
+.seo-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 16px;
+}
+
+.seo-content ul {
+  margin: 0 0 16px;
+  padding-left: 24px;
+}
+
+.seo-content li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.benefit {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e8e8ed;
+}
+
+.benefit h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #18a058;
+}
+
+.benefit p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+}
+
+.categories-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.categories-list li {
+  padding: 12px;
+  background: white;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 1px solid #e8e8ed;
+}
+
+.faq-section {
+  margin-top: 16px;
+}
+
+.faq-item {
+  background: white;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid #e8e8ed;
+}
+
+.faq-item h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #18a058;
+}
+
+.faq-item p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
 }
 
 .ghost-card {
@@ -215,6 +408,10 @@ function onUpdateFavoriteTools() {
   }
 
   .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
     grid-template-columns: 1fr;
   }
 }
