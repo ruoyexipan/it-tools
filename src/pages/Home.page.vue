@@ -146,9 +146,9 @@ function onUpdateFavoriteTools() {
       <h2>External Resources</h2>
       <p>Learn more about developer tools from these authoritative sources:</p>
       <ul>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">MDN Web Docs - JavaScript</a></li>
-        <li><a href="https://json.org" target="_blank" rel="noopener">JSON.org - JSON Specification</a></li>
-        <li><a href="https://base64.guru" target="_blank" rel="noopener">Base64.guru - Base64 Encoding Guide</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener" title="MDN Web Docs - JavaScript documentation and tutorials">MDN Web Docs - JavaScript</a></li>
+        <li><a href="https://json.org" target="_blank" rel="noopener" title="JSON.org - Official JSON specification and documentation">JSON.org - JSON Specification</a></li>
+        <li><a href="https://base64.guru" target="_blank" rel="noopener" title="Base64.guru - Learn about Base64 encoding and decoding">Base64.guru - Base64 Encoding Guide</a></li>
       </ul>
     </section>
   </div>

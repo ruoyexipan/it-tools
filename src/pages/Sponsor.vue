@@ -118,11 +118,11 @@ function donateCustom() {
     <section class="other-section">
       <h2>Other Ways to Support</h2>
       <div class="other-methods">
-        <a href="https://x.com/ruoyexi666" target="_blank" rel="noopener noreferrer" class="method">
+        <a href="https://x.com/ruoyexi666" target="_blank" rel="noopener noreferrer" class="method" title="Follow us on Twitter/X">
           <span class="method-icon">🐦</span>
           <span>Follow on Twitter</span>
         </a>
-        <a href="https://github.com/ruoyexipan/it-tools" target="_blank" rel="noopener noreferrer" class="method">
+        <a href="https://github.com/ruoyexipan/it-tools" target="_blank" rel="noopener noreferrer" class="method" title="View source code on GitHub">
           <span class="method-icon">⭐</span>
           <span>Star on GitHub</span>
         </a>
