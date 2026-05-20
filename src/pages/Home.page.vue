@@ -30,7 +30,6 @@ function onUpdateFavoriteTools() {
         <div class="hero-text">
           <h2 class="hero-title">Developer Tools</h2>
           <p class="hero-subtitle">Free online tools for developers. No signup required.</p>
-          <p class="hero-desc">AgentsAITools is a free online developer tools platform providing 90+ tools for developers and IT professionals. Tools include JSON formatter, Base64 encoder, hash generator, JWT decoder, UUID generator, regex tester, and more.</p>
         </div>
 
         <div class="hero-stats">
@@ -189,16 +188,6 @@ function onUpdateFavoriteTools() {
   font-size: 16px;
   opacity: 0.9;
   margin: 0 0 12px;
-}
-
-.hero-desc {
-  font-size: 14px;
-  line-height: 1.5;
-  opacity: 0.85;
-  margin: 0;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hero-stats {
