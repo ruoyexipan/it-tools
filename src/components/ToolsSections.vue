@@ -85,7 +85,7 @@ function getToolCategory(toolName: string): string {
     'Web': ['URL', 'HTML Entities', 'Device', 'Basic Auth', 'Meta Tag', 'OTP', 'MIME', 'JWT', 'Keycode', 'Slugify', 'HTML WYSIWYG', 'User Agent', 'HTTP Status', 'JSON Diff', 'SafeLink'],
     'Images': ['QR Code', 'WiFi QR', 'SVG Placeholder', 'Camera'],
     'Development': ['Git', 'Random Port', 'Crontab', 'JSON', 'SQL', 'Chmod', 'Docker', 'XML', 'YAML', 'Email', 'Regex'],
-    'Network': ['IPv4', 'MAC', 'IPv6', 'IP'],
+    'Network': ['IPv4', 'MAC', 'IPv6', 'IP', 'Speed', 'DNS', 'SSL', 'Website', 'My IP', 'Internet'],
     'Math': ['Math', 'ETA', 'Percentage'],
     'Measurement': ['Chronometer', 'Temperature', 'Benchmark'],
     'Text': ['Lorem Ipsum', 'Text Statistics', 'Emoji', 'String Obfuscator', 'Text Diff', 'Numeronym', 'ASCII'],
