@@ -120,6 +120,7 @@ export default defineConfig({
           'vendor-vue': ['vue', 'vue-router', 'pinia'],
           'vendor-ui': ['naive-ui'],
           'vendor-utils': ['lodash', 'date-fns', 'mathjs'],
+          'vendor-icons': ['@tabler/icons-vue', '@vicons/tabler', '@vicons/material'],
         },
       },
     },
