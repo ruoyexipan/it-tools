@@ -686,6 +686,42 @@ const pages = [
     keywords: 'my ip, what is my ip, ip address, public ip, ip lookup',
     category: 'Network',
   },
+  {
+    path: '/iban-validator-and-parser',
+    title: 'IBAN Validator and Parser | AgentsAITools',
+    description: 'Validate and parse IBAN numbers online. Free IBAN validator.',
+    keywords: 'iban validator, iban check',
+    category: 'Data',
+  },
+  // Network Testing Tools
+  {
+    path: '/speed-test',
+    title: 'Internet Speed Test - Check Download & Upload Speed | AgentsAITools',
+    description: 'Test your internet connection speed online. Measure download speed, upload speed, and ping latency. Free speed test tool.',
+    keywords: 'speed test, internet speed, bandwidth test, download speed, upload speed, ping test, network speed',
+    category: 'Network',
+  },
+  {
+    path: '/dns-lookup',
+    title: 'DNS Lookup Online - Check DNS Records | AgentsAITools',
+    description: 'Look up DNS records for any domain. Check A, AAAA, MX, TXT, CNAME, and NS records online. Free DNS lookup tool.',
+    keywords: 'dns lookup, dns records, dns checker, domain lookup, mx records, a record, cname record',
+    category: 'Network',
+  },
+  {
+    path: '/ssl-checker',
+    title: 'SSL Certificate Checker - Verify SSL Online | AgentsAITools',
+    description: 'Check SSL certificate details for any website. Verify certificate validity, expiration date, and issuer information. Free SSL checker.',
+    keywords: 'ssl checker, ssl certificate, certificate validator, https check, ssl test, certificate expiry',
+    category: 'Network',
+  },
+  {
+    path: '/website-checker',
+    title: 'Website Down Checker - Check Site Status | AgentsAITools',
+    description: 'Check if a website is down or up. Test website availability from multiple locations worldwide. Free website status checker.',
+    keywords: 'website checker, site down, website status, is website down, uptime checker, website monitor',
+    category: 'Network',
+  },,
 ];
 
 // 生成 HTML
@@ -996,33 +1032,3 @@ function main() {
 }
 
 main();
-
-// 新增测试工具
-{
-  path: '/speed-test',
-  title: 'Internet Speed Test - Check Download & Upload Speed | AgentsAITools',
-  description: 'Test your internet connection speed online. Measure download speed, upload speed, and ping latency. Free speed test tool.',
-  keywords: 'speed test, internet speed, bandwidth test, download speed, upload speed, ping test, network speed',
-  category: 'Network',
-},
-{
-  path: '/dns-lookup',
-  title: 'DNS Lookup Online - Check DNS Records | AgentsAITools',
-  description: 'Look up DNS records for any domain. Check A, AAAA, MX, TXT, CNAME, and NS records online. Free DNS lookup tool.',
-  keywords: 'dns lookup, dns records, dns checker, domain lookup, mx records, a record, cname record',
-  category: 'Network',
-},
-{
-  path: '/ssl-checker',
-  title: 'SSL Certificate Checker - Verify SSL Online | AgentsAITools',
-  description: 'Check SSL certificate details for any website. Verify certificate validity, expiration date, and issuer information. Free SSL checker.',
-  keywords: 'ssl checker, ssl certificate, certificate validator, https check, ssl test, certificate expiry',
-  category: 'Network',
-},
-{
-  path: '/website-checker',
-  title: 'Website Down Checker - Check Site Status | AgentsAITools',
-  description: 'Check if a website is down or up. Test website availability from multiple locations worldwide. Free website status checker.',
-  keywords: 'website checker, site down, website status, is website down, uptime checker, website monitor',
-  category: 'Network',
-},
