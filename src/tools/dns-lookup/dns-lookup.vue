@@ -6,7 +6,7 @@ const results = ref<any[]>([]);
 const isSearching = ref(false);
 const error = ref('');
 
-const recordTypes = ['A', 'AAAA', 'MX', 'TXT', 'CNAME', 'NS', 'SOA'];
+const recordTypes = ['A', 'AAAA', 'MX', 'TXT', 'CNAME', 'NS'];
 
 async function lookupDNS() {
   if (!domain.value) return;
