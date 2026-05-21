@@ -87,6 +87,10 @@ import { tool as uuidGenerator } from './uuid-generator';
 import { tool as macAddressLookup } from './mac-address-lookup';
 import { tool as xmlFormatter } from './xml-formatter';
 import { tool as yamlViewer } from './yaml-viewer';
+import { tool as speedTest } from './speed-test';
+import { tool as dnsLookup } from './dns-lookup';
+import { tool as sslChecker } from './ssl-checker';
+import { tool as websiteChecker } from './website-checker';
 
 export const toolsByCategory: ToolCategory[] = [
   {
@@ -165,7 +169,7 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Network',
-    components: [ipv4SubnetCalculator, ipv4AddressConverter, ipv4RangeExpander, macAddressLookup, macAddressGenerator, ipv6UlaGenerator, myIp],
+    components: [ipv4SubnetCalculator, ipv4AddressConverter, ipv4RangeExpander, macAddressLookup, macAddressGenerator, ipv6UlaGenerator, myIp, speedTest, dnsLookup, sslChecker, websiteChecker],
   },
   {
     name: 'Math',
