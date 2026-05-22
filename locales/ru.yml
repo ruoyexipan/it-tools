@@ -1,0 +1,476 @@
+home:
+  categories:
+    newestTools: Новейшие инструменты
+    favoriteTools: 'Избранные инструменты'
+    allTools: 'Все инструменты'
+    favoritesDndToolTip: 'Перетащите для изменения порядка избранных'
+  subtitle: 'Полезные инструменты для разработчиков'
+  toggleMenu: 'Переключить меню'
+  home: Главная
+  uiLib: 'UI библиотека'
+  support: 'Поддержать разработку IT-Tools'
+  buyMeACoffee: 'Купить мне кофе'
+  follow:
+    title: 'Нравится IT-Tools?'
+    p1: 'Поставьте звезду на'
+    githubRepository: 'репозитории IT-Tools на GitHub'
+    p2: 'или подпишитесь на'
+    twitterXAccount: 'аккаунт IT-Tools в X'
+    thankYou: 'Спасибо!'
+  nav:
+    github: 'Репозиторий GitHub'
+    githubRepository: 'Репозиторий IT-Tools на GitHub'
+    twitterX: 'Аккаунт X'
+    twitterXAccount: 'Аккаунт IT Tools в X'
+    about: 'Об IT-Tools'
+    aboutLabel: 'О нас'
+    darkMode: 'Тёмная тема'
+    lightMode: 'Светлая тема'
+    mode: 'Переключить тёмную/светлую тему'
+aboutPage:
+  content: >
+    # Об IT-Tools
+
+    Этот замечательный сайт, созданный с ❤ [Corentin Thomasset](https://corentin.tech?utm_source=it-tools&utm_medium=about), объединяет полезные инструменты для разработчиков и IT-специалистов. Если вам он полезен, поделитесь с теми, кому он тоже может пригодиться, и не забудьте добавить в закладки!
+
+    IT Tools — проект с открытым исходным кодом (лицензия GPL-3.0) и бесплатный, и таким останется навсегда, однако хостинг и продление домена стоят денег. Если вы хотите поддержать мою работу и мотивировать добавлять новые инструменты, рассмотрите возможность [спонсировать меня](https://www.buymeacoffee.com/cthmsst).
+
+    ## Технологии
+
+    IT Tools создан на Vue.js (Vue 3) с библиотекой компонентов Naive UI и развёрнут с помощью Vercel. В некоторых инструментах используются сторонние библиотеки с открытым исходным кодом — полный список можно найти в файле [package.json](https://github.com/CorentinTh/it-tools/blob/main/package.json) репозитория.
+
+    ## Нашли ошибку? Не хватает инструмента?
+
+    Если вам нужен инструмент, которого здесь нет, и вы считаете его полезным, добро пожаловать в [раздел issues](https://github.com/CorentinTh/it-tools/issues/new/choose) репозитория на GitHub — оставьте запрос на добавление функции.
+
+    А если вы нашли ошибку или что-то работает не так, как ожидалось, сообщите об этом в [разделе issues](https://github.com/CorentinTh/it-tools/issues/new/choose) репозитория на GitHub.
+
+404:
+  notFound: '404 Не найдено'
+  sorry: 'Извините, эта страница, похоже, не существует'
+  maybe: 'Возможно, кэш преподносит сюрпризы — попробуйте принудительное обновление?'
+  backHome: 'На главную'
+favoriteButton:
+  remove: 'Удалить из избранного'
+  add: 'Добавить в избранное'
+toolCard:
+  new: Новый
+search:
+  label: Поиск
+tools:
+  categories:
+    favorite-tools: 'Избранные инструменты'
+    crypto: Криптография
+    converter: Конвертеры
+    web: Веб
+    images and videos: 'Изображения и видео'
+    development: Разработка
+    network: Сеть
+    math: Математика
+    measurement: Измерения
+    text: Текст
+    data: Данные
+
+  password-strength-analyser:
+    title: Анализатор надёжности паролей
+    description: Узнайте надёжность вашего пароля с помощью этого клиентского инструмента анализа и оценки времени взлома.
+
+  chronometer:
+    title: Секундомер
+    description: Засекайте длительность событий. По сути, секундомер с простым функционалом.
+
+  token-generator:
+    title: Генератор токенов
+    description: 'Генерируйте случайные строки с нужными символами: прописные или строчные буквы, цифры и/или спецсимволы.'
+
+    uppercase: Прописные (ABC...)
+    lowercase: Строчные (abc...)
+    numbers: Цифры (123...)
+    symbols: Символы (!-;...)
+    length: Длина
+    tokenPlaceholder: 'Токен...'
+    copied: Токен скопирован в буфер обмена
+    button:
+      copy: Копировать
+      refresh: Обновить
+  percentage-calculator:
+    title: Калькулятор процентов
+    description: Легко вычисляйте проценты от одного значения к другому или от процентов к значению.
+
+  svg-placeholder-generator:
+    title: Генератор SVG-заглушек
+    description: Генерируйте SVG-изображения для использования в качестве заглушек в ваших приложениях.
+
+  json-to-csv:
+    title: JSON в CSV
+    description: Конвертируйте JSON в CSV с автоматическим определением заголовков.
+
+  camera-recorder:
+    title: Запись с камеры
+    description: Сделайте фото или запишите видео с веб-камеры или камеры.
+
+  keycode-info:
+    title: Информация о кодах клавиш
+    description: Узнайте javascript keycode, код, расположение и модификаторы нажатой клавиши.
+
+  emoji-picker:
+    title: Выбор эмодзи
+    description: Копируйте и вставляйте эмодзи, а также узнайте unicode и code points каждого эмодзи.
+
+  color-converter:
+    title: Конвертер цветов
+    description: Конвертируйте цвета между различными форматами (hex, rgb, hsl и css-имена).
+
+  bcrypt:
+    title: Bcrypt
+    description: Хешируйте и сравнивайте текстовые строки с помощью bcrypt. Bcrypt — функция хеширования паролей на основе шифра Blowfish.
+
+  crontab-generator:
+    title: Генератор crontab
+    description: Проверяйте и создавайте crontab-выражения с понятным описанием расписания.
+
+  http-status-codes:
+    title: HTTP-коды состояния
+    description: Список всех HTTP-кодов состояния, их названия и значения.
+
+  sql-prettify:
+    title: Форматирование SQL
+    description: Форматируйте и приукрашивайте SQL-запросы онлайн (поддерживаются различные диалекты SQL).
+
+  benchmark-builder:
+    title: Построитель бенчмарков
+    description: Легко сравнивайте время выполнения задач с помощью простого онлайн-построителя бенчмарков.
+
+  git-memo:
+    title: Шпаргалка по Git
+    description: Git — децентрализованная система управления версиями. Эта шпаргалка обеспечит быстрый доступ к наиболее часто используемым командам git.
+
+  slugify-string:
+    title: Преобразование в slug
+    description: Преобразуйте строку в безопасный формат для URL, имени файла и идентификатора.
+
+  encryption:
+    title: Шифрование / дешифрование текста
+    description: Шифруйте открытый текст и дешифруйте зашифрованный текст с помощью алгоритмов AES, TripleDES, Rabbit или RC4.
+
+  random-port-generator:
+    title: Генератор случайных портов
+    description: Генерируйте случайные номера портов за пределами диапазона «известных» портов (0-1023).
+
+  yaml-prettify:
+    title: Форматирование YAML
+    description: Преобразуйте YAML-строку в удобный, читаемый формат.
+
+  eta-calculator:
+    title: Калькулятор ETA
+    description: Калькулятор примерного времени завершения задачи — определите время окончания и длительность, например, загрузки файла.
+
+  roman-numeral-converter:
+    title: Конвертер римских чисел
+    description: Конвертируйте римские числа в арабские и наоборот.
+
+  hmac-generator:
+    title: Генератор HMAC
+    description: Вычисляет код аутентификации сообщения на основе хеша (HMAC) с использованием секретного ключа и выбранной хеш-функции.
+
+  bip39-generator:
+    title: Генератор BIP39-паролей
+    description: Генерируйте BIP39-пароль из существующей или случайной мнемоники, либо получите мнемонику из пароля.
+
+  base64-file-converter:
+    title: Конвертер файлов в Base64
+    description: Конвертируйте строку, файл или изображение в формат base64.
+
+  list-converter:
+    title: Конвертер списков
+    description: Этот инструмент обрабатывает табличные данные и применяет различные преобразования (транспонирование, добавление префикса и суффикса, реверс, сортировка, приведение к нижнему регистру, обрезка значений) к каждой строке.
+
+  base64-string-converter:
+    title: Кодировщик/декодировщик Base64
+    description: Простое кодирование и декодирование строк в формат base64.
+
+  toml-to-yaml:
+    title: TOML в YAML
+    description: Разбор и конвертация TOML в YAML.
+
+  math-evaluator:
+    title: Вычислитель математических выражений
+    description: Калькулятор для вычисления математических выражений. Можно использовать функции sqrt, cos, sin, abs и др.
+
+  json-to-yaml-converter:
+    title: Конвертер JSON в YAML
+    description: Простая конвертация JSON в YAML с помощью онлайн-конвертера.
+
+  url-parser:
+    title: Парсер URL
+    description: Разберите URL на составные части (протокол, источник, параметры, порт, логин-пароль, ...).
+
+  iban-validator-and-parser:
+    title: Валидатор и парсер IBAN
+    description: Проверяйте и разбирайте номера IBAN. Узнайте, является ли IBAN действительным, получите страну, BBAN, является ли он QR-IBAN, и удобный формат IBAN.
+
+  user-agent-parser:
+    title: Парсер User-Agent
+    description: Определяйте и разбирайте браузер, движок, ОС, процессор, тип и модель устройства из строки user-agent.
+
+  numeronym-generator:
+    title: Генератор числовых аббревиатур
+    description: Числовая аббревиатура (numeronym) — это слово, в котором используется число для сокращения. Например, «i18n» — это числовая аббревиатура слова «internationalization», где 18 обозначает количество букв между первой «i» и последней «n».
+
+  case-converter:
+    title: Конвертер регистра
+    description: Измените регистр строки и выберите нужный формат.
+
+  html-entities:
+    title: Экранирование HTML-сущностей
+    description: Экранируйте или раскранируйте HTML-сущности (замена символов <,>, &, " и ' на их HTML-представление).
+
+  json-prettify:
+    title: Форматирование JSON
+    description: Преобразуйте JSON-строку в удобный, читаемый формат.
+
+  docker-run-to-docker-compose-converter:
+    title: Конвертер Docker run в Docker Compose
+    description: Преобразует команды «docker run» в файлы docker-compose!
+
+  mac-address-lookup:
+    title: Поиск по MAC-адресу
+    description: Найдите производителя устройства по его MAC-адресу.
+
+  mime-types:
+    title: MIME-типы
+    description: Конвертируйте MIME-типы в расширения файлов и наоборот.
+
+  toml-to-json:
+    title: TOML в JSON
+    description: Разбор и конвертация TOML в JSON.
+
+  lorem-ipsum-generator:
+    title: Генератор Lorem ipsum
+    description: Lorem ipsum — текст-заглушка, используемый для демонстрации визуальной формы документа или шрифта без привязки к содержанию.
+
+  qrcode-generator:
+    title: Генератор QR-кодов
+    description: Генерируйте и скачивайте QR-коды для URL или простого текста с настройкой цветов фона и переднего плана.
+
+  wifi-qrcode-generator:
+    title: Генератор QR-кодов для WiFi
+    description: Генерируйте и скачивайте QR-коды для быстрого подключения к WiFi-сетям.
+
+  xml-formatter:
+    title: Форматирование XML
+    description: Преобразуйте XML-строку в удобный, читаемый формат.
+
+  temperature-converter:
+    title: Конвертер температуры
+    description: Конвертация температур между Кельвинами, Цельсием, Фаренгейтом, Ранкином, Делислом, Ньютоном, Реомюром и Рёмером.
+
+  chmod-calculator:
+    title: Калькулятор chmod
+    description: Вычисляйте права и команды chmod с помощью онлайн-калькулятора.
+
+  rsa-key-pair-generator:
+    title: Генератор пар ключей RSA
+    description: Генерируйте новую случайную пару приватного и публичного RSA-ключей в формате PEM.
+
+  html-wysiwyg-editor:
+    title: HTML WYSIWYG-редактор
+    description: Онлайн-редактор HTML с богатым функционалом WYSIWYG, который сразу генерирует исходный код содержимого.
+
+  yaml-to-toml:
+    title: YAML в TOML
+    description: Разбор и конвертация YAML в TOML.
+
+  mac-address-generator:
+    title: Генератор MAC-адресов
+    description: Введите количество и префикс. MAC-адреса будут сгенерированы в выбранном регистре (прописные или строчные).
+
+  json-diff:
+    title: Сравнение JSON
+    description: Сравните два JSON-объекта и получите различия между ними.
+
+  jwt-parser:
+    title: Парсер JWT
+    description: Разберите и декодируйте JSON Web Token (JWT) и просмотрите его содержимое.
+
+  date-converter:
+    title: Конвертер даты и времени
+    description: Конвертируйте дату и время в различные форматы.
+
+  phone-parser-and-formatter:
+    title: Парсер и форматировщик номеров телефонов
+    description: 'Разбирайте, проверяйте и форматируйте номера телефонов. Получите информацию о номере: код страны, тип и т.д.'
+
+  ipv4-subnet-calculator:
+    title: Калькулятор подсетей IPv4
+    description: Разберите блоки IPv4 CIDR и получите всю необходимую информацию о вашей подсети.
+
+  og-meta-generator:
+    title: Генератор Open Graph мета-тегов
+    description: Генерируйте мета-теги Open Graph и социальных сетей для вашего сайта.
+
+  ipv6-ula-generator:
+    title: Генератор IPv6 ULA
+    description: Генерируйте собственные локальные, не маршрутизируемые IP-адреса для вашей сети согласно RFC4193.
+
+  hash-text:
+    title: Хеширование текста
+    description: 'Хешируйте текстовую строку нужной функцией: MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3 или RIPEMD160'
+
+  json-to-toml:
+    title: JSON в TOML
+    description: Разбор и конвертация JSON в TOML.
+
+  device-information:
+    title: Информация об устройстве
+    description: Получите информацию о текущем устройстве (размер экрана, плотность пикселей, user agent, ...).
+
+  pdf-signature-checker:
+    title: Проверка подписей PDF
+    description: Проверьте подписи PDF-файла. Подписанный PDF содержит одну или несколько подписей, которые позволяют определить, был ли изменён файл после подписания.
+
+  json-minify:
+    title: Минификация JSON
+    description: Сжимайте JSON, удаляя лишние пробелы.
+
+  ulid-generator:
+    title: Генератор ULID
+    description: Генерируйте случайные универсальные лексикографически сортируемые идентификаторы (ULID).
+
+  string-obfuscator:
+    title: Обфускация строк
+    description: Обфусцируйте строку (например, секрет, IBAN или токен), чтобы сделать её пригодной для передачи и идентификации без раскрытия содержимого.
+
+  base-converter:
+    title: Конвертер систем счисления
+    description: Конвертируйте числа между различными системами счисления (десятичная, шестнадцатеричная, двоичная, восьмеричная, base64, ...).
+
+  yaml-to-json-converter:
+    title: Конвертер YAML в JSON
+    description: Простая конвертация YAML в JSON с помощью онлайн-конвертера.
+
+  uuid-generator:
+    title: Генератор UUID
+    description: Уникальный универсальный идентификатор (UUID) — 128-битное число для идентификации информации в компьютерных системах. Количество возможных UUID составляет 16^32, что равно 2^128 или примерно 3.4×10^38 (это очень много!).
+
+  ipv4-address-converter:
+    title: Конвертер адресов IPv4
+    description: Конвертируйте IP-адрес в десятичный, двоичный, шестнадцатеричный формат или даже в представление IPv6.
+
+  text-statistics:
+    title: Статистика текста
+    description: 'Получите информацию о тексте: количество символов, количество слов, размер в байтах, ...'
+
+  text-to-nato-alphabet:
+    title: Текст в алфавит NATO
+    description: Преобразуйте текст в фонетический алфавит NATO для устной передачи.
+
+  basic-auth-generator:
+    title: Генератор Basic Auth
+    description: Генерируйте заголовок base64 basic auth из логина и пароля.
+
+  text-to-unicode:
+    title: Текст в Unicode
+    description: Преобразуйте текст в Unicode и наоборот.
+
+  ipv4-range-expander:
+    title: Расширитель диапазона IPv4
+    description: По начальному и конечному IPv4-адресам вычисляет допустимую подсети IPv4 с CIDR-нотацией.
+
+  text-diff:
+    title: Сравнение текстов
+    description: Сравните два текста и увидьте различия между ними.
+
+  otp-generator:
+    title: Генератор OTP-кодов
+    description: Генерируйте и проверяйте одноразовые пароли (OTP) на основе времени для многофакторной аутентификации.
+
+  url-encoder:
+    title: Кодирование/декодирование URL
+    description: Кодируйте текст в URL-формат (он же «процентное кодирование») или декодируйте из него.
+
+  text-to-binary:
+    title: Текст в двоичный ASCII
+    description: Конвертируйте текст в его двоичное ASCII-представление и наоборот.
+
+  unix-timestamp-converter:
+    title: Конвертер Unix-времени
+    description: Конвертируйте Unix-время в читаемые даты и наоборот. Поддерживаются секунды и миллисекунды.
+
+  speed-test:
+    title: Тест скорости интернета
+    description: Проверьте скорость интернет-соединения онлайн. Измерьте скорость загрузки, выгрузки и задержку (пинг).
+
+  dns-lookup:
+    title: DNS-запросы
+    description: Просматривайте DNS-записи любого домена. Проверяйте записи A, AAAA, MX, TXT, CNAME и NS онлайн.
+
+  ssl-checker:
+    title: Проверка SSL-сертификатов
+    description: Проверьте данные SSL-сертификата любого сайта. Узнайте срок действия, дату истечения и информацию об издателе.
+
+  website-checker:
+    title: Проверка доступности сайта
+    description: Проверьте, доступен ли сайт. Тестируйте доступность из различных точек мира.
+
+  my-ip:
+    title: Мой IP-адрес
+    description: Узнайте свой публичный IP-адрес онлайн. Бесплатный инструмент показывает ваш IP, местоположение и информацию об провайдере.
+
+sponsor:
+  title: Поддержать AgentsAITools
+  subtitle: Помогите нам сохранить инструменты бесплатными и улучшить платформу для разработчиков по всему миру.
+  whySupport: Почему стоит поддержать?
+  keepToolsFree: Инструменты останутся бесплатными
+  keepToolsFreeDesc: Все 90+ инструментов всегда будут бесплатными, без регистрации.
+  newTools: Новые инструменты
+  newToolsDesc: Помогите нам разрабатывать новые инструменты и улучшать существующие.
+  betterPerformance: Лучшая производительность
+  betterPerformanceDesc: Более быстрые серверы и лучшая инфраструктура для всех.
+  chooseLevel: Выберите уровень поддержки
+  supporter: Сторонник
+  supporterDesc: Купите нам кофе!
+  champion: Чемпион
+  championDesc: Помогите покрыть расходы на хостинг
+  hero: Герой
+  heroDesc: Профинансируйте разработку новых инструментов
+  donate: Пожертвовать
+  customAmount: Произвольная сумма
+  customDesc: Хотите внести другую сумму? Используйте нашу ссылку для произвольного платежа.
+  donateCustom: Пожертвовать произвольную сумму
+  otherWays: Другие способы поддержки
+  followTwitter: Подписаться в Twitter
+  starGitHub: Поставить звезду на GitHub
+  shareFeedback: Поделиться отзывом
+  thankYou: Спасибо за вашу поддержку!
+  thankYouDesc: Каждый вклад помогает нам поддерживать инструменты бесплатными и улучшать их.
+
+contact:
+  title: Свяжитесь с нами
+  subtitle: Мы будем рады услышать вас
+  getInTouch: Как связаться
+  getInTouchDesc: Есть вопросы, предложения или отзывы? Мы готовы помочь!
+  email: Электронная почта
+  responseTime: Время ответа
+  responseTimeDesc: Обычно мы отвечаем в течение 24-48 часов.
+  whatWeHelp: С чем мы поможем
+  generalQuestions: Общие вопросы об инструментах
+  featureRequests: Запросы на новые функции
+  bugReports: Отчёты об ошибках
+  partnershipInquiries: Вопросы о партнёрстве
+  sendMessage: Отправить сообщение
+  name: Имя
+  namePlaceholder: Ваше имя
+  subject: Тема
+  selectSubject: Выберите тему
+  generalQuestion: Общий вопрос
+  featureRequest: Запрос на функцию
+  bugReport: Отчёт об ошибке
+  partnership: Вопрос о партнёрстве
+  other: Другое
+  message: Сообщение
+  messagePlaceholder: Ваше сообщение...
+  send: Отправить сообщение
+  sending: Отправка...
+  successMessage: Спасибо за сообщение! Почтовый клиент откроется в ближайшее время.
+

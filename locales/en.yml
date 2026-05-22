@@ -392,3 +392,121 @@ tools:
   text-to-binary:
     title: Text to ASCII binary
     description: Convert text to its ASCII binary representation and vice-versa.
+
+  unix-timestamp-converter:
+    title: Unix timestamp converter
+    description: Convert Unix timestamps to human-readable dates and vice versa. Supports seconds and milliseconds.
+
+  speed-test:
+    title: Internet speed test
+    description: Test your internet connection speed online. Measure download speed, upload speed, and ping latency.
+
+  dns-lookup:
+    title: DNS lookup
+    description: Look up DNS records for any domain. Check A, AAAA, MX, TXT, CNAME, and NS records online.
+
+  ssl-checker:
+    title: SSL certificate checker
+    description: Check SSL certificate details for any website. Verify certificate validity, expiration date, and issuer information.
+
+  website-checker:
+    title: Website down checker
+    description: Check if a website is down or up. Test website availability from multiple locations worldwide.
+
+  my-ip:
+    title: What is my IP address
+    description: Check your public IP address online. Free IP address lookup tool showing your IP, location, and ISP information.
+
+sponsor:
+  title: Support AgentsAITools
+  subtitle: Help us keep these tools free and improve the platform for developers worldwide.
+  whySupport: Why Support Us?
+  keepToolsFree: Keep Tools Free
+  keepToolsFreeDesc: All 90+ tools will always be free, no signup required.
+  newTools: New Tools
+  newToolsDesc: Help us develop new tools and improve existing ones.
+  betterPerformance: Better Performance
+  betterPerformanceDesc: Faster servers and better infrastructure for everyone.
+  chooseLevel: Choose Your Support Level
+  supporter: Supporter
+  supporterDesc: Buy us a coffee!
+  champion: Champion
+  championDesc: Help us cover hosting costs
+  hero: Hero
+  heroDesc: Fund new tool development
+  donate: Donate
+  customAmount: Custom Amount
+  customDesc: Want to give a different amount? Use our custom payment link.
+  donateCustom: Donate Custom Amount
+  otherWays: Other Ways to Support
+  followTwitter: Follow on Twitter
+  starGitHub: Star on GitHub
+  shareFeedback: Share Feedback
+  thankYou: Thank you for your support!
+  thankYouDesc: Every contribution helps us keep the tools free and improve them.
+
+contact:
+  title: Contact Us
+  subtitle: We'd love to hear from you
+  getInTouch: Get in Touch
+  getInTouchDesc: Have questions, suggestions, or feedback? We're here to help!
+  email: Email
+  responseTime: Response Time
+  responseTimeDesc: We typically respond within 24-48 hours.
+  whatWeHelp: What We Help With
+  generalQuestions: General questions about tools
+  featureRequests: Feature requests
+  bugReports: Bug reports
+  partnershipInquiries: Partnership inquiries
+  sendMessage: Send Us a Message
+  name: Name
+  namePlaceholder: Your name
+  subject: Subject
+  selectSubject: Select a subject
+  generalQuestion: General Question
+  featureRequest: Feature Request
+  bugReport: Bug Report
+  partnership: Partnership Inquiry
+  other: Other
+  message: Message
+  messagePlaceholder: Your message...
+  send: Send Message
+  sending: Sending...
+  successMessage: Thank you for your message! Your email client should open shortly.
+
+aboutPage:
+  title: About AgentsAITools
+  subtitle: Free Online Developer Tools Platform
+  mission: Our Mission
+  missionDesc1: AgentsAITools is a free online developer tools platform providing 90+ tools for developers and IT professionals worldwide.
+  missionDesc2: We believe that essential developer tools should be accessible to everyone, without signup requirements or hidden fees.
+  whatWeOffer: What We Offer
+  tools90: 90+ Tools
+  tools90Desc: JSON formatter, Base64 encoder, hash generator, JWT decoder, UUID generator, regex tester, and more.
+  free100: 100% Free
+  free100Desc: All tools are completely free to use. No hidden fees, no premium tiers.
+  privacyFirst: Privacy First
+  privacyFirstDesc: All processing happens in your browser. No data sent to servers.
+  mobileFriendly: Mobile Friendly
+  mobileFriendlyDesc: Works on desktop, tablet, and mobile devices.
+  toolCategories: Tool Categories
+  crypto: Crypto
+  cryptoDesc: Hash generators, encryption, UUID, JWT tools
+  converters: Converters
+  convertersDesc: JSON, YAML, Base64, color converters
+  webTools: Web
+  webToolsDesc: URL encoder, HTML entities, meta tags
+  development: Development
+  developmentDesc: SQL formatter, regex tester, Docker tools
+  network: Network
+  networkDesc: IP calculators, MAC address tools
+  textTools: Text
+  textToolsDesc: Lorem ipsum, text diff, case converter
+  technology: Technology
+  technologyDesc: 'AgentsAITools is built with modern web technologies:'
+  vuejs: Vue.js 3 with TypeScript
+  vite: Vite build tool
+  cloudflareHosting: Cloudflare Pages hosting
+  cloudflareCdn: Cloudflare CDN for global performance
+  contactUs: Contact Us
+  contactUsDesc: Have questions, suggestions, or feedback? We'd love to hear from you.

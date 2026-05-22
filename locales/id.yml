@@ -1,0 +1,476 @@
+home:
+  categories:
+    newestTools: Alat terbaru
+    favoriteTools: 'Alat favorit Anda'
+    allTools: 'Semua alat'
+    favoritesDndToolTip: 'Seret dan lepas untuk mengurutkan favorit'
+  subtitle: 'Alat praktis untuk pengembang'
+  toggleMenu: 'Buka/tutup menu'
+  home: Beranda
+  uiLib: 'UI Lib'
+  support: 'Dukung pengembangan IT-Tools'
+  buyMeACoffee: 'Traktir saya kopi'
+  follow:
+    title: 'Anda suka it-tools?'
+    p1: 'Beri kami bintang di'
+    githubRepository: 'Repositori GitHub IT-Tools'
+    p2: 'atau ikuti kami di'
+    twitterXAccount: 'Akun X IT-Tools'
+    thankYou: 'Terima kasih!'
+  nav:
+    github: 'Repositori GitHub'
+    githubRepository: 'Repositori GitHub IT-Tools'
+    twitterX: 'Akun X'
+    twitterXAccount: 'Akun X IT Tools'
+    about: 'Tentang IT-Tools'
+    aboutLabel: 'Tentang'
+    darkMode: 'Mode gelap'
+    lightMode: 'Mode terang'
+    mode: 'Beralih mode gelap/terang'
+aboutPage:
+  content: >
+    # Tentang IT-Tools
+
+    Situs web luar biasa ini, dibuat dengan ❤ oleh [Corentin Thomasset](https://corentin.tech?utm_source=it-tools&utm_medium=about), mengumpulkan alat-alat berguna untuk pengembang dan orang-orang yang bekerja di bidang IT. Jika Anda merasa bermanfaat, silakan bagikan kepada orang yang menurut Anda juga akan merasakan manfaatnya dan jangan lupa untuk menandainya di bilah pintasan Anda!
+
+    IT Tools bersifat open-source (di bawah lisensi GPL-3.0) dan gratis, dan akan selalu demikian, tetapi saya membutuhkan biaya untuk hosting dan memperbarui nama domain. Jika Anda ingin mendukung pekerjaan saya, dan mendorong saya untuk menambahkan lebih banyak alat, silakan pertimbangkan untuk mendukung dengan [mensponsori saya](https://www.buymeacoffee.com/cthmsst).
+
+    ## Teknologi
+
+    IT Tools dibuat dengan Vue.js (Vue 3) menggunakan pustaka komponen Naive UI dan di-hosting serta di-deploy secara berkelanjutan oleh Vercel. Pustaka open-source pihak ketiga digunakan di beberapa alat, Anda dapat menemukan daftar lengkapnya di file [package.json](https://github.com/CorentinTh/it-tools/blob/main/package.json) di repositori.
+
+    ## Menemukan bug? Ada alat yang kurang?
+
+    Jika Anda membutuhkan alat yang saat ini belum tersedia di sini, dan menurut Anda alat tersebut bermanfaat, Anda dipersilakan untuk mengirimkan permintaan fitur di [bagian issues](https://github.com/CorentinTh/it-tools/issues/new/choose) di repositori GitHub.
+
+    Dan jika Anda menemukan bug, atau sesuatu tidak berfungsi sebagaimana mestinya, silakan laporkan bug di [bagian issues](https://github.com/CorentinTh/it-tools/issues/new/choose) di repositori GitHub.
+
+404:
+  notFound: '404 Tidak Ditemukan'
+  sorry: 'Maaf, halaman ini sepertinya tidak ada'
+  maybe: 'Mungkin cache sedang bermasalah, coba muat ulang paksa?'
+  backHome: 'Kembali ke beranda'
+favoriteButton:
+  remove: 'Hapus dari favorit'
+  add: 'Tambahkan ke favorit'
+toolCard:
+  new: Baru
+search:
+  label: Cari
+tools:
+  categories:
+    favorite-tools: 'Alat favorit Anda'
+    crypto: Kripto
+    converter: Konverter
+    web: Web
+    images and videos: 'Gambar & Video'
+    development: Pengembangan
+    network: Jaringan
+    math: Matematika
+    measurement: Pengukuran
+    text: Teks
+    data: Data
+
+  password-strength-analyser:
+    title: Analisis kekuatan kata sandi
+    description: Temukan kekuatan kata sandi Anda dengan alat analisis kekuatan kata sandi dan estimasi waktu pembobolan yang berjalan sepenuhnya di sisi klien.
+
+  chronometer:
+    title: Kronometer
+    description: Pantau durasi sesuatu. Pada dasarnya adalah kronometer dengan fitur kronometer sederhana.
+
+  token-generator:
+    title: Generator token
+    description: Buat string acak dengan karakter yang Anda inginkan, huruf besar atau kecil, angka dan/atau simbol.
+
+    uppercase: Huruf besar (ABC...)
+    lowercase: Huruf kecil (abc...)
+    numbers: Angka (123...)
+    symbols: Simbol (!-;...)
+    length: Panjang
+    tokenPlaceholder: 'Token...'
+    copied: Token disalin ke clipboard
+    button:
+      copy: Salin
+      refresh: Muat ulang
+  percentage-calculator:
+    title: Kalkulator persentase
+    description: Hitung persentase dengan mudah dari satu nilai ke nilai lain, atau dari persentase ke nilai.
+
+  svg-placeholder-generator:
+    title: Generator placeholder SVG
+    description: Buat gambar SVG untuk digunakan sebagai placeholder di aplikasi Anda.
+
+  json-to-csv:
+    title: JSON ke CSV
+    description: Konversi JSON ke CSV dengan deteksi header otomatis.
+
+  camera-recorder:
+    title: Perekam kamera
+    description: Ambil gambar atau rekam video dari webcam atau kamera Anda.
+
+  keycode-info:
+    title: Info kode tombol
+    description: Temukan kode tombol JavaScript, kode, lokasi, dan pengubah dari tombol yang ditekan.
+
+  emoji-picker:
+    title: Pemilih emoji
+    description: Salin dan tempel emoji dengan mudah serta dapatkan nilai unicode dan code point dari setiap emoji.
+
+  color-converter:
+    title: Konverter warna
+    description: Konversi warna antara berbagai format (hex, rgb, hsl, dan nama css)
+
+  bcrypt:
+    title: Bcrypt
+    description: Hash dan bandingkan string teks menggunakan bcrypt. Bcrypt adalah fungsi hashing kata sandi berdasarkan cipher Blowfish.
+
+  crontab-generator:
+    title: Generator crontab
+    description: Validasi dan buat crontab serta dapatkan deskripsi yang mudah dibaca dari jadwal cron.
+
+  http-status-codes:
+    title: Kode status HTTP
+    description: Daftar semua kode status HTTP, nama, dan artinya.
+
+  sql-prettify:
+    title: Rapihkan dan format SQL
+    description: Format dan rapihkan query SQL Anda secara online (mendukung berbagai dialek SQL).
+
+  benchmark-builder:
+    title: Pembuat benchmark
+    description: Bandingkan waktu eksekusi tugas dengan mudah menggunakan pembuat benchmark online yang sangat sederhana ini.
+
+  git-memo:
+    title: Panduan cepat Git
+    description: Git adalah perangkat lunak manajemen versi terdesentralisasi. Dengan panduan cepat ini, Anda akan memiliki akses cepat ke perintah git yang paling umum digunakan.
+
+  slugify-string:
+    title: Slug string
+    description: Buat string aman untuk URL, nama file, dan ID.
+
+  encryption:
+    title: Enkripsi / dekripsi teks
+    description: Enkripsi teks biasa dan dekripsi teks terenkripsi menggunakan algoritma kripto seperti AES, TripleDES, Rabbit, atau RC4.
+
+  random-port-generator:
+    title: Generator port acak
+    description: Buat nomor port acak di luar rentang port "terkenal" (0-1023).
+
+  yaml-prettify:
+    title: Rapihkan dan format YAML
+    description: Rapihkan string YAML Anda menjadi format yang mudah dibaca.
+
+  eta-calculator:
+    title: Kalkulator ETA
+    description: Kalkulator ETA (Perkiraan Waktu Kedatangan) untuk menentukan waktu perkiraan selesainya suatu tugas, misalnya waktu selesai dan durasi unduhan file.
+
+  roman-numeral-converter:
+    title: Konverter angka Romawi
+    description: Konversi angka Romawi ke angka biasa dan konversi angka biasa ke angka Romawi.
+
+  hmac-generator:
+    title: Generator HMAC
+    description: Hitung kode otentikasi pesan berbasis hash (HMAC) menggunakan kunci rahasia dan fungsi hashing favorit Anda.
+
+  bip39-generator:
+    title: Generator frasa sandi BIP39
+    description: Buat frasa sandi BIP39 dari mnemonic yang ada atau acak, atau dapatkan mnemonic dari frasa sandi.
+
+  base64-file-converter:
+    title: Konverter file Base64
+    description: Konversi string, file, atau gambar ke representasi base64-nya.
+
+  list-converter:
+    title: Konverter daftar
+    description: Alat ini dapat memproses data berbasis kolom dan menerapkan berbagai perubahan (transpose, tambahkan awalan dan akhiran, balik daftar, urutkan daftar, huruf kecil, potong nilai) pada setiap baris.
+
+  base64-string-converter:
+    title: Pengkode/decoder string Base64
+    description: Enkode dan dekode string ke representasi base64-nya dengan mudah.
+
+  toml-to-yaml:
+    title: TOML ke YAML
+    description: Parse dan konversi TOML ke YAML.
+
+  math-evaluator:
+    title: Evaluator matematika
+    description: Kalkulator untuk mengevaluasi ekspresi matematika. Anda dapat menggunakan fungsi seperti sqrt, cos, sin, abs, dll.
+
+  json-to-yaml-converter:
+    title: Konverter JSON ke YAML
+    description: Konversi JSON ke YAML dengan mudah menggunakan konverter online langsung ini.
+
+  url-parser:
+    title: Parser URL
+    description: Parse URL menjadi bagian-bagian penyusunnya (protokol, asal, parameter, port, nama pengguna-kata sandi, ...)
+
+  iban-validator-and-parser:
+    title: Validator dan parser IBAN
+    description: Validasi dan parse nomor IBAN. Periksa apakah IBAN valid dan dapatkan negara, BBAN, apakah itu QR-IBAN, dan format IBAN yang ramah.
+
+  user-agent-parser:
+    title: Parser user-agent
+    description: Deteksi dan parse Browser, Mesin, OS, CPU, dan tipe/model Perangkat dari string user-agent.
+
+  numeronym-generator:
+    title: Generator numeronim
+    description: Numeronim adalah kata yang menggunakan angka untuk membentuk singkatan. Misalnya, "i18n" adalah numeronim dari "internationalization" di mana 18 mewakili jumlah huruf antara i pertama dan n terakhir dalam kata tersebut.
+
+  case-converter:
+    title: Konverter huruf
+    description: Ubah huruf besar/kecil dari string dan pilih antara berbagai format
+
+  html-entities:
+    title: Escape entitas HTML
+    description: Escape atau unescape entitas HTML (ganti karakter seperti <,>, &, " dan \' dengan versi HTML-nya)
+
+  json-prettify:
+    title: Rapihkan dan format JSON
+    description: Rapihkan string JSON Anda menjadi format yang mudah dibaca.
+
+  docker-run-to-docker-compose-converter:
+    title: Konverter docker run ke docker compose
+    description: Ubah perintah "docker run" menjadi file docker-compose!
+
+  mac-address-lookup:
+    title: Pencarian alamat MAC
+    description: Temukan vendor dan produsen perangkat berdasarkan alamat MAC-nya.
+
+  mime-types:
+    title: Tipe MIME
+    description: Konversi tipe MIME ke ekstensi file dan sebaliknya.
+
+  toml-to-json:
+    title: TOML ke JSON
+    description: Parse dan konversi TOML ke JSON.
+
+  lorem-ipsum-generator:
+    title: Generator lorem ipsum
+    description: Lorem ipsum adalah teks placeholder yang umum digunakan untuk mendemonstrasikan bentuk visual dokumen atau jenis huruf tanpa bergantung pada konten yang bermakna
+
+  qrcode-generator:
+    title: Generator kode QR
+    description: Buat dan unduh kode QR untuk URL (atau teks biasa), dan sesuaikan warna latar belakang dan latar depan.
+
+  wifi-qrcode-generator:
+    title: Generator kode QR WiFi
+    description: Buat dan unduh kode QR untuk koneksi cepat ke jaringan WiFi.
+
+  xml-formatter:
+    title: Pemformat XML
+    description: Rapihkan string XML Anda menjadi format yang mudah dibaca.
+
+  temperature-converter:
+    title: Konverter suhu
+    description: Konversi suhu derajat untuk Kelvin, Celsius, Fahrenheit, Rankine, Delisle, Newton, Réaumur, dan Rømer.
+
+  chmod-calculator:
+    title: Kalkulator chmod
+    description: Hitung izin dan perintah chmod Anda dengan kalkulator chmod online ini.
+
+  rsa-key-pair-generator:
+    title: Generator pasangan kunci RSA
+    description: Buat pasangan kunci sertifikat publik dan privat RSA baru secara acak.
+
+  html-wysiwyg-editor:
+    title: Editor HTML WYSIWYG
+    description: Editor HTML WYSIWYG online yang kaya fitur yang langsung menghasilkan kode sumber dari konten.
+
+  yaml-to-toml:
+    title: YAML ke TOML
+    description: Parse dan konversi YAML ke TOML.
+
+  mac-address-generator:
+    title: Generator alamat MAC
+    description: Masukkan jumlah dan awalan. Alamat MAC akan dihasilkan dalam huruf besar atau kecil sesuai pilihan Anda.
+
+  json-diff:
+    title: Perbedaan JSON
+    description: Bandingkan dua objek JSON dan dapatkan perbedaannya.
+
+  jwt-parser:
+    title: Parser JWT
+    description: Parse dan decode JSON Web Token (JWT) Anda dan tampilkan isinya.
+
+  date-converter:
+    title: Konverter tanggal dan waktu
+    description: Konversi tanggal dan waktu ke berbagai format yang berbeda
+
+  phone-parser-and-formatter:
+    title: Parser dan pemformat nomor telepon
+    description: Parse, validasi, dan format nomor telepon. Dapatkan informasi tentang nomor telepon, seperti kode negara, tipe, dll.
+
+  ipv4-subnet-calculator:
+    title: Kalkulator subnet IPv4
+    description: Parse blok CIDR IPv4 Anda dan dapatkan semua info yang Anda butuhkan tentang subnet Anda.
+
+  og-meta-generator:
+    title: Generator meta Open Graph
+    description: Buat tag meta HTML Open Graph dan media sosial untuk situs web Anda.
+
+  ipv6-ula-generator:
+    title: Generator IPv6 ULA
+    description: Buat alamat IP lokal Anda sendiri yang tidak dapat dirutekan untuk jaringan Anda sesuai RFC4193.
+
+  hash-text:
+    title: Hash teks
+    description: 'Hash string teks menggunakan fungsi yang Anda butuhkan: MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3 atau RIPEMD160'
+
+  json-to-toml:
+    title: JSON ke TOML
+    description: Parse dan konversi JSON ke TOML.
+
+  device-information:
+    title: Informasi perangkat
+    description: Dapatkan informasi tentang perangkat Anda saat ini (ukuran layar, rasio piksel, user agent, ...)
+
+  pdf-signature-checker:
+    title: Pemeriksa tanda tangan PDF
+    description: Verifikasi tanda tangan file PDF. File PDF yang ditandatangani berisi satu atau lebih tanda tangan yang dapat digunakan untuk menentukan apakah isi file telah diubah sejak file ditandatangani.
+
+  json-minify:
+    title: Minifikasi JSON
+    description: Minifikasi dan kompres JSON Anda dengan menghapus spasi yang tidak perlu.
+
+  ulid-generator:
+    title: Generator ULID
+    description: Buat Pengidentifier Unik yang Dapat Diurutkan secara Leksikografis (ULID) secara acak.
+
+  string-obfuscator:
+    title: Obfuscator string
+    description: Obfuscate string (seperti rahasia, IBAN, atau token) agar dapat dibagikan dan diidentifikasi tanpa mengungkapkan isinya.
+
+  base-converter:
+    title: Konverter basis bilangan bulat
+    description: Konversi angka antar basis yang berbeda (desimal, heksadesimal, biner, oktal, base64, ...)
+
+  yaml-to-json-converter:
+    title: Konverter YAML ke JSON
+    description: Konversi YAML ke JSON dengan mudah menggunakan konverter online langsung ini.
+
+  uuid-generator:
+    title: Generator UUID
+    description: Pengidentifier Unik Universal (UUID) adalah angka 128-bit yang digunakan untuk mengidentifikasi informasi dalam sistem komputer. Jumlah UUID yang mungkin adalah 16^32, yaitu 2^128 atau sekitar 3,4x10^38 (sangat banyak!).
+
+  ipv4-address-converter:
+    title: Konverter alamat IPv4
+    description: Konversi alamat IP ke desimal, biner, heksadesimal, atau bahkan representasi IPv6-nya.
+
+  text-statistics:
+    title: Statistik teks
+    description: Dapatkan informasi tentang teks, jumlah karakter, jumlah kata, ukurannya dalam byte, ...
+
+  text-to-nato-alphabet:
+    title: Teks ke alfabet NATO
+    description: Ubah teks menjadi alfabet fonetik NATO untuk transmisi lisan.
+
+  basic-auth-generator:
+    title: Generator autentikasi dasar
+    description: Buat header autentikasi dasar base64 dari nama pengguna dan kata sandi.
+
+  text-to-unicode:
+    title: Teks ke Unicode
+    description: Parse dan konversi teks ke Unicode dan sebaliknya
+
+  ipv4-range-expander:
+    title: Pemperluas rentang IPv4
+    description: Dengan diberikan alamat IPv4 awal dan akhir, alat ini menghitung subnet IPv4 yang valid beserta notasi CIDR-nya.
+
+  text-diff:
+    title: Perbedaan teks
+    description: Bandingkan dua teks dan lihat perbedaannya.
+
+  otp-generator:
+    title: Generator kode OTP
+    description: Buat dan validasi OTP berbasis waktu (kata sandi sekali pakai) untuk autentikasi multi-faktor.
+
+  url-encoder:
+    title: Enkode/dekode string berformat URL
+    description: Enkode teks ke format URL-encoded (juga dikenal sebagai "percent-encoded"), atau dekode darinya.
+
+  text-to-binary:
+    title: Teks ke biner ASCII
+    description: Konversi teks ke representasi biner ASCII-nya dan sebaliknya.
+
+  unix-timestamp-converter:
+    title: Konverter timestamp Unix
+    description: Konversi timestamp Unix ke tanggal yang mudah dibaca dan sebaliknya. Mendukung detik dan milidetik.
+
+  speed-test:
+    title: Uji kecepatan internet
+    description: Uji kecepatan koneksi internet Anda secara online. Ukur kecepatan unduh, unggah, dan latensi ping.
+
+  dns-lookup:
+    title: Pencarian DNS
+    description: Cari catatan DNS untuk domain apa pun. Periksa catatan A, AAAA, MX, TXT, CNAME, dan NS secara online.
+
+  ssl-checker:
+    title: Pemeriksa sertifikat SSL
+    description: Periksa detail sertifikat SSL untuk situs web mana pun. Verifikasi validitas sertifikat, tanggal kedaluwarsa, dan informasi penerbit.
+
+  website-checker:
+    title: Pemeriksa status situs web
+    description: Periksa apakah situs web sedang down atau aktif. Uji ketersediaan situs web dari berbagai lokasi di seluruh dunia.
+
+  my-ip:
+    title: Apa alamat IP saya
+    description: Periksa alamat IP publik Anda secara online. Alat pencarian IP gratis yang menampilkan IP, lokasi, dan informasi ISP Anda.
+
+sponsor:
+  title: Dukung AgentsAITools
+  subtitle: Bantu kami menjaga alat-alat ini tetap gratis dan tingkatkan platform untuk pengembang di seluruh dunia.
+  whySupport: Mengapa Mendukung Kami?
+  keepToolsFree: Jaga Alat Tetap Gratis
+  keepToolsFreeDesc: Semua 90+ alat akan selalu gratis, tanpa perlu mendaftar.
+  newTools: Alat Baru
+  newToolsDesc: Bantu kami mengembangkan alat baru dan meningkatkan yang sudah ada.
+  betterPerformance: Performa Lebih Baik
+  betterPerformanceDesc: Server lebih cepat dan infrastruktur yang lebih baik untuk semua orang.
+  chooseLevel: Pilih Level Dukungan Anda
+  supporter: Pendukung
+  supporterDesc: Traktir kami kopi!
+  champion: Juara
+  championDesc: Bantu kami menutupi biaya hosting
+  hero: Pahlawan
+  heroDesc: Dana pengembangan alat baru
+  donate: Donasi
+  customAmount: Jumlah Kustom
+  customDesc: Ingin memberikan jumlah yang berbeda? Gunakan tautan pembayaran kustom kami.
+  donateCustom: Donasi Jumlah Kustom
+  otherWays: Cara Lain untuk Mendukung
+  followTwitter: Ikuti di Twitter
+  starGitHub: Beri bintang di GitHub
+  shareFeedback: Bagikan Umpan Balik
+  thankYou: Terima kasih atas dukungan Anda!
+  thankYouDesc: Setiap kontribusi membantu kami menjaga alat tetap gratis dan meningkatkannya.
+
+contact:
+  title: Hubungi Kami
+  subtitle: Kami ingin mendengar dari Anda
+  getInTouch: Hubungi Kami
+  getInTouchDesc: Punya pertanyaan, saran, atau umpan balik? Kami di sini untuk membantu!
+  email: Email
+  responseTime: Waktu Respons
+  responseTimeDesc: Kami biasanya merespons dalam 24-48 jam.
+  whatWeHelp: Apa yang Kami Bantu
+  generalQuestions: Pertanyaan umum tentang alat
+  featureRequests: Permintaan fitur
+  bugReports: Laporan bug
+  partnershipInquiries: Pertanyaan kemitraan
+  sendMessage: Kirim Pesan kepada Kami
+  name: Nama
+  namePlaceholder: Nama Anda
+  subject: Subjek
+  selectSubject: Pilih subjek
+  generalQuestion: Pertanyaan Umum
+  featureRequest: Permintaan Fitur
+  bugReport: Laporan Bug
+  partnership: Pertanyaan Kemitraan
+  other: Lainnya
+  message: Pesan
+  messagePlaceholder: Pesan Anda...
+  send: Kirim Pesan
+  sending: Mengirim...
+  successMessage: Terima kasih atas pesan Anda! Klien email Anda akan segera terbuka.
+

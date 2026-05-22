@@ -1,0 +1,476 @@
+home:
+  categories:
+    newestTools: Mga pinakabagong tool
+    favoriteTools: 'Mga paborito mong tool'
+    allTools: 'Lahat ng tool'
+    favoritesDndToolTip: 'I-drag at i-drop para ayusin ang mga paborito'
+  subtitle: 'Mga kapakipakinabang na tool para sa mga developer'
+  toggleMenu: 'I-toggle ang menu'
+  home: Tahanan
+  uiLib: 'UI Lib'
+  support: 'Suportahan ang pag-unlad ng IT-Tools'
+  buyMeACoffee: 'Bilhan mo ako ng kape'
+  follow:
+    title: 'Gusto mo ang it-tools?'
+    p1: 'Bigyan kami ng bituin sa'
+    githubRepository: 'IT-Tools GitHub repository'
+    p2: 'o sundan kami sa'
+    twitterXAccount: 'IT-Tools X account'
+    thankYou: 'Salamat!'
+  nav:
+    github: 'GitHub repository'
+    githubRepository: 'IT-Tools GitHub repository'
+    twitterX: 'X account'
+    twitterXAccount: 'IT Tools X account'
+    about: 'Tungkol sa IT-Tools'
+    aboutLabel: 'Tungkol sa'
+    darkMode: 'Madilim na mode'
+    lightMode: 'Maliwanag na mode'
+    mode: 'I-toggle ang madilim/maliwanag na mode'
+aboutPage:
+  content: >
+    # Tungkol sa IT-Tools
+
+    Ang kamangha-manghang website na ito, ginawa ng may ❤ ni [Corentin Thomasset](https://corentin.tech?utm_source=it-tools&utm_medium=about), ay nagsasama-sama ng mga kapakipakinabang na tool para sa mga developer at mga taong nagtatrabaho sa IT. Kung nakikita mong kapaki-pakinabang ito, mangyaring huwag mag-atubiling ibahagi ito sa mga taong sa palagay mo ay makikita rin itong kapaki-pakinabang at huwag kalimutang i-bookmark ito sa iyong shortcut bar!
+
+    Ang IT Tools ay open-source (sa ilalim ng GPL-3.0 license) at libre, at palaging magiging libre, ngunit may gastos sa akin ang pag-host at pag-renew ng domain name. Kung gusto mong suportahan ang aking trabaho, at hikayatin akong magdagdag ng mas maraming tool, mangyaring isaalang-alang ang pagsuporta sa pamamagitan ng [pagsponsor sa akin](https://www.buymeacoffee.com/cthmsst).
+
+    ## Mga Teknolohiya
+
+    Ang IT Tools ay ginawa gamit ang Vue.js (Vue 3) na may Naive UI component library at naka-host at patuloy na naka-deploy ng Vercel. Ang mga third-party na open-source library ay ginagamit sa ilang tool, maaari mong makita ang kumpletong listahan sa [package.json](https://github.com/CorentinTh/it-tools/blob/main/package.json) file ng repository.
+
+    ## Nakakita ng bug? May nawawalang tool?
+
+    Kung kailangan mo ng tool na kasalukuyang wala rito, at sa tingin mo ay maaaring kapaki-pakinabang, malugod kang tinatanggap na magsumite ng feature request sa [issues section](https://github.com/CorentinTh/it-tools/issues/new/choose) sa GitHub repository.
+
+    At kung nakakita ka ng bug, o may hindi gumagana ayon sa inaasahan, mangyaring mag-file ng bug report sa [issues section](https://github.com/CorentinTh/it-tools/issues/new/choose) sa GitHub repository.
+
+404:
+  notFound: '404 Hindi Nahanap'
+  sorry: 'Paumanhin, ang pahinang ito ay tila hindi umiiral'
+  maybe: 'Baka ang cache ay gumagawa ng mga kakaibang bagay, subukang i-force-refresh?'
+  backHome: 'Bumalik sa tahanan'
+favoriteButton:
+  remove: 'Alisin sa mga paborito'
+  add: 'Idagdag sa mga paborito'
+toolCard:
+  new: Bago
+search:
+  label: Hanapin
+tools:
+  categories:
+    favorite-tools: 'Mga paborito mong tool'
+    crypto: Kripto
+    converter: Converter
+    web: Web
+    images and videos: 'Mga Larawan at Video'
+    development: Pag-unlad
+    network: Network
+    math: Matematika
+    measurement: Sukatan
+    text: Teksto
+    data: Data
+
+  password-strength-analyser:
+    title: Tagasuri ng lakas ng password
+    description: Tuklasin ang lakas ng iyong password gamit ang tool na ito na tagasuri ng lakas ng password at pagtaya ng oras ng pag-crack na client-side lamang.
+
+  chronometer:
+    title: Kronometro
+    description: Subaybayan ang tagal ng isang bagay. Sa madaling salita, isang kronometro na may mga simpleng tampok ng kronometro.
+
+  token-generator:
+    title: Tagagawa ng token
+    description: Bumuo ng random na string gamit ang mga character na gusto mo, malalaking o maliliit na titik, numero at/o mga simbolo.
+
+    uppercase: Malalaking titik (ABC...)
+    lowercase: Maliliit na titik (abc...)
+    numbers: Mga numero (123...)
+    symbols: Mga simbolo (!-;...)
+    length: Habà
+    tokenPlaceholder: 'Ang token...'
+    copied: Na-copy na ang token sa clipboard
+    button:
+      copy: Kopyahin
+      refresh: I-refresh
+  percentage-calculator:
+    title: Porsyento calculator
+    description: Madaling kalkulahin ang mga porsyento mula sa isang patungo sa ibang halaga, o mula sa isang porsyento patungo sa isang halaga.
+
+  svg-placeholder-generator:
+    title: SVG placeholder generator
+    description: Bumuo ng mga SVG na larawan bilang placeholder sa iyong mga application.
+
+  json-to-csv:
+    title: JSON patungong CSV
+    description: I-convert ang JSON patungong CSV na may awtomatikong pagtukoy ng header.
+
+  camera-recorder:
+    title: Tagarekord ng kamera
+    description: Kumuha ng larawan o magrekord ng video mula sa iyong webcam o kamera.
+
+  keycode-info:
+    title: Impormasyon ng keycode
+    description: Hanapin ang javascript keycode, code, lokasyon at mga modifier ng anumang na-press na key.
+
+  emoji-picker:
+    title: Emoji picker
+    description: Madaling kopyahin at i-paste ang mga emoji at makuha ang unicode at code points value ng bawat emoji.
+
+  color-converter:
+    title: Color converter
+    description: I-convert ang kulay sa pagitan ng iba't ibang format (hex, rgb, hsl at css name)
+
+  bcrypt:
+    title: Bcrypt
+    description: I-hash at ihambing ang text string gamit ang bcrypt. Ang bcrypt ay isang password-hashing function batay sa Blowfish cipher.
+
+  crontab-generator:
+    title: Crontab generator
+    description: I-validate at bumuo ng crontab at makuha ang nababasa ng tao na paglalarawan ng cron schedule.
+
+  http-status-codes:
+    title: HTTP status codes
+    description: Ang listahan ng lahat ng HTTP status code, ang kanilang pangalan, at ang kanilang kahulugan.
+
+  sql-prettify:
+    title: SQL prettify at format
+    description: I-format at pataasin ang iyong mga SQL query online (sinusuportahan nito ang iba't ibang SQL dialect).
+
+  benchmark-builder:
+    title: Benchmark builder
+    description: Madaling ihambing ang oras ng pagpapatupad ng mga gamit gamit ang napaka-simpleng online benchmark builder na ito.
+
+  git-memo:
+    title: Git cheatsheet
+    description: Ang Git ay isang decentralized na software sa pamamahala ng bersyon. Gamit ang cheatsheet na ito, magkakaroon ka ng mabilis na access sa mga pinakakaraniwang git command.
+
+  slugify-string:
+    title: Slugify string
+    description: Gawing ligtas sa url, filename at id ang isang string.
+
+  encryption:
+    title: I-encrypt / i-decrypt ang teksto
+    description: I-encrypt ang malinaw na teksto at i-decrypt ang ciphertext gamit ang mga crypto algorithm tulad ng AES, TripleDES, Rabbit o RC4.
+
+  random-port-generator:
+    title: Random port generator
+    description: Bumuo ng mga random na numero ng port sa labas ng saklaw ng mga "kilalang" port (0-1023).
+
+  yaml-prettify:
+    title: YAML prettify at format
+    description: Pataasin ang iyong YAML string sa isang friendly, nababasa ng tao na format.
+
+  eta-calculator:
+    title: ETA calculator
+    description: Isang ETA (Tinantyang Oras ng Pagdating) calculator para matuklasan ang tinatayang oras ng pagtatapos ng isang gawain, halimbawa, ang oras ng pagtatapos at tagal ng pag-download ng file.
+
+  roman-numeral-converter:
+    title: Roman numeral converter
+    description: I-convert ang mga Roman numeral sa mga numero at i-convert ang mga numero sa mga Roman numeral.
+
+  hmac-generator:
+    title: Hmac generator
+    description: Kalkulahin ang hash-based message authentication code (HMAC) gamit ang secret key at ang iyong paboritong hashing function.
+
+  bip39-generator:
+    title: BIP39 passphrase generator
+    description: Bumuo ng BIP39 passphrase mula sa umiiral o random na mnemonic, o makuha ang mnemonic mula sa passphrase.
+
+  base64-file-converter:
+    title: Base64 file converter
+    description: I-convert ang string, file, o larawan sa base64 representation nito.
+
+  list-converter:
+    title: List converter
+    description: Ang tool na ito ay maaaring magproseso ng column-based na data at mag-apply ng iba't ibang pagbabago (transpose, magdagdag ng prefix at suffix, baligtarin ang listahan, ayusin ang listahan, gawing lowercase ang mga halaga, putulin ang mga halaga) sa bawat hilera.
+
+  base64-string-converter:
+    title: Base64 string encoder/decoder
+    description: Simpleng i-encode at i-decode ang mga string sa base64 representation nito.
+
+  toml-to-yaml:
+    title: TOML patungong YAML
+    description: I-parse at i-convert ang TOML patungong YAML.
+
+  math-evaluator:
+    title: Math evaluator
+    description: Isang calculator para sa pag-evaluate ng mga mathematical expression. Maaari kang gumamit ng mga function tulad ng sqrt, cos, sin, abs, atbp.
+
+  json-to-yaml-converter:
+    title: JSON patungong YAML converter
+    description: Simpleng i-convert ang JSON patungong YAML gamit ang online live converter na ito.
+
+  url-parser:
+    title: URL parser
+    description: I-parse ang URL sa mga hiwalay na bahagi nito (protocol, origin, params, port, username-password, ...)
+
+  iban-validator-and-parser:
+    title: IBAN validator at parser
+    description: I-validate at i-parse ang mga IBAN number. Suriin kung ang IBAN ay wasto at makuha ang bansa, BBAN, kung ito ay QR-IBAN at ang IBAN friendly format.
+
+  user-agent-parser:
+    title: User-agent parser
+    description: Tuklasin at i-parse ang Browser, Engine, OS, CPU, at Device type/model mula sa user-agent string.
+
+  numeronym-generator:
+    title: Numeronym generator
+    description: Ang numeronym ay isang salita kung saan ang isang numero ay ginagamit upang bumuo ng pagpapaikli. Halimbawa, ang "i18n" ay isang numeronym ng "internationalization" kung saan ang 18 ay tumatayo para sa bilang ng mga titik sa pagitan ng unang i at huling n sa salita.
+
+  case-converter:
+    title: Case converter
+    description: Baguhin ang case ng isang string at pumili sa pagitan ng iba't ibang format
+
+  html-entities:
+    title: I-escape ang HTML entities
+    description: I-escape o i-unescape ang HTML entities (palitan ang mga character tulad ng <,>, &, " at \' gamit ang HTML version nito)
+
+  json-prettify:
+    title: JSON prettify at format
+    description: Pataasin ang iyong JSON string sa isang friendly, nababasa ng tao na format.
+
+  docker-run-to-docker-compose-converter:
+    title: Docker run patungong Docker compose converter
+    description: Binabago ang mga "docker run" command sa docker-compose files!
+
+  mac-address-lookup:
+    title: MAC address lookup
+    description: Hanapin ang vendor at manufacturer ng isang device sa pamamagitan ng MAC address nito.
+
+  mime-types:
+    title: MIME types
+    description: I-convert ang MIME types sa mga file extension at vice-versa.
+
+  toml-to-json:
+    title: TOML patungong JSON
+    description: I-parse at i-convert ang TOML patungong JSON.
+
+  lorem-ipsum-generator:
+    title: Lorem ipsum generator
+    description: Ang Lorem ipsum ay isang placeholder text na karaniwang ginagamit para ipakita ang visual na anyo ng isang document o typeface nang hindi umaasa sa makabuluhang nilalaman
+
+  qrcode-generator:
+    title: QR Code generator
+    description: Bumuo at mag-download ng QR code para sa isang URL (o simpleng plain text), at i-customize ang background at foreground colors.
+
+  wifi-qrcode-generator:
+    title: WiFi QR Code generator
+    description: Bumuo at mag-download ng mga QR code para sa mabilis na koneksyon sa WiFi networks.
+
+  xml-formatter:
+    title: XML formatter
+    description: Pataasin ang iyong XML string sa isang friendly, nababasa ng tao na format.
+
+  temperature-converter:
+    title: Temperature converter
+    description: Mga conversion ng temperatura sa degree para sa Kelvin, Celsius, Fahrenheit, Rankine, Delisle, Newton, Réaumur, at Rømer.
+
+  chmod-calculator:
+    title: Chmod calculator
+    description: Kalkulahin ang iyong mga chmod permission at command gamit ang online chmod calculator na ito.
+
+  rsa-key-pair-generator:
+    title: RSA key pair generator
+    description: Bumuo ng bagong random na RSA private at public pem certificate key pair.
+
+  html-wysiwyg-editor:
+    title: HTML WYSIWYG editor
+    description: Online, feature-rich na WYSIWYG HTML editor na agad na nagge-generate ng source code ng nilalaman.
+
+  yaml-to-toml:
+    title: YAML patungong TOML
+    description: I-parse at i-convert ang YAML patungong TOML.
+
+  mac-address-generator:
+    title: MAC address generator
+    description: Ilagay ang dami at prefix. Ang mga MAC address ay bubuo sa napili mong case (malaki o maliliit na titik)
+
+  json-diff:
+    title: JSON diff
+    description: Ihambing ang dalawang JSON object at makuha ang mga pagkakaiba sa pagitan nila.
+
+  jwt-parser:
+    title: JWT parser
+    description: I-parse at i-decode ang iyong JSON Web Token (JWT) at ipakita ang nilalaman nito.
+
+  date-converter:
+    title: Date-time converter
+    description: I-convert ang petsa at oras sa iba't ibang format
+
+  phone-parser-and-formatter:
+    title: Phone parser at formatter
+    description: I-parse, i-validate at i-format ang mga numero ng telepono. Makakuha ng impormasyon tungkol sa numero ng telepono, tulad ng country code, type, atbp.
+
+  ipv4-subnet-calculator:
+    title: IPv4 subnet calculator
+    description: I-parse ang iyong IPv4 CIDR blocks at makuha ang lahat ng impormasyong kailangan mo tungkol sa iyong subnet.
+
+  og-meta-generator:
+    title: Open graph meta generator
+    description: Bumuo ng open-graph at socials HTML meta tags para sa iyong website.
+
+  ipv6-ula-generator:
+    title: IPv6 ULA generator
+    description: Bumuo ng iyong sariling lokal, hindi na-routable na IP address para sa iyong network ayon sa RFC4193.
+
+  hash-text:
+    title: I-hash ang teksto
+    description: 'I-hash ang isang text string gamit ang function na kailangan mo: MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3 o RIPEMD160'
+
+  json-to-toml:
+    title: JSON patungong TOML
+    description: I-parse at i-convert ang JSON patungong TOML.
+
+  device-information:
+    title: Impormasyon ng device
+    description: Makakuha ng impormasyon tungkol sa iyong kasalukuyang device (laki ng screen, pixel-ratio, user agent, ...)
+
+  pdf-signature-checker:
+    title: PDF signature checker
+    description: I-verify ang mga signature ng isang PDF file. Ang isang naka-sign na PDF file ay naglalaman ng isa o higit pang mga signature na maaaring gamitin upang matukoy kung ang nilalaman ng file ay nabago mula nang i-sign ang file.
+
+  json-minify:
+    title: JSON minify
+    description: I-minify at i-compress ang iyong JSON sa pamamagitan ng pag-aalis ng hindi kinakailangang whitespace.
+
+  ulid-generator:
+    title: ULID generator
+    description: Bumuo ng random na Universally Unique Lexicographically Sortable Identifier (ULID).
+
+  string-obfuscator:
+    title: String obfuscator
+    description: I-obfuscate ang isang string (tulad ng isang secret, IBAN, o token) upang gawing maibahagi at makikilala nang hindi inilalantad ang nilalaman nito.
+
+  base-converter:
+    title: Integer base converter
+    description: I-convert ang isang numero sa pagitan ng iba't ibang base (decimal, hexadecimal, binary, octal, base64, ...)
+
+  yaml-to-json-converter:
+    title: YAML patungong JSON converter
+    description: Simpleng i-convert ang YAML patungong JSON gamit ang online live converter na ito.
+
+  uuid-generator:
+    title: UUIDs generator
+    description: Ang Universally Unique Identifier (UUID) ay isang 128-bit na numero na ginagamit para makilala ang impormasyon sa mga computer system. Ang bilang ng mga posibleng UUID ay 16^32, na kung saan ay 2^128 o mga 3.4x10^38 (na kung saan ay napakarami!).
+
+  ipv4-address-converter:
+    title: IPv4 address converter
+    description: I-convert ang IP address sa decimal, binary, hexadecimal, o kahit IPv6 representation nito.
+
+  text-statistics:
+    title: Estadistika ng teksto
+    description: Makakuha ng impormasyon tungkol sa isang teksto, ang bilang ng mga character, ang bilang ng mga salita, ang laki nito sa bytes, ...
+
+  text-to-nato-alphabet:
+    title: Teksto patungong NATO alphabet
+    description: Baguhin ang teksto sa NATO phonetic alphabet para sa oral na paghahatid.
+
+  basic-auth-generator:
+    title: Basic auth generator
+    description: Bumuo ng base64 basic auth header mula sa username at password.
+
+  text-to-unicode:
+    title: Teksto patungong Unicode
+    description: I-parse at i-convert ang teksto sa unicode at vice-versa
+
+  ipv4-range-expander:
+    title: IPv4 range expander
+    description: Binibigyan ng simula at katapusan ng IPv4 address, kinakalkula ng tool na ito ang wastong IPv4 subnet kasama ang CIDR notation nito.
+
+  text-diff:
+    title: Text diff
+    description: Ihambing ang dalawang teksto at tingnan ang mga pagkakaiba sa pagitan nila.
+
+  otp-generator:
+    title: OTP code generator
+    description: Bumuo at i-validate ang time-based na OTP (one time password) para sa multi-factor authentication.
+
+  url-encoder:
+    title: I-encode/i-decode ang URL-formatted na mga string
+    description: I-encode ang teksto sa URL-encoded format (kilala rin bilang "percent-encoded"), o i-decode mula rito.
+
+  text-to-binary:
+    title: Teksto patungong ASCII binary
+    description: I-convert ang teksto sa ASCII binary representation nito at vice-versa.
+
+  unix-timestamp-converter:
+    title: Unix timestamp converter
+    description: I-convert ang mga Unix timestamp sa nababasa ng tao na mga petsa at vice versa. Sinusuportahan ang mga segundo at millisecond.
+
+  speed-test:
+    title: Speed test ng internet
+    description: Subukan ang bilis ng iyong internet connection online. Sukatin ang bilis ng download, bilis ng upload, at ping latency.
+
+  dns-lookup:
+    title: DNS lookup
+    description: Mag-lookup ng DNS records para sa anumang domain. Suriin ang A, AAAA, MX, TXT, CNAME, at NS records online.
+
+  ssl-checker:
+    title: SSL certificate checker
+    description: Suriin ang mga detalye ng SSL certificate para sa anumang website. I-verify ang bisa ng certificate, petsa ng pag-expire, at impormasyon ng issuer.
+
+  website-checker:
+    title: Website down checker
+    description: Suriin kung ang website ay down o up. Subukan ang availability ng website mula sa maraming lokasyon sa buong mundo.
+
+  my-ip:
+    title: Ano ang aking IP address
+    description: Suriin ang iyong public IP address online. Libreng IP address lookup tool na nagpapakita ng iyong IP, lokasyon, at impormasyon ng ISP.
+
+sponsor:
+  title: Suportahan ang AgentsAITools
+  subtitle: Tulungan kaming panatilihing libre ang mga tool na ito at pahusayin ang platform para sa mga developer sa buong mundo.
+  whySupport: Bakit Kami Susuportahan?
+  keepToolsFree: Panatilihing Libre ang mga Tool
+  keepToolsFreeDesc: Ang lahat ng 90+ na tool ay palaging magiging libre, walang kinakailangang pag-sign up.
+  newTools: Mga Bagong Tool
+  newToolsDesc: Tulungan kaming mag-develop ng mga bagong tool at pahusayin ang mga umiiral.
+  betterPerformance: Mas Mahusay na Performance
+  betterPerformanceDesc: Mas mabilis na server at mas mahusay na imprastraktura para sa lahat.
+  chooseLevel: Piliin ang Iyong Antas ng Suporta
+  supporter: Tagasuporta
+  supporterDesc: Bilhan kami ng kape!
+  champion: Kampeon
+  championDesc: Tulungan kaming bayaran ang mga gastos sa hosting
+  hero: Bayani
+  heroDesc: Pondohan ang pag-unlad ng bagong tool
+  donate: Mag-donate
+  customAmount: Custom na Halaga
+  customDesc: Gustong magbigay ng ibang halaga? Gamitin ang aming custom payment link.
+  donateCustom: Mag-donate ng Custom na Halaga
+  otherWays: Iba Pang Paraan ng Pagsuporta
+  followTwitter: Sundan sa Twitter
+  starGitHub: Bigyan ng bituin sa GitHub
+  shareFeedback: Ibahagi ang Feedback
+  thankYou: Salamat sa iyong suporta!
+  thankYouDesc: Ang bawong kontribusyon ay nakakatulong na panatilihing libre ang mga tool at pahusayin ang mga ito.
+
+contact:
+  title: Makipag-ugnayan sa Amin
+  subtitle: Gusto naming marinig mula sa iyo
+  getInTouch: Makipag-ugnayan
+  getInTouchDesc: May mga tanong, suhestiyon, o feedback? Nandito kami para tumulong!
+  email: Email
+  responseTime: Oras ng Tugon
+  responseTimeDesc: Karaniwan kaming tumutugon sa loob ng 24-48 oras.
+  whatWeHelp: Saan Kami Nakakatulong
+  generalQuestions: Pangkalahatang tanong tungkol sa mga tool
+  featureRequests: Mga kahilingan ng feature
+  bugReports: Mga ulat ng bug
+  partnershipInquiries: Mga katanungan sa pakikipagtulungan
+  sendMessage: Magpadala sa Amin ng Mensahe
+  name: Pangalan
+  namePlaceholder: Ang iyong pangalan
+  subject: Paksa
+  selectSubject: Pumili ng paksa
+  generalQuestion: Pangkalahatang Tanong
+  featureRequest: Kahilingan ng Feature
+  bugReport: Ulat ng Bug
+  partnership: Katanungan sa Pakikipagtulungan
+  other: Iba pa
+  message: Mensahe
+  messagePlaceholder: Ang iyong mensahe...
+  send: Ipadala ang Mensahe
+  sending: Ipinapadala...
+  successMessage: Salamat sa iyong mensahe! Ang iyong email client ay dapat magbukas sa ilang sandali.
+

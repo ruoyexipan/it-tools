@@ -1,0 +1,476 @@
+home:
+  categories:
+    newestTools: Cele mai noi instrumente
+    favoriteTools: 'Instrumentele tale favorite'
+    allTools: 'Toate instrumentele'
+    favoritesDndToolTip: 'Trage și plasează pentru a reordona favoritele'
+  subtitle: 'Instrumente utile pentru dezvoltatori'
+  toggleMenu: 'Comută meniul'
+  home: Acasă
+  uiLib: 'Biblioteca UI'
+  support: 'Susține dezvoltarea IT-Tools'
+  buyMeACoffee: 'Oferă-mi o cafea'
+  follow:
+    title: 'Îți place it-tools?'
+    p1: 'Oferă-ne o stea pe'
+    githubRepository: 'Repository-ul IT-Tools de pe GitHub'
+    p2: 'sau urmărește-ne pe'
+    twitterXAccount: 'Contul IT-Tools de pe X'
+    thankYou: 'Mulțumim!'
+  nav:
+    github: 'Repository GitHub'
+    githubRepository: 'Repository-ul IT-Tools de pe GitHub'
+    twitterX: 'Contul X'
+    twitterXAccount: 'Contul IT Tools de pe X'
+    about: 'Despre IT-Tools'
+    aboutLabel: 'Despre'
+    darkMode: 'Mod întunecat'
+    lightMode: 'Mod luminos'
+    mode: 'Comută modul întunecat/luminos'
+aboutPage:
+  content: >
+    # Despre IT-Tools
+
+    Acest site web minunat, creat cu ❤ de [Corentin Thomasset](https://corentin.tech?utm_source=it-tools&utm_medium=about), adună instrumente utile pentru dezvoltatori și persoane care lucrează în IT. Dacă îl consideri util, te rugăm să îl distribui persoanelor care crezi că ar putea găsi util și nu uita să îl adaugi la marcaje în bara de scurtături!
+
+    IT Tools este open-source (sub licența GPL-3.0) și gratuit, și va fi întotdeauna, dar costă bani pentru găzduire și reînnoirea numelui de domeniu. Dacă vrei să susții munca mea și să mă încurajezi să adaug mai multe instrumente, te rog să iei în considerare susținerea prin [sponsorizare](https://www.buymeacoffee.com/cthmsst).
+
+    ## Tehnologii
+
+    IT Tools este realizat în Vue.js (Vue 3) cu biblioteca de componente Naive UI și este găzduit și implementat continuu de Vercel. Biblioteci open-source terțe sunt utilizate în unele instrumente, poți găsi lista completă în fișierul [package.json](https://github.com/CorentinTh/it-tools/blob/main/package.json) al repository-ului.
+
+    ## Ai găsit un bug? Lipsește un instrument?
+
+    Dacă ai nevoie de un instrument care nu este prezent aici și crezi că poate fi util, ești binevenit să trimiți o cerere de funcționalitate în [secțiunea de issues](https://github.com/CorentinTh/it-tools/issues/new/choose) din repository-ul GitHub.
+
+    Și dacă ai găsit un bug sau ceva nu funcționează așa cum era de așteptat, te rugăm să trimiți un raport de eroare în [secțiunea de issues](https://github.com/CorentinTh/it-tools/issues/new/choose) din repository-ul GitHub.
+
+404:
+  notFound: '404 Pagina nu a fost găsită'
+  sorry: 'Ne pare rău, această pagină nu pare să existe'
+  maybe: 'Poate memoria cache face lucruri ciudate, încearcă o reîmprospătare forțată?'
+  backHome: 'Înapoi acasă'
+favoriteButton:
+  remove: 'Elimină de la favorite'
+  add: 'Adaugă la favorite'
+toolCard:
+  new: Nou
+search:
+  label: Căutare
+tools:
+  categories:
+    favorite-tools: 'Instrumentele tale favorite'
+    crypto: Criptografie
+    converter: Convertor
+    web: Web
+    images and videos: 'Imagini și Videoclipuri'
+    development: Dezvoltare
+    network: Rețea
+    math: Matematică
+    measurement: Măsurare
+    text: Text
+    data: Date
+
+  password-strength-analyser:
+    title: Analizor de putere a parolei
+    description: Descoperă puterea parolei tale cu acest analizor de putere a parolei care funcționează doar pe partea clientului și instrumentul de estimare a timpului de spargere.
+
+  chronometer:
+    title: Cronometru
+    description: Monitorizează durata unui lucru. Practic un cronometru cu funcții simple de cronometru.
+
+  token-generator:
+    title: Generator de token-uri
+    description: Generează șiruri aleatoare cu caracterele dorite, litere mari sau mici, numere și/sau simboluri.
+
+    uppercase: Majuscule (ABC...)
+    lowercase: Minuscule (abc...)
+    numbers: Numere (123...)
+    symbols: Simboluri (!-;...)
+    length: Lungime
+    tokenPlaceholder: 'Token-ul...'
+    copied: Token-ul a fost copiat în clipboard
+    button:
+      copy: Copiază
+      refresh: Reîmprospătează
+  percentage-calculator:
+    title: Calculator de procente
+    description: Calculează cu ușurință procentele de la o valoare la alta, sau de la un procent la o valoare.
+
+  svg-placeholder-generator:
+    title: Generator de imagini SVG placeholder
+    description: Generează imagini SVG pentru a le folosi ca placeholder în aplicațiile tale.
+
+  json-to-csv:
+    title: JSON în CSV
+    description: Convertește JSON în CSV cu detectare automată a antetelor.
+
+  camera-recorder:
+    title: Înregistrator cameră
+    description: Fă o fotografie sau înregistrează un videoclip de la camera web sau camera ta.
+
+  keycode-info:
+    title: Informații cod tastă
+    description: Găsește codul javascript, codul, locația și modificatorii oricărei taste apăsate.
+
+  emoji-picker:
+    title: Selector emoji
+    description: Copiază și lipește emoji-uri cu ușurință și obține valorile unicode și code points pentru fiecare emoji.
+
+  color-converter:
+    title: Convertor de culori
+    description: Convertește culorile între diferite formate (hex, rgb, hsl și nume CSS)
+
+  bcrypt:
+    title: Bcrypt
+    description: Hash-uiește și compară șiruri de text folosind bcrypt. Bcrypt este o funcție de hash-uire a parolelor bazată pe cifrul Blowfish.
+
+  crontab-generator:
+    title: Generator crontab
+    description: Validează și generează crontab și obține descrierea lizibilă a programului cron.
+
+  http-status-codes:
+    title: Coduri de stare HTTP
+    description: Lista tuturor codurilor de stare HTTP, numele lor și semnificația lor.
+
+  sql-prettify:
+    title: Formatare și înfrumusețare SQL
+    description: Formatează și înfrumusețează interogările SQL online (suportă diverse dialecte SQL).
+
+  benchmark-builder:
+    title: Constructor de benchmark
+    description: Compară cu ușurință timpul de execuție al sarcinilor cu acest constructor de benchmark online foarte simplu.
+
+  git-memo:
+    title: Fișă de comenzi Git
+    description: Git este un software de management al versiunilor descentralizat. Cu această fișă de comenzi, vei avea acces rapid la cele mai comune comenzi git.
+
+  slugify-string:
+    title: Slugificare șir
+    description: Transformă un șir într-unul sigur pentru URL, nume de fișier și ID.
+
+  encryption:
+    title: Criptare / decriptare text
+    description: Criptează textul clar și decriptează textul criptat folosind algoritmi criptografici precum AES, TripleDES, Rabbit sau RC4.
+
+  random-port-generator:
+    title: Generator de porturi aleatoare
+    description: Generează numere de porturi aleatoare în afara intervalului porturilor „cunoscute" (0-1023).
+
+  yaml-prettify:
+    title: Formatare și înfrumusețare YAML
+    description: Înfrumusețează șirul YAML într-un format prietenos și lizibil.
+
+  eta-calculator:
+    title: Calculator ETA
+    description: Un calculator ETA (Timp Estimat de Sosire) pentru a determina timpul aproximativ de finalizare al unei sarcini, de exemplu, timpul de sfârșit și durata descărcării unui fișier.
+
+  roman-numeral-converter:
+    title: Convertor de numere romane
+    description: Convertește numerele romane în numere și convertește numerele în numere romane.
+
+  hmac-generator:
+    title: Generator HMAC
+    description: Calculează un cod de autentificare a mesajelor bazat pe hash (HMAC) folosind o cheie secretă și funcția ta de hash preferată.
+
+  bip39-generator:
+    title: Generator de frază de acces BIP39
+    description: Generează o frază de acces BIP39 dintr-un mnemonic existent sau aleatoriu, sau obține mnemonicul din fraza de acces.
+
+  base64-file-converter:
+    title: Convertor fișier Base64
+    description: Convertește un șir, fișier sau imagine în reprezentarea sa base64.
+
+  list-converter:
+    title: Convertor de liste
+    description: Acest instrument poate procesa date pe coloane și poate aplica diverse modificări (transpunere, adăugare prefix și sufix, inversare listă, sortare listă, valori cu litere mici, trunchiere valori) pentru fiecare rând.
+
+  base64-string-converter:
+    title: Codificator/decodificator șir Base64
+    description: Codifică și decodează pur și simplu șiruri în reprezentarea lor base64.
+
+  toml-to-yaml:
+    title: TOML în YAML
+    description: Parsează și convertește TOML în YAML.
+
+  math-evaluator:
+    title: Evaluator matematic
+    description: Un calculator pentru evaluarea expresiilor matematice. Poți folosi funcții precum sqrt, cos, sin, abs etc.
+
+  json-to-yaml-converter:
+    title: Convertor JSON în YAML
+    description: Convertește pur și simplu JSON în YAML cu acest convertor online live.
+
+  url-parser:
+    title: Parser URL
+    description: Parsează un URL în părțile sale componente separate (protocol, origine, parametri, port, nume de utilizator-parolă, ...)
+
+  iban-validator-and-parser:
+    title: Validator și parser IBAN
+    description: Validează și parsează numerele IBAN. Verifică dacă un IBAN este valid și obține țara, BBAN, dacă este un QR-IBAN și formatul prietenos IBAN.
+
+  user-agent-parser:
+    title: Parser user-agent
+    description: Detectează și parsează Browserul, Motorul, SO, CPU și Tipul/Modelul dispozitivului dintr-un șir user-agent.
+
+  numeronym-generator:
+    title: Generator de numeronime
+    description: Un numeronim este un cuvânt în care se folosește un număr pentru a forma o abreviere. De exemplu, „i18n" este un numeronim al cuvântului „internationalization" unde 18 reprezintă numărul de litere dintre primul i și ultimul n din cuvânt.
+
+  case-converter:
+    title: Convertor de majuscule/minuscule
+    description: Transformă majusculele și minusculele unui șir și alege între diferite formate
+
+  html-entities:
+    title: Escapare entități HTML
+    description: Escapează sau unescapează entitățile HTML (înlocuiește caractere precum <,>, &, " și \' cu versiunea lor HTML)
+
+  json-prettify:
+    title: Formatare și înfrumusețare JSON
+    description: Înfrumusețează șirul JSON într-un format prietenos și lizibil.
+
+  docker-run-to-docker-compose-converter:
+    title: Convertor docker run în docker compose
+    description: Transformă comenzile „docker run" în fișiere docker-compose!
+
+  mac-address-lookup:
+    title: Căutare adresă MAC
+    description: Găsește furnizorul și producătorul unui dispozitiv prin adresa sa MAC.
+
+  mime-types:
+    title: Tipuri MIME
+    description: Convertește tipurile MIME în extensii de fișiere și invers.
+
+  toml-to-json:
+    title: TOML în JSON
+    description: Parsează și convertește TOML în JSON.
+
+  lorem-ipsum-generator:
+    title: Generator Lorem ipsum
+    description: Lorem ipsum este un text placeholder folosit în mod obișnuit pentru a demonstra forma vizuală a unui document sau a unui font fără a se baza pe conținut semnificativ
+
+  qrcode-generator:
+    title: Generator cod QR
+    description: Generează și descarcă un cod QR pentru un URL (sau doar text simplu) și personalizează culorile de fundal și prim-plan.
+
+  wifi-qrcode-generator:
+    title: Generator cod QR WiFi
+    description: Generează și descarcă coduri QR pentru conectarea rapidă la rețelele WiFi.
+
+  xml-formatter:
+    title: Formatare XML
+    description: Înfrumusețează șirul XML într-un format prietenos și lizibil.
+
+  temperature-converter:
+    title: Convertor de temperatură
+    description: Conversii de temperatură în grade pentru Kelvin, Celsius, Fahrenheit, Rankine, Delisle, Newton, Réaumur și Rømer.
+
+  chmod-calculator:
+    title: Calculator chmod
+    description: Calculează permisiunile și comenzile chmod cu acest calculator chmod online.
+
+  rsa-key-pair-generator:
+    title: Generator pereche chei RSA
+    description: Generează o nouă pereche aleatoare de chei certificat RSA privată și publică în format PEM.
+
+  html-wysiwyg-editor:
+    title: Editor HTML WYSIWYG
+    description: Editor HTML WYSIWYG online, bogat în funcții, care generează codul sursă al conținutului imediat.
+
+  yaml-to-toml:
+    title: YAML în TOML
+    description: Parsează și convertește YAML în TOML.
+
+  mac-address-generator:
+    title: Generator adresă MAC
+    description: Introdu cantitatea și prefixul. Adresele MAC vor fi generate în cazul ales de tine (majuscule sau minuscule)
+
+  json-diff:
+    title: Diferențe JSON
+    description: Compară două obiecte JSON și obține diferențele dintre ele.
+
+  jwt-parser:
+    title: Parser JWT
+    description: Parsează și decodează JSON Web Token-ul (jwt) și afișează conținutul acestuia.
+
+  date-converter:
+    title: Convertor dată și oră
+    description: Convertește data și ora în diverse formate diferite
+
+  phone-parser-and-formatter:
+    title: Parser și formator număr de telefon
+    description: Parsează, validează și formatează numerele de telefon. Obține informații despre numărul de telefon, precum codul țării, tipul etc.
+
+  ipv4-subnet-calculator:
+    title: Calculator subrețea IPv4
+    description: Parsează blocurile tale CIDR IPv4 și obține toate informațiile de care ai nevoie despre subrețeaua ta.
+
+  og-meta-generator:
+    title: Generator meta Open Graph
+    description: Generează etichete meta open-graph și pentru rețele sociale pentru site-ul tău web.
+
+  ipv6-ula-generator:
+    title: Generator IPv6 ULA
+    description: Generează-ți propriile adrese IP locale, nerutabile pentru rețeaua ta conform RFC4193.
+
+  hash-text:
+    title: Hash text
+    description: 'Hash-uiește un șir de text folosind funcția de care ai nevoie: MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3 sau RIPEMD160'
+
+  json-to-toml:
+    title: JSON în TOML
+    description: Parsează și convertește JSON în TOML.
+
+  device-information:
+    title: Informații dispozitiv
+    description: Obține informații despre dispozitivul tău curent (dimensiune ecran, raport pixeli, user agent, ...)
+
+  pdf-signature-checker:
+    title: Verificator semnături PDF
+    description: Verifică semnăturile unui fișier PDF. Un fișier PDF semnat conține una sau mai multe semnături care pot fi folosite pentru a determina dacă conținutul fișierului a fost modificat de la semnarea acestuia.
+
+  json-minify:
+    title: Minificare JSON
+    description: Minifică și comprimă eliminând spațiile albe inutile.
+
+  ulid-generator:
+    title: Generator ULID
+    description: Generează Identificatori Unici Universal Lexicografic Sortabili (ULID) aleatori.
+
+  string-obfuscator:
+    title: Obfuscare șir
+    description: Obfuscă un șir (cum ar fi un secret, un IBAN sau un token) pentru a-l face partajabil și identificabil fără a-i dezvălui conținutul.
+
+  base-converter:
+    title: Convertor bază numere întregi
+    description: Convertește un număr între diferite baze (zecimal, hexazecimal, binar, octal, base64, ...)
+
+  yaml-to-json-converter:
+    title: Convertor YAML în JSON
+    description: Convertește pur și simplu YAML în JSON cu acest convertor online live.
+
+  uuid-generator:
+    title: Generator UUID-uri
+    description: Un Identificator Universal Unic (UUID) este un număr de 128 de biți folosit pentru a identifica informațiile în sistemele informatice. Numărul de UUID-uri posibile este 16^32, adică 2^128 sau aproximativ 3,4x10^38 (ceea ce este foarte mult!).
+
+  ipv4-address-converter:
+    title: Convertor adresă IPv4
+    description: Convertește o adresă IP în format zecimal, binar, hexazecimal sau chiar într-o reprezentare IPv6 a acesteia.
+
+  text-statistics:
+    title: Statistici text
+    description: Obține informații despre un text, numărul de caractere, numărul de cuvinte, dimensiunea în octeți, ...
+
+  text-to-nato-alphabet:
+    title: Text în alfabetul NATO
+    description: Transformă textul în alfabetul fonetic NATO pentru transmisie orală.
+
+  basic-auth-generator:
+    title: Generator autentificare de bază
+    description: Generează un antet de autentificare de bază base64 dintr-un nume de utilizator și o parolă.
+
+  text-to-unicode:
+    title: Text în Unicode
+    description: Parsează și convertește textul în unicode și invers
+
+  ipv4-range-expander:
+    title: Extindere interval IPv4
+    description: Dată fiind o adresă IPv4 de început și una de sfârșit, acest instrument calculează o subrețea IPv4 validă împreună cu notația sa CIDR.
+
+  text-diff:
+    title: Diferențe text
+    description: Compară două texte și vezi diferențele dintre ele.
+
+  otp-generator:
+    title: Generator cod OTP
+    description: Generează și validează OTP bazat pe timp (parolă unică) pentru autentificarea cu factori multipli.
+
+  url-encoder:
+    title: Codificare/decodificare șiruri format URL
+    description: Codifică textul în format codificat URL (cunoscut și ca „codificat procentual") sau decodează din acesta.
+
+  text-to-binary:
+    title: Text în binar ASCII
+    description: Convertește textul în reprezentarea sa binară ASCII și invers.
+
+  unix-timestamp-converter:
+    title: Convertor timestamp Unix
+    description: Convertește timestamp-urile Unix în date lizibile și invers. Suportă secunde și milisecunde.
+
+  speed-test:
+    title: Test viteză internet
+    description: Testează viteza conexiunii tale la internet online. Măsoară viteza de descărcare, viteza de încărcare și latența ping.
+
+  dns-lookup:
+    title: Căutare DNS
+    description: Caută înregistrări DNS pentru orice domeniu. Verifică înregistrările A, AAAA, MX, TXT, CNAME și NS online.
+
+  ssl-checker:
+    title: Verificator certificat SSL
+    description: Verifică detaliile certificatului SSL pentru orice site web. Verifică valabilitatea certificatului, data de expirare și informațiile despre emitent.
+
+  website-checker:
+    title: Verificator disponibilitate site web
+    description: Verifică dacă un site web este căzut sau funcțional. Testează disponibilitatea site-ului din mai multe locații din întreaga lume.
+
+  my-ip:
+    title: Care este adresa mea IP
+    description: Verifică adresa ta IP publică online. Instrument gratuit de căutare adresă IP care afișează IP-ul, locația și informațiile ISP.
+
+sponsor:
+  title: Susține AgentsAITools
+  subtitle: Ajută-ne să menținem aceste instrumente gratuite și să îmbunătățim platforma pentru dezvoltatorii din întreaga lume.
+  whySupport: De ce să ne susții?
+  keepToolsFree: Menținem instrumentele gratuite
+  keepToolsFreeDesc: Toate cele 90+ de instrumente vor fi întotdeauna gratuite, fără înregistrare necesară.
+  newTools: Instrumente noi
+  newToolsDesc: Ajută-ne să dezvoltăm instrumente noi și să le îmbunătățim pe cele existente.
+  betterPerformance: Performanță mai bună
+  betterPerformanceDesc: Servere mai rapide și infrastructură mai bună pentru toată lumea.
+  chooseLevel: Alege nivelul tău de susținere
+  supporter: Susținător
+  supporterDesc: Oferă-ne o cafea!
+  champion: Campion
+  championDesc: Ajută-ne să acoperim costurile de găzduire
+  hero: Erou
+  heroDesc: Finanțează dezvoltarea de instrumente noi
+  donate: Donează
+  customAmount: Sumă personalizată
+  customDesc: Vrei să oferi o sumă diferită? Folosește link-ul nostru de plată personalizat.
+  donateCustom: Donează sumă personalizată
+  otherWays: Alte modalități de susținere
+  followTwitter: Urmărește pe Twitter
+  starGitHub: Oferă stea pe GitHub
+  shareFeedback: Împărtășește feedback
+  thankYou: Mulțumim pentru susținere!
+  thankYouDesc: Fiecare contribuție ne ajută să menținem instrumentele gratuite și să le îmbunătățim.
+
+contact:
+  title: Contactează-ne
+  subtitle: Ne-ar face plăcere să auzim de la tine
+  getInTouch: Ia legătura cu noi
+  getInTouchDesc: Ai întrebări, sugestii sau feedback? Suntem aici să te ajutăm!
+  email: E-mail
+  responseTime: Timp de răspuns
+  responseTimeDesc: De obicei răspundem în 24-48 de ore.
+  whatWeHelp: Cu ce te putem ajuta
+  generalQuestions: Întrebări generale despre instrumente
+  featureRequests: Cereri de funcționalități
+  bugReports: Rapoarte de erori
+  partnershipInquiries: Cereri de parteneriat
+  sendMessage: Trimite-ne un mesaj
+  name: Nume
+  namePlaceholder: Numele tău
+  subject: Subiect
+  selectSubject: Selectează un subiect
+  generalQuestion: Întrebare generală
+  featureRequest: Cerere de funcționalitate
+  bugReport: Raport de eroare
+  partnership: Cerere de parteneriat
+  other: Altele
+  message: Mesaj
+  messagePlaceholder: Mesajul tău...
+  send: Trimite mesajul
+  sending: Se trimite...
+  successMessage: Mulțumim pentru mesaj! Clientul tău de e-mail ar trebui să se deschidă în curând.
+

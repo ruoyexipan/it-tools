@@ -1,0 +1,476 @@
+home:
+  categories:
+    newestTools: Nyaste verktyg
+    favoriteTools: 'Dina favoritverktyg'
+    allTools: 'Alla verktyg'
+    favoritesDndToolTip: 'Dra och släpp för att ordna om favoriter'
+  subtitle: 'Praktiska verktyg för utvecklare'
+  toggleMenu: 'Växla meny'
+  home: Hem
+  uiLib: 'UI-bibliotek'
+  support: 'Stöd IT-Tools utveckling'
+  buyMeACoffee: 'Köp en kaffe åt mig'
+  follow:
+    title: 'Gillar du it-tools?'
+    p1: 'Ge oss en stjärna på'
+    githubRepository: 'IT-Tools GitHub-arkiv'
+    p2: 'eller följ oss på'
+    twitterXAccount: 'IT-Tools X-konto'
+    thankYou: 'Tack!'
+  nav:
+    github: 'GitHub-arkiv'
+    githubRepository: 'IT-Tools GitHub-arkiv'
+    twitterX: 'X-konto'
+    twitterXAccount: 'IT-Tools X-konto'
+    about: 'Om IT-Tools'
+    aboutLabel: 'Om'
+    darkMode: 'Mörkt läge'
+    ljustLäge: 'Ljust läge'
+    mode: 'Växla mörkt/ljust läge'
+aboutPage:
+  content: >
+    # Om IT-Tools
+
+    Denna fantastiska webbplats, gjord med ❤ av [Corentin Thomasset](https://corentin.tech?utm_source=it-tools&utm_medium=about), samlar användbara verktyg för utvecklare och personer som arbetar med IT. Om du tycker den är användbar, dela den gärna med personer du tror kan ha nytta av den och glöm inte att bokmärka den i din genvägsfält!
+
+    IT Tools är open-source (under GPL-3.0-licensen) och gratis, och kommer alltid att vara det, men det kostar mig pengar att drifta och förnya domännamnet. Om du vill stödja mitt arbete och uppmuntra mig att lägga till fler verktyg, överväg gärna att stödja genom att [sponsra mig](https://www.buymeacoffee.com/cthmsst).
+
+    ## Teknologier
+
+    IT Tools är gjort i Vue.js (Vue 3) med Naive UI-komponentbiblioteket och driftas och distribueras kontinuerligt av Vercel. Tredjeparts open-source-bibliotek används i vissa verktyg, du hittar den fullständiga listan i [package.json](https://github.com/CorentinTh/it-tools/blob/main/package.json)-filen i arkivet.
+
+    ## Hittat en bugg? Saknas ett verktyg?
+
+    Om du behöver ett verktyg som för närvarande inte finns här och du tycker det kan vara användbart, är du välkommen att skicka en funktionsförfrågan i [issues-sektionen](https://github.com/CorentinTh/it-tools/issues/new/choose) i GitHub-arkivet.
+
+    Och om du hittade en bugg eller något inte fungerar som förväntat, vänligen skicka in en buggrapport i [issues-sektionen](https://github.com/CorentinTh/it-tools/issues/new/choose) i GitHub-arkivet.
+
+404:
+  notFound: '404 Hittades inte'
+  sorry: 'Tyvärr, denna sida verkar inte finnas'
+  maybe: 'Kanske cachen ställer till det, prova att tvinga uppdatering?'
+  backHome: 'Tillbaka till startsidan'
+favoriteButton:
+  remove: 'Ta bort från favoriter'
+  add: 'Lägg till i favoriter'
+toolCard:
+  new: Ny
+search:
+  label: Sök
+tools:
+  categories:
+    favorite-tools: 'Dina favoritverktyg'
+    crypto: Krypto
+    converter: Konverterare
+    web: Webb
+    images and videos: 'Bilder & Video'
+    development: Utveckling
+    network: Nätverk
+    math: Matematik
+    measurement: Mätning
+    text: Text
+    data: Data
+
+  password-strength-analyser:
+    title: Lösenordsstyrkeanalysator
+    description: Upptäck styrkan i ditt lösenord med denna klientbaserade lösenordsstyrkeanalysator och beräkningsverktyg för knäckningstid.
+
+  chronometer:
+    title: Kronometer
+    description: Övervaka varaktigheten för något. I grunden en kronometer med enkla kronometerfunktioner.
+
+  token-generator:
+    title: Token-generator
+    description: Generera slumpmässiga strängar med de tecken du vill ha, versaler eller gemener, siffror och/eller symboler.
+
+    uppercase: Versaler (ABC...)
+    lowercase: Gemener (abc...)
+    numbers: Siffror (123...)
+    symbols: Symboler (!-;...)
+    length: Längd
+    tokenPlaceholder: 'Token...'
+    copied: Token kopierad till urklipp
+    button:
+      copy: Kopiera
+      refresh: Uppdatera
+  percentage-calculator:
+    title: Procentberäknare
+    description: Beräenkla enkelt procentandelar från ett värde till ett annat, eller från en procentandel till ett värde.
+
+  svg-placeholder-generator:
+    title: SVG-platshållaregenerator
+    description: Generera SVG-bilder att använda som platshållare i dina applikationer.
+
+  json-to-csv:
+    title: JSON till CSV
+    description: Konvertera JSON till CSV med automatisk detektering av rubriker.
+
+  camera-recorder:
+    title: Kamera-inspelare
+    description: Ta ett foto eller spela in en video från din webbkamera eller kamera.
+
+  keycode-info:
+    title: Tangentkod-info
+    description: Hitta JavaScript-tangentkod, kod, placering och modifierare för valfri nedtryckt tangent.
+
+  emoji-picker:
+    title: Emoji-väljare
+    description: Kopiera och klistra in emojis enkelt och få unicode- och kodpunktsvärdet för varje emoji.
+
+  color-converter:
+    title: Färgkonverterare
+    description: Konvertera färg mellan olika format (hex, rgb, hsl och CSS-namn)
+
+  bcrypt:
+    title: Bcrypt
+    description: Hasha och jämför textsträngar med bcrypt. Bcrypt är en lösenordshashfunktion baserad på Blowfish-chiffern.
+
+  crontab-generator:
+    title: Crontab-generator
+    description: Validera och generera crontab och få den mänskligt läsbara beskrivningen av cron-schemat.
+
+  http-status-codes:
+    title: HTTP-statuskoder
+    description: Listan över alla HTTP-statuskoder, deras namn och deras betydelse.
+
+  sql-prettify:
+    title: SQL-finslipning och formatering
+    description: Formatera och finslipa dina SQL-frågor online (det stöder olika SQL-dialekter).
+
+  benchmark-builder:
+    title: Benchmark-byggare
+    description: Jämför enkelt exekveringstiden för uppgifter med denna mycket enkla onlinebenchmark-byggare.
+
+  git-memo:
+    title: Git-fuskblad
+    description: Git är en decentraliserad versionshanteringsprogramvara. Med detta fuskblad får du snabb åtkomst till de vanligaste git-kommandona.
+
+  slugify-string:
+    title: Slugifiera sträng
+    description: Gör en sträng URL-, filnamn- och ID-säker.
+
+  encryption:
+    title: Kryptera / dekryptera text
+    description: Kryptera klartext och dekryptera chiffertext med kryptoalgoritmer som AES, TripleDES, Rabbit eller RC4.
+
+  random-port-generator:
+    title: Slumpmässig portgenerator
+    description: Generera slumpmässiga portnummer utanför intervallet av "kända" portar (0-1023).
+
+  yaml-prettify:
+    title: YAML-finslipning och formatering
+    description: Finslipa din YAML-sträng till ett vänligt, mänskligt läsbart format.
+
+  eta-calculator:
+    title: ETA-beräknare
+    description: En ETA (beräknad ankomsttid) beräknare för att bestämma den ungefärliga sluttiden för en uppgift, till exempel sluttiden och varaktigheten för en filhämtning.
+
+  roman-numeral-converter:
+    title: Romersk sifferkonverterare
+    description: Konvertera romerska siffror till tal och konvertera tal till romerska siffror.
+
+  hmac-generator:
+    title: HMAC-generator
+    description: Beräknar ett hash-baserat meddelandeautentiseringskod (HMAC) med en hemlig nyckel och din favorithashfunktion.
+
+  bip39-generator:
+    title: BIP39-lösenfrasgenerator
+    description: Generera en BIP39-lösenfras från en befintlig eller slumpmässig mnemonic, eller få mnemonic från lösenfrasen.
+
+  base64-file-converter:
+    title: Base64-filkonverterare
+    description: Konvertera en sträng, fil eller bild till dess base64-representation.
+
+  list-converter:
+    title: Listkonverterare
+    description: Detta verktyg kan bearbeta kolumnbaserade data och tillämpa olika ändringar (transponera, lägg till prefix och suffix, vänd lista, sortera lista, gemena värden, trunkera värden) för varje rad.
+
+  base64-string-converter:
+    title: Base64-strängkodare/dekodare
+    description: Enkelt koda och avkoda strängar till deras base64-representation.
+
+  toml-to-yaml:
+    title: TOML till YAML
+    description: Tolka och konvertera TOML till YAML.
+
+  math-evaluator:
+    title: Matematisk utvärderare
+    description: En miniräknare för att utvärdera matematiska uttryck. Du kan använda funktioner som sqrt, cos, sin, abs, osv.
+
+  json-to-yaml-converter:
+    title: JSON till YAML-konverterare
+    description: Konvertera enkelt JSON till YAML med denna online live-konverterare.
+
+  url-parser:
+    title: URL-tolkare
+    description: Tolka en URL till dess separata beståndsdelar (protokoll, ursprung, parametrar, port, användarnamn-lösenord, ...)
+
+  iban-validator-and-parser:
+    title: IBAN-validerare och tolkare
+    description: Validera och tolka IBAN-nummer. Kontrollera om ett IBAN är giltigt och få landet, BBAN, om det är ett QR-IBAN och det IBAN-vänliga formatet.
+
+  user-agent-parser:
+    title: User-agent-tolkare
+    description: Detektera och tolka webbläsare, motor, operativsystem, processor och enhetstyp/modell från en user-agent-sträng.
+
+  numeronym-generator:
+    title: Numeronym-generator
+    description: Ett numeronym är ett ord där ett tal används för att bilda en förkortning. Till exempel är "i18n" ett numeronym av "internationalization" där 18 står för antalet bokstäver mellan det första i:et och det sista n:et i ordet.
+
+  case-converter:
+    title: Skiftlägeskonverterare
+    description: Transformera skiftläget på en sträng och välj mellan olika format
+
+  html-entities:
+    title: Escapa HTML-entiteter
+    description: Escapa eller av-escapa HTML-entiteter (ersätt tecken som <,>, & , " och \' med deras HTML-version)
+
+  json-prettify:
+    title: JSON-finslipning och formatering
+    description: Finslipa din JSON-sträng till ett vänligt, mänskligt läsbart format.
+
+  docker-run-to-docker-compose-converter:
+    title: Docker run till Docker compose-konverterare
+    description: Transformerar "docker run"-kommandon till docker-compose-filer!
+
+  mac-address-lookup:
+    title: MAC-adressuppslagning
+    description: Hitta leverantör och tillverkare för en enhet via dess MAC-adress.
+
+  mime-types:
+    title: MIME-typer
+    description: Konvertera MIME-typer till filtillägg och vice versa.
+
+  toml-to-json:
+    title: TOML till JSON
+    description: Tolka och konvertera TOML till JSON.
+
+  lorem-ipsum-generator:
+    title: Lorem ipsum-generator
+    description: Lorem ipsum är en platshållartext som vanligen används för att demonstrera den visuella formen av ett dokument eller ett typsnitt utan att förlita sig på meningsfullt innehåll
+
+  qrcode-generator:
+    title: QR-kodsgenerator
+    description: Generera och ladda ner en QR-kod för en URL (eller bara vanlig text) och anpassa bakgrunds- och förgrundsfärger.
+
+  wifi-qrcode-generator:
+    title: WiFi QR-kodsgenerator
+    description: Generera och ladda ner QR-koder för snabb anslutning till WiFi-nätverk.
+
+  xml-formatter:
+    title: XML-formaterare
+    description: Finslipa din XML-sträng till ett vänligt, mänskligt läsbart format.
+
+  temperature-converter:
+    title: Temperaturkonverterare
+    description: Temperaturkonverteringar för Kelvin, Celsius, Fahrenheit, Rankine, Delisle, Newton, Réaumur och Rømer.
+
+  chmod-calculator:
+    title: Chmod-beräknare
+    description: Beräkna dina chmod-rättigheter och kommandon med denna online chmod-beräknare.
+
+  rsa-key-pair-generator:
+    title: RSA-nyckelparsgenerator
+    description: Generera ett nytt slumpmässigt RSA-privat och publikt PEM-certifikat-nyckelpar.
+
+  html-wysiwyg-editor:
+    title: HTML WYSIWYG-redigerare
+    description: Online, funktionsrik WYSIWYG HTML-redigerare som omedelbart genererar källkoden för innehållet.
+
+  yaml-to-toml:
+    title: YAML till TOML
+    description: Tolka och konvertera YAML till TOML.
+
+  mac-address-generator:
+    title: MAC-adressgenerator
+    description: Ange antalet och prefixet. MAC-adresser kommer att genereras i ditt valda skiftläge (versaler eller gemener)
+
+  json-diff:
+    title: JSON-diff
+    description: Jämför två JSON-objekt och få skillnaderna mellan dem.
+
+  jwt-parser:
+    title: JWT-tolkare
+    description: Tolka och avkoda din JSON Web Token (JWT) och visa dess innehåll.
+
+  date-converter:
+    title: Datum-tid-konverterare
+    description: Konvertera datum och tid till de olika formaten
+
+  phone-parser-and-formatter:
+    title: Telefontolkare och formaterare
+    description: Tolka, validera och formatera telefonnummer. Få information om telefonnumret, som landskod, typ, osv.
+
+  ipv4-subnet-calculator:
+    title: IPv4-subnätberäknare
+    description: Tolka dina IPv4 CIDR-block och få all information du behöver om ditt subnät.
+
+  og-meta-generator:
+    title: Open Graph-metagenerator
+    description: Generera open-graph- och sociala HTML-metataggar för din webbplats.
+
+  ipv6-ula-generator:
+    title: IPv6 ULA-generator
+    description: Generera dina egna lokala, icke-routbara IP-adresser för ditt nätverk enligt RFC4193.
+
+  hash-text:
+    title: Hash-text
+    description: 'Hasha en textsträng med den funktion du behöver: MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3 eller RIPEMD160'
+
+  json-to-toml:
+    title: JSON till TOML
+    description: Tolka och konvertera JSON till TOML.
+
+  device-information:
+    title: Enhetsinformation
+    description: Få information om din nuvarande enhet (skärmstorlek, pixelkvot, user agent, ...)
+
+  pdf-signature-checker:
+    title: PDF-signaturkontroll
+    description: Verifiera signaturerna i en PDF-fil. En signerad PDF-fil innehåller en eller flera signaturer som kan användas för att avgöra om filens innehåll har ändrats sedan filen signerades.
+
+  json-minify:
+    title: JSON-minifiering
+    description: Minifiera och komprimera ditt JSON genom att ta bort onödiga blanksteg.
+
+  ulid-generator:
+    title: ULID-generator
+    description: Generera slumpmässiga Universellt Unika Lexikografiskt Sorterbara Identifierare (ULID).
+
+  string-obfuscator:
+    title: Sträng-obfusator
+    description: Obfusera en sträng (som en hemlighet, ett IBAN eller en token) för att göra den delbar och identifierbar utan att avslöja dess innehåll.
+
+  base-converter:
+    title: Heltalsbas-konverterare
+    description: Konvertera ett tal mellan olika baser (decimal, hexadecimal, binär, oktal, base64, ...)
+
+  yaml-to-json-converter:
+    title: YAML till JSON-konverterare
+    description: Konvertera enkelt YAML till JSON med denna online live-konverterare.
+
+  uuid-generator:
+    title: UUID-generator
+    description: En Universellt Unik Identifierare (UUID) är ett 128-bitars tal som används för att identifiera information i datasystem. Antalet möjliga UUID:er är 16^32, vilket är 2^128 eller cirka 3,4x10^38 (vilket är mycket!).
+
+  ipv4-address-converter:
+    title: IPv4-adresskonverterare
+    description: Konvertera en IP-adress till decimal, binär, hexadecimal eller till och med en IPv6-representation av den.
+
+  text-statistics:
+    title: Textstatistik
+    description: Få information om en text, antalet tecken, antalet ord, dess storlek i byte, ...
+
+  text-to-nato-alphabet:
+    title: Text till NATO-alfabetet
+    description: Transformera text till NATO:s fonetiska alfabet för muntlig överföring.
+
+  basic-auth-generator:
+    title: Grundläggande autentiseringsgenerator
+    description: Generera en base64 basic auth-rubrik från ett användarnamn och lösenord.
+
+  text-to-unicode:
+    title: Text till Unicode
+    description: Tolka och konvertera text till unicode och vice versa
+
+  ipv4-range-expander:
+    title: IPv4-intervallutvidgare
+    description: Med en start- och en slut-IPv4-adress beräknar detta verktyg ett giltigt IPv4-subnät tillsammans med dess CIDR-notation.
+
+  text-diff:
+    title: Text-diff
+    description: Jämför två texter och se skillnaderna mellan dem.
+
+  otp-generator:
+    title: OTP-kodgenerator
+    description: Generera och validera tidsbaserade OTP (engångslösenord) för multifaktorautentisering.
+
+  url-encoder:
+    title: Kodning/avkodning av URL-formaterade strängar
+    description: Kod text till URL-kodat format (även känt som "procentkodat"), eller avkoda från det.
+
+  text-to-binary:
+    title: Text till ASCII-binär
+    description: Konvertera text till dess ASCII-binära representation och vice versa.
+
+  unix-timestamp-converter:
+    title: Unix-tidsstämpelkonverterare
+    description: Konvertera Unix-tidsstämplar till mänskligt läsbara datum och vice versa. Stöder sekunder och millisekunder.
+
+  speed-test:
+    title: Internethastighetstest
+    description: Testa din internetanslutningshastighet online. Mät nedladdningshastighet, uppladdningshastighet och ping-latens.
+
+  dns-lookup:
+    title: DNS-uppslagning
+    description: Slå upp DNS-poster för valfri domän. Kontrollera A, AAAA, MX, TXT, CNAME och NS-poster online.
+
+  ssl-checker:
+    title: SSL-certifikatkontroll
+    description: Kontrollera SSL-certifikatdetaljer för valfri webbplats. Verifiera certifikatets giltighet, utgångsdatum och utfärdarinformation.
+
+  website-checker:
+    title: Webbplats-ned-kontroll
+    description: Kontrollera om en webbplats är nere eller uppe. Testa webbplatsens tillgänglighet från flera platser världen över.
+
+  my-ip:
+    title: Vad är min IP-adress
+    description: Kontrollera din publika IP-adress online. Gratis IP-adressuppslagningsverktyg som visar din IP, plats och ISP-information.
+
+sponsor:
+  title: Stöd AgentsAITools
+  subtitle: Håll oss dessa verktyg gratis och förbättra plattformen för utvecklare världen över.
+  whySupport: Varför stödja oss?
+  keepToolsFree: Håll verktyg gratis
+  keepToolsFreeDesc: Alla 90+ verktyg kommer alltid att vara gratis, ingen registrering krävs.
+  newTools: Nya verktyg
+  newToolsDesc: Hjälp oss att utveckla nya verktyg och förbättra befintliga.
+  betterPerformance: Bättre prestanda
+  betterPerformanceDesc: Snabbare servrar och bättre infrastruktur för alla.
+  chooseLevel: Välj din supportnivå
+  supporter: Supporter
+  supporterDesc: Köp en kaffe åt oss!
+  champion: Mästare
+  championDesc: Hjälp oss täcka driftkostnader
+  hero: Hjälte
+  heroDesc: Finansiera ny verktygsutveckling
+  donate: Donera
+  customAmount: Anpassat belopp
+  customDesc: Vill du ge ett annat belopp? Använd vår anpassade betalningslänk.
+  donateCustom: Donera anpassat belopp
+  otherWays: Andra sätt att stödja
+  followTwitter: Följ på Twitter
+  starGitHub: Stjärnmärk på GitHub
+  shareFeedback: Dela feedback
+  thankYou: Tack för ditt stöd!
+  thankYouDesc: Varje bidrag hjälper oss hålla verktygen gratis och förbättra dem.
+
+contact:
+  title: Kontakta oss
+  subtitle: Vi vill gärna höra från dig
+  getInTouch: Kom i kontakt
+  getInTouchDesc: Har du frågor, förslag eller feedback? Vi finns här för att hjälpa!
+  email: E-post
+  responseTime: Svarstid
+  responseTimeDesc: Vi svarar vanligen inom 24-48 timmar.
+  whatWeHelp: Vad vi hjälper med
+  generalQuestions: Allmänna frågor om verktyg
+  featureRequests: Funktionsförfrågningar
+  bugReports: Buggrapporter
+  partnershipInquiries: Samarbetsförfrågningar
+  sendMessage: Skicka oss ett meddelande
+  name: Namn
+  namePlaceholder: Ditt namn
+  subject: Ämne
+  selectSubject: Välj ett ämne
+  generalQuestion: Allmän fråga
+  featureRequest: Funktionsförfrågan
+  bugReport: Buggrapport
+  partnership: Samarbetsförfrågan
+  other: Övrigt
+  message: Meddelande
+  messagePlaceholder: Ditt meddelande...
+  send: Skicka meddelande
+  sending: Skickar...
+  successMessage: Tack för ditt meddelande! Din e-postklient borde öppnas inom kort.
+

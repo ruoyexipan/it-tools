@@ -388,3 +388,121 @@ tools:
   text-to-binary:
     title: 文本到 ASCII 二进制
     description: 将文本转换为其 ASCII 二进制表示形式，反之亦然。
+
+  unix-timestamp-converter:
+    title: Unix时间戳转换器
+    description: 将Unix时间戳转换为人类可读日期，反之亦然。支持秒和毫秒。
+
+  speed-test:
+    title: 网络速度测试
+    description: 在线测试您的网络连接速度。测量下载速度、上传速度和Ping延迟。
+
+  dns-lookup:
+    title: DNS查询
+    description: 查询任何域名的DNS记录。在线检查A、AAAA、MX、TXT、CNAME和NS记录。
+
+  ssl-checker:
+    title: SSL证书检查器
+    description: 检查任何网站的SSL证书详情。验证证书有效性、到期日期和颁发者信息。
+
+  website-checker:
+    title: 网站状态检查
+    description: 检查网站是否宕机。从全球多个位置测试网站可用性。
+
+  my-ip:
+    title: 我的IP地址
+    description: 在线查看您的公网IP地址。免费IP地址查询工具，显示您的IP、位置和ISP信息。
+
+sponsor:
+  title: 支持AgentsAITools
+  subtitle: 帮助我们保持这些工具免费，并为全球开发者改进平台。
+  whySupport: 为什么支持我们？
+  keepToolsFree: 保持工具免费
+  keepToolsFreeDesc: 所有90+工具将永远免费，无需注册。
+  newTools: 新工具
+  newToolsDesc: 帮助我们开发新工具并改进现有工具。
+  betterPerformance: 更好的性能
+  betterPerformanceDesc: 为所有人提供更快的服务器和更好的基础设施。
+  chooseLevel: 选择您的支持级别
+  supporter: 支持者
+  supporterDesc: 请我们喝杯咖啡！
+  champion: 冠军
+  championDesc: 帮助我们支付托管费用
+  hero: 英雄
+  heroDesc: 资助新工具开发
+  donate: 捐赠
+  customAmount: 自定义金额
+  customDesc: 想要捐赠不同的金额？使用我们的自定义支付链接。
+  donateCustom: 捐赠自定义金额
+  otherWays: 其他支持方式
+  followTwitter: 关注Twitter
+  starGitHub: GitHub点赞
+  shareFeedback: 分享反馈
+  thankYou: 感谢您的支持！
+  thankYouDesc: 每一份贡献都帮助我们保持工具免费并改进它们。
+
+contact:
+  title: 联系我们
+  subtitle: 我们期待听到您的声音
+  getInTouch: 联系方式
+  getInTouchDesc: 有问题、建议或反馈？我们随时为您提供帮助！
+  email: 电子邮件
+  responseTime: 响应时间
+  responseTimeDesc: 我们通常在24-48小时内回复。
+  whatWeHelp: 我们可以帮助您
+  generalQuestions: 工具相关问题
+  featureRequests: 功能请求
+  bugReports: 错误报告
+  partnershipInquiries: 合作咨询
+  sendMessage: 发送消息
+  name: 姓名
+  namePlaceholder: 您的姓名
+  subject: 主题
+  selectSubject: 选择主题
+  generalQuestion: 一般问题
+  featureRequest: 功能请求
+  bugReport: 错误报告
+  partnership: 合作咨询
+  other: 其他
+  message: 消息
+  messagePlaceholder: 您的消息...
+  send: 发送消息
+  sending: 发送中...
+  successMessage: 感谢您的消息！您的邮件客户端即将打开。
+
+aboutPage:
+  title: 关于AgentsAITools
+  subtitle: 免费在线开发者工具平台
+  mission: 我们的使命
+  missionDesc1: AgentsAITools是一个免费的在线开发者工具平台，为全球开发者和IT专业人士提供90+工具。
+  missionDesc2: 我们相信，基本的开发者工具应该对所有人开放，无需注册或隐藏费用。
+  whatWeOffer: 我们提供什么
+  tools90: 90+工具
+  tools90Desc: JSON格式化、Base64编码、哈希生成器、JWT解码器、UUID生成器、正则测试等。
+  free100: 100%免费
+  free100Desc: 所有工具完全免费使用。无隐藏费用，无高级版本。
+  privacyFirst: 隐私优先
+  privacyFirstDesc: 所有处理都在您的浏览器中进行。不向服务器发送数据。
+  mobileFriendly: 移动端友好
+  mobileFriendlyDesc: 支持桌面、平板和移动设备。
+  toolCategories: 工具分类
+  crypto: 加密
+  cryptoDesc: 哈希生成器、加密、UUID、JWT工具
+  converters: 转换器
+  convertersDesc: JSON、YAML、Base64、颜色转换器
+  webTools: Web
+  webToolsDesc: URL编码、HTML实体、Meta标签
+  development: 开发
+  developmentDesc: SQL格式化、正则测试、Docker工具
+  network: 网络
+  networkDesc: IP计算器、MAC地址工具
+  textTools: 文本
+  textToolsDesc: Lorem ipsum、文本比较、大小写转换
+  technology: 技术栈
+  technologyDesc: AgentsAITools使用现代Web技术构建：
+  vuejs: Vue.js 3 + TypeScript
+  vite: Vite构建工具
+  cloudflareHosting: Cloudflare Pages托管
+  cloudflareCdn: Cloudflare CDN全球加速
+  contactUs: 联系我们
+  contactUsDesc: 有问题、建议或反馈？我们期待听到您的声音。

@@ -1,0 +1,476 @@
+home:
+  categories:
+    newestTools: 최신 도구
+    favoriteTools: '즐겨찾는 도구'
+    allTools: '모든 도구'
+    favoritesDndToolTip: '드래그 앤 드롭으로 즐겨찾기 순서 변경'
+  subtitle: '개발자를 위한 유용한 도구 모음'
+  toggleMenu: '메뉴 토글'
+  home: 홈
+  uiLib: 'UI 라이브러리'
+  support: 'IT-Tools 개발 지원하기'
+  buyMeACoffee: '커피 한 잔 사주기'
+  follow:
+    title: 'IT-Tools가 마음에 드시나요?'
+    p1: '에서 스타를 눌러주세요'
+    githubRepository: 'IT-Tools GitHub 저장소'
+    p2: '또는 팔로우해주세요'
+    twitterXAccount: 'IT-Tools X 계정'
+    thankYou: '감사합니다!'
+  nav:
+    github: 'GitHub 저장소'
+    githubRepository: 'IT-Tools GitHub 저장소'
+    twitterX: 'X 계정'
+    twitterXAccount: 'IT Tools X 계정'
+    about: 'IT-Tools 소개'
+    aboutLabel: '소개'
+    darkMode: '다크 모드'
+    lightMode: '라이트 모드'
+    mode: '다크/라이트 모드 전환'
+aboutPage:
+  content: >
+    # IT-Tools 소개
+
+    이 멋진 웹사이트는 [Corentin Thomasset](https://corentin.tech?utm_source=it-tools&utm_medium=about)가 ❤으로 만들었으며, 개발자와 IT 종사자에게 유용한 도구를 모아놓았습니다. 유용하다고 생각하시면 주변에 공유해주시고, 즐겨찾기에 추가해두시면 편리합니다!
+
+    IT Tools는 GPL-3.0 라이선스 하에 오픈 소스로 제공되며 무료입니다. 앞으로도 무료로 유지할 예정이지만, 호스팅 및 도메인 비용이 발생합니다. 제 작업을 지원하고 더 많은 도구 추가를 응원하고 싶으시다면 [후원하기](https://www.buymeacoffee.com/cthmsst)를 고려해주세요.
+
+    ## 기술 스택
+
+    IT Tools는 Vue.js (Vue 3)와 Naive UI 컴포넌트 라이브러리로 제작되었으며, Vercel에서 호스팅 및 지속적 배포가 이루어집니다. 일부 도구에서는 서드파티 오픈 소스 라이브러리를 사용하며, 전체 목록은 저장소의 [package.json](https://github.com/CorentinTh/it-tools/blob/main/package.json) 파일에서 확인할 수 있습니다.
+
+    ## 버그를 발견하셨나요? 도구가 빠졌나요?
+
+    현재 없는 도구가 필요하시거나 유용할 것 같다고 생각되신다면, GitHub 저장소의 [이슈 섹션](https://github.com/CorentinTh/it-tools/issues/new/choose)에서 기능 요청을 제출해주세요.
+
+    버그를 발견하셨거나 예상대로 작동하지 않는 경우, GitHub 저장소의 [이슈 섹션](https://github.com/CorentinTh/it-tools/issues/new/choose)에서 버그 리포트를 제출해주세요.
+
+404:
+  notFound: '404 페이지를 찾을 수 없음'
+  sorry: '죄송합니다. 해당 페이지가 존재하지 않는 것 같습니다.'
+  maybe: '캐시 문제가 있을 수 있습니다. 강력 새로고침을 시도해보세요.'
+  backHome: '홈으로 돌아가기'
+favoriteButton:
+  remove: '즐겨찾기에서 제거'
+  add: '즐겨찾기에 추가'
+toolCard:
+  new: 신규
+search:
+  label: 검색
+tools:
+  categories:
+    favorite-tools: '즐겨찾는 도구'
+    crypto: 암호화
+    converter: 변환기
+    web: 웹
+    images and videos: '이미지 및 동영상'
+    development: 개발
+    network: 네트워크
+    math: 수학
+    measurement: 측정
+    text: 텍스트
+    data: 데이터
+
+  password-strength-analyser:
+    title: 비밀번호 강도 분석기
+    description: 클라이언트 측 전용 비밀번호 강도 분석 및 해독 시간 추정 도구로 비밀번호의 강도를 확인하세요.
+
+  chronometer:
+    title: 스톱워치
+    description: 시간을 측정하세요. 기본적인 스톱워치 기능을 제공합니다.
+
+  token-generator:
+    title: 토큰 생성기
+    description: 원하는 문자로 랜덤 문자열을 생성하세요. 대문자, 소문자, 숫자 및/또는 기호를 선택할 수 있습니다.
+
+    uppercase: 대문자 (ABC...)
+    lowercase: 소문자 (abc...)
+    numbers: 숫자 (123...)
+    symbols: 기호 (!-;...)
+    length: 길이
+    tokenPlaceholder: '토큰...'
+    copied: 토큰이 클립보드에 복사되었습니다
+    button:
+      copy: 복사
+      refresh: 새로고침
+  percentage-calculator:
+    title: 백분율 계산기
+    description: 값에서 값으로 또는 백분율에서 값으로 쉽게 백분율을 계산하세요.
+
+  svg-placeholder-generator:
+    title: SVG 플레이스홀더 생성기
+    description: 애플리케이션에서 플레이스홀더로 사용할 SVG 이미지를 생성하세요.
+
+  json-to-csv:
+    title: JSON to CSV
+    description: 자동 헤더 감지로 JSON을 CSV로 변환하세요.
+
+  camera-recorder:
+    title: 카메라 녹화기
+    description: 웹캠이나 카메라로 사진을 찍거나 동영상을 녹화하세요.
+
+  keycode-info:
+    title: 키코드 정보
+    description: 누른 키의 자바스크립트 키코드, 코드, 위치 및 수정자를 확인하세요.
+
+  emoji-picker:
+    title: 이모지 선택기
+    description: 이모지를 쉽게 복사하고 붙여넣으며 각 이모지의 유니코드 및 코드 포인트 값을 확인하세요.
+
+  color-converter:
+    title: 색상 변환기
+    description: 다양한 형식(hex, rgb, hsl, css 이름) 간에 색상을 변환하세요.
+
+  bcrypt:
+    title: Bcrypt
+    description: bcrypt를 사용하여 텍스트 문자열을 해시하고 비교하세요. Bcrypt는 Blowfish 암호 기반의 비밀번호 해시 함수입니다.
+
+  crontab-generator:
+    title: Crontab 생성기
+    description: crontab을 검증하고 생성하며, 크론 스케줄의 사람이 읽을 수 있는 설명을 확인하세요.
+
+  http-status-codes:
+    title: HTTP 상태 코드
+    description: 모든 HTTP 상태 코드의 목록, 이름 및 의미입니다.
+
+  sql-prettify:
+    title: SQL 정렬 및 포맷
+    description: SQL 쿼리를 온라인으로 정렬하고 포맷하세요 (다양한 SQL 방언 지원).
+
+  benchmark-builder:
+    title: 벤치마크 빌더
+    description: 이 간단한 온라인 벤치마크 빌더로 작업의 실행 시간을 쉽게 비교하세요.
+
+  git-memo:
+    title: Git 치트시트
+    description: Git은 분산 버전 관리 소프트웨어입니다. 이 치트시트에서 가장 일반적인 git 명령어에 빠르게 접근할 수 있습니다.
+
+  slugify-string:
+    title: 문자열 Slugify
+    description: 문자열을 URL, 파일명 및 ID에 안전하게 변환하세요.
+
+  encryption:
+    title: 텍스트 암호화/복호화
+    description: AES, TripleDES, Rabbit 또는 RC4와 같은 암호화 알고리즘을 사용하여 평문을 암호화하고 암호문을 복호화하세요.
+
+  random-port-generator:
+    title: 랜덤 포트 생성기
+    description: '알려진 포트 범위(0-1023) 외부의 랜덤 포트 번호를 생성하세요.'
+
+  yaml-prettify:
+    title: YAML 정렬 및 포맷
+    description: YAML 문자열을 사람이 읽기 쉬운 형식으로 정렬하세요.
+
+  eta-calculator:
+    title: ETA 계산기
+    description: 'ETA(예상 도착 시간) 계산기로 작업의 대략적인 종료 시간을 확인하세요. 예: 파일 다운로드의 종료 시간 및 소요 시간.'
+
+  roman-numeral-converter:
+    title: 로마 숫자 변환기
+    description: 로마 숫자를 숫자로, 숫자를 로마 숫자로 변환하세요.
+
+  hmac-generator:
+    title: HMAC 생성기
+    description: 비밀 키와 원하는 해시 함수를 사용하여 해시 기반 메시지 인증 코드(HMAC)를 계산합니다.
+
+  bip39-generator:
+    title: BIP39 패스프레이즈 생성기
+    description: 기존 또는 랜덤 니모닉에서 BIP39 패스프레이즈를 생성하거나, 패스프레이즈에서 니모닉을 얻으세요.
+
+  base64-file-converter:
+    title: Base64 파일 변환기
+    description: 문자열, 파일 또는 이미지를 base64 표현으로 변환하세요.
+
+  list-converter:
+    title: 목록 변환기
+    description: 이 도구는 열 기반 데이터를 처리하고 각 행에 다양한 변경 사항(전치, 접두사 및 접미사 추가, 목록 뒤집기, 목록 정렬, 소문자 변환, 값 잘라내기)을 적용할 수 있습니다.
+
+  base64-string-converter:
+    title: Base64 문자열 인코더/디코더
+    description: 문자열을 base64 표현으로 쉽게 인코딩하고 디코딩하세요.
+
+  toml-to-yaml:
+    title: TOML to YAML
+    description: TOML을 파싱하여 YAML로 변환하세요.
+
+  math-evaluator:
+    title: 수학 표현식 평가기
+    description: 수학 표현식을 평가하는 계산기입니다. sqrt, cos, sin, abs 등의 함수를 사용할 수 있습니다.
+
+  json-to-yaml-converter:
+    title: JSON to YAML 변환기
+    description: 이 온라인 실시간 변환기로 JSON을 YAML로 쉽게 변환하세요.
+
+  url-parser:
+    title: URL 파서
+    description: URL을 각 구성 요소(프로토콜, 출처, 매개변수, 포트, 사용자명-비밀번호 등)로 파싱하세요.
+
+  iban-validator-and-parser:
+    title: IBAN 검증기 및 파서
+    description: IBAN 번호를 검증하고 파싱하세요. IBAN 유효성을 확인하고 국가, BBAN, QR-IBAN 여부 및 IBAN 친화적 형식을 확인하세요.
+
+  user-agent-parser:
+    title: User-agent 파서
+    description: user-agent 문자열에서 브라우저, 엔진, OS, CPU 및 장치 유형/모델을 감지하고 파싱하세요.
+
+  numeronym-generator:
+    title: 숫자약어 생성기
+    description: 숫자약어는 숫자를 사용하여 약어를 만드는 단어입니다. 예를 들어, "i18n"은 "internationalization"의 숫자약어로, 첫 번째 i와 마지막 n 사이의 글자 수인 18을 나타냅니다.
+
+  case-converter:
+    title: 대소문자 변환기
+    description: 문자열의 대소문자를 변환하고 다양한 형식 중에서 선택하세요.
+
+  html-entities:
+    title: HTML 엔티티 이스케이프
+    description: HTML 엔티티를 이스케이프하거나 이스케이프 해제하세요 (<, >, &, " 및 ' 문자를 HTML 버전으로 대체).
+
+  json-prettify:
+    title: JSON 정렬 및 포맷
+    description: JSON 문자열을 사람이 읽기 쉬운 형식으로 정렬하세요.
+
+  docker-run-to-docker-compose-converter:
+    title: Docker run to Docker compose 변환기
+    description: 'docker run 명령어를 docker-compose 파일로 변환하세요!'
+
+  mac-address-lookup:
+    title: MAC 주소 조회
+    description: MAC 주소로 장치의 제조업체 및 제조사를 확인하세요.
+
+  mime-types:
+    title: MIME 유형
+    description: MIME 유형을 파일 확장자로, 파일 확장자를 MIME 유형으로 변환하세요.
+
+  toml-to-json:
+    title: TOML to JSON
+    description: TOML을 파싱하여 JSON으로 변환하세요.
+
+  lorem-ipsum-generator:
+    title: Lorem ipsum 생성기
+    description: Lorem ipsum은 의미 있는 내용에 의존하지 않고 문서나 서체의 시각적 형태를 보여주기 위해 일반적으로 사용되는 플레이스홀더 텍스트입니다.
+
+  qrcode-generator:
+    title: QR 코드 생성기
+    description: URL(또는 일반 텍스트)에 대한 QR 코드를 생성하고 다운로드하며, 배경 및 전경 색상을 사용자 지정하세요.
+
+  wifi-qrcode-generator:
+    title: WiFi QR 코드 생성기
+    description: WiFi 네트워크에 빠르게 연결할 수 있는 QR 코드를 생성하고 다운로드하세요.
+
+  xml-formatter:
+    title: XML 포맷터
+    description: XML 문자열을 사람이 읽기 쉬운 형식으로 정렬하세요.
+
+  temperature-converter:
+    title: 온도 변환기
+    description: 켈빈, 섭씨, 화씨, 랭킨, 드리스, 뉴턴, 레오무르 및 뢰머 간의 온도 변환을 지원합니다.
+
+  chmod-calculator:
+    title: Chmod 계산기
+    description: 이 온라인 chmod 계산기로 chmod 권한과 명령어를 계산하세요.
+
+  rsa-key-pair-generator:
+    title: RSA 키 쌍 생성기
+    description: 새로운 랜덤 RSA 개인 및 공개 PEM 인증서 키 쌍을 생성하세요.
+
+  html-wysiwyg-editor:
+    title: HTML WYSIWYG 편집기
+    description: 콘텐츠의 소스 코드를 즉시 생성하는 온라인 기능丰富的 WYSIWYG HTML 편집기입니다.
+
+  yaml-to-toml:
+    title: YAML to TOML
+    description: YAML을 파싱하여 TOML로 변환하세요.
+
+  mac-address-generator:
+    title: MAC 주소 생성기
+    description: 수량과 접두사를 입력하세요. 선택한 대소문자(대문자 또는 소문자)로 MAC 주소가 생성됩니다.
+
+  json-diff:
+    title: JSON 비교
+    description: 두 JSON 객체를 비교하고 차이점을 확인하세요.
+
+  jwt-parser:
+    title: JWT 파서
+    description: JSON Web Token(JWT)을 파싱 및 디코딩하고 내용을 표시합니다.
+
+  date-converter:
+    title: 날짜/시간 변환기
+    description: 날짜와 시간을 다양한 형식으로 변환하세요.
+
+  phone-parser-and-formatter:
+    title: 전화번호 파서 및 포맷터
+    description: 전화번호를 파싱, 검증 및 포맷하세요. 국가 코드, 유형 등 전화번호에 대한 정보를 확인하세요.
+
+  ipv4-subnet-calculator:
+    title: IPv4 서브넷 계산기
+    description: IPv4 CIDR 블록을 파싱하고 서브넷에 필요한 모든 정보를 확인하세요.
+
+  og-meta-generator:
+    title: Open Graph 메타 생성기
+    description: 웹사이트를 위한 Open Graph 및 소셜 미디어 HTML 메타 태그를 생성하세요.
+
+  ipv6-ula-generator:
+    title: IPv6 ULA 생성기
+    description: RFC4193에 따라 네트워크용 로컬 비라우팅 IP 주소를 생성하세요.
+
+  hash-text:
+    title: 텍스트 해시
+    description: '필요한 함수를 사용하여 텍스트 문자열을 해시하세요: MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3 또는 RIPEMD160'
+
+  json-to-toml:
+    title: JSON to TOML
+    description: JSON을 파싱하여 TOML로 변환하세요.
+
+  device-information:
+    title: 장치 정보
+    description: 현재 장치에 대한 정보를 확인하세요 (화면 크기, 픽셀 비율, user agent 등).
+
+  pdf-signature-checker:
+    title: PDF 서명 검사기
+    description: PDF 파일의 서명을 확인하세요. 서명된 PDF 파일에는 파일이 서명된 이후 내용이 변경되었는지 확인하는 데 사용할 수 있는 하나 이상의 서명이 포함되어 있습니다.
+
+  json-minify:
+    title: JSON 축소
+    description: 불필요한 공백을 제거하여 JSON을 축소하고 압축하세요.
+
+  ulid-generator:
+    title: ULID 생성기
+    description: 랜덤 범용 고유 어휘순 정렬 식별자(ULID)를 생성하세요.
+
+  string-obfuscator:
+    title: 문자열 난독화
+    description: 문자열(비밀번호, IBAN 또는 토큰 등)을 난독화하여 내용을 노출하지 않고 공유하고 식별할 수 있게 하세요.
+
+  base-converter:
+    title: 정수 진법 변환기
+    description: 숫자를 다양한 진법(10진수, 16진수, 2진수, 8진수, base64 등) 간에 변환하세요.
+
+  yaml-to-json-converter:
+    title: YAML to JSON 변환기
+    description: 이 온라인 실시간 변환기로 YAML을 JSON으로 쉽게 변환하세요.
+
+  uuid-generator:
+    title: UUID 생성기
+    description: 범용 고유 식별자(UUID)는 컴퓨터 시스템에서 정보를 식별하는 데 사용되는 128비트 숫자입니다. 가능한 UUID의 수는 16^32, 즉 2^128 또는 약 3.4x10^38입니다 (매우 많은 수입니다!).
+
+  ipv4-address-converter:
+    title: IPv4 주소 변환기
+    description: IP 주소를 10진수, 2진수, 16진수 또는 IPv6 표현으로 변환하세요.
+
+  text-statistics:
+    title: 텍스트 통계
+    description: 텍스트에 대한 정보를 확인하세요. 문자 수, 단어 수, 바이트 크기 등.
+
+  text-to-nato-alphabet:
+    title: NATO 음성 알파벳 변환
+    description: 텍스트를 구두 전달을 위한 NATO 음성 알파벳으로 변환하세요.
+
+  basic-auth-generator:
+    title: Basic 인증 생성기
+    description: 사용자 이름과 비밀번호로 base64 basic 인증 헤더를 생성하세요.
+
+  text-to-unicode:
+    title: 텍스트 to 유니코드
+    description: 텍스트를 유니코드로 파싱 및 변환하고 그 반대도 가능합니다.
+
+  ipv4-range-expander:
+    title: IPv4 범위 확장기
+    description: 시작 및 종료 IPv4 주소가 주어지면, 이 도구가 유효한 IPv4 서브넷과 CIDR 표기를 계산합니다.
+
+  text-diff:
+    title: 텍스트 비교
+    description: 두 텍스트를 비교하고 차이점을 확인하세요.
+
+  otp-generator:
+    title: OTP 코드 생성기
+    description: 다중 요소 인증을 위한 시간 기반 OTP(일회용 비밀번호)를 생성하고 검증하세요.
+
+  url-encoder:
+    title: URL 형식 문자열 인코딩/디코딩
+    description: 텍스트를 URL 인코딩 형식("퍼센트 인코딩"이라고도 함)으로 인코딩하거나 디코딩하세요.
+
+  text-to-binary:
+    title: 텍스트 to ASCII 바이너리
+    description: 텍스트를 ASCII 바이너리 표현으로 변환하고 그 반대도 가능합니다.
+
+  unix-timestamp-converter:
+    title: Unix 타임스탬프 변환기
+    description: Unix 타임스탬프를 사람이 읽을 수 있는 날짜로 변환하고 그 반대도 가능합니다. 초와 밀리초를 지원합니다.
+
+  speed-test:
+    title: 인터넷 속도 테스트
+    description: 온라인으로 인터넷 연결 속도를 테스트하세요. 다운로드 속도, 업로드 속도 및 핑 지연 시간을 측정합니다.
+
+  dns-lookup:
+    title: DNS 조회
+    description: 모든 도메인의 DNS 레코드를 조회하세요. A, AAAA, MX, TXT, CNAME 및 NS 레코드를 온라인으로 확인합니다.
+
+  ssl-checker:
+    title: SSL 인증서 검사기
+    description: 모든 웹사이트의 SSL 인증서 세부 정보를 확인하세요. 인증서 유효성, 만료일 및 발급자 정보를 확인합니다.
+
+  website-checker:
+    title: 웹사이트 다운 확인기
+    description: 웹사이트가 다운되었는지 확인하세요. 전 세계 여러 위치에서 웹사이트 가용성을 테스트합니다.
+
+  my-ip:
+    title: 내 IP 주소 확인
+    description: 온라인으로 공인 IP 주소를 확인하세요. IP, 위치 및 ISP 정보를 보여주는 무료 IP 주소 조회 도구입니다.
+
+sponsor:
+  title: AgentsAITools 지원하기
+  subtitle: 도구를 무료로 유지하고 전 세계 개발자를 위한 플랫폼을 개선할 수 있도록 도와주세요.
+  whySupport: 왜 지원해야 하나요?
+  keepToolsFree: 도구 무료 유지
+  keepToolsFreeDesc: 90개 이상의 모든 도구는 항상 무료이며 가입이 필요하지 않습니다.
+  newTools: 새로운 도구
+  newToolsDesc: 새로운 도구 개발과 기존 도구 개선에 도움을 주세요.
+  betterPerformance: 더 나은 성능
+  betterPerformanceDesc: 모두를 위한 더 빠른 서버와 더 나은 인프라.
+  chooseLevel: 지원 수준 선택
+  supporter: 서포터
+  supporterDesc: 커피 한 잔 사주기!
+  champion: 챔피언
+  championDesc: 호스팅 비용 지원하기
+  hero: 히어로
+  heroDesc: 새로운 도구 개발 지원하기
+  donate: 후원하기
+  customAmount: 사용자 지정 금액
+  customDesc: 다른 금액을 후원하고 싶으신가요? 사용자 지정 결제 링크를 이용하세요.
+  donateCustom: 사용자 지정 금액 후원하기
+  otherWays: 다른 지원 방법
+  followTwitter: Twitter에서 팔로우
+  starGitHub: GitHub에서 스타 누르기
+  shareFeedback: 피드백 공유
+  thankYou: 지원해 주셔서 감사합니다!
+  thankYouDesc: 모든 기여는 도구를 무료로 유지하고 개선하는 데 도움이 됩니다.
+
+contact:
+  title: 문의하기
+  subtitle: 여러분의 의견을 듣고 싶습니다
+  getInTouch: 연락하기
+  getInTouchDesc: 질문, 제안 또는 피드백이 있으신가요? 도와드리겠습니다!
+  email: 이메일
+  responseTime: 응답 시간
+  responseTimeDesc: 일반적으로 24-48시간 이내에 응답합니다.
+  whatWeHelp: 도움이 필요한 사항
+  generalQuestions: 도구에 대한 일반적인 질문
+  featureRequests: 기능 요청
+  bugReports: 버그 리포트
+  partnershipInquiries: 파트너십 문의
+  sendMessage: 메시지 보내기
+  name: 이름
+  namePlaceholder: 이름을 입력하세요
+  subject: 제목
+  selectSubject: 제목 선택
+  generalQuestion: 일반 문의
+  featureRequest: 기능 요청
+  bugReport: 버그 리포트
+  partnership: 파트너십 문의
+  other: 기타
+  message: 메시지
+  messagePlaceholder: 메시지를 입력하세요...
+  send: 메시지 보내기
+  sending: 전송 중...
+  successMessage: 메시지를 보내주셔서 감사합니다! 곧 이메일 클라이언트가 열립니다.
+
