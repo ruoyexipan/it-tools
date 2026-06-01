@@ -6,6 +6,9 @@ useHead({
   meta: [
     { name: 'description', content: 'Learn about AgentsAITools - a free online developer tools platform with 90+ tools for developers and IT professionals.' },
   ],
+  link: [
+    { rel: 'canonical', href: 'https://agentsaitools.com/about' },
+  ],
 });
 </script>
 

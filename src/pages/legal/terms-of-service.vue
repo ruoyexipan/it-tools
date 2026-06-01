@@ -6,6 +6,9 @@ useHead({
   meta: [
     { name: 'description', content: 'Terms of Service for AgentsAITools - Free online developer tools.' },
   ],
+  link: [
+    { rel: 'canonical', href: 'https://agentsaitools.com/terms-of-service' },
+  ],
 });
 </script>
 

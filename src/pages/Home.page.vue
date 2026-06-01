@@ -12,6 +12,9 @@ useHead({
   meta: [
     { name: 'description', content: 'AgentsAITools provides 90+ free online developer tools including JSON formatter, Base64 encoder, hash generator, JWT decoder, UUID generator, and more. No signup required.' },
   ],
+  link: [
+    { rel: 'canonical', href: 'https://agentsaitools.com' },
+  ],
 });
 const { t } = useI18n();
 const favoriteTools = computed(() => toolStore.favoriteTools);

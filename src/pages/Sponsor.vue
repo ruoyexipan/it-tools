@@ -6,6 +6,9 @@ useHead({
   meta: [
     { name: 'description', content: 'Support AgentsAITools development. Help us keep the tools free and improve the platform.' },
   ],
+  link: [
+    { rel: 'canonical', href: 'https://agentsaitools.com/sponsor' },
+  ],
 });
 
 const tiers = [

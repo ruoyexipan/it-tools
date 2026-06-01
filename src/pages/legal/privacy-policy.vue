@@ -6,6 +6,9 @@ useHead({
   meta: [
     { name: 'description', content: 'Privacy Policy for AgentsAITools - Free online developer tools.' },
   ],
+  link: [
+    { rel: 'canonical', href: 'https://agentsaitools.com/privacy-policy' },
+  ],
 });
 </script>
 

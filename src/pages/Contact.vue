@@ -7,6 +7,9 @@ useHead({
   meta: [
     { name: 'description', content: 'Contact AgentsAITools for questions, feedback, or support.' },
   ],
+  link: [
+    { rel: 'canonical', href: 'https://agentsaitools.com/contact' },
+  ],
 });
 
 const formData = ref({
